@@ -1,8 +1,17 @@
 import { useState } from 'react'
+import Nav from './components/Nav'
+import { Outlet } from 'react-router-dom'
 import './App.css'
 
-const App = () => {
+const App = ({library}) => {
   const [count, setCount] = useState(0)
+  const [searchQuery, setSearchQuery] = useState('')
+
+  const handleSearch = (e) => {
+    setSearchQuery(e.target.value)
+}
+
+
 
   return (
     <>
@@ -10,6 +19,10 @@ const App = () => {
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
+        <Nav />
+        {/* We should make it light...it will be dark already! isDarkMode={isDarkMode} onToggleDarkMode={onToggleDarkMode} */}
+        <Outlet context ={{searchQuery, handleSearch, library}}/>
+        {/* <Outlet context={{}} /> */}
     </>
   )
 }

@@ -3,7 +3,7 @@ import { useState } from 'react'
 const Form = () => {
     const [ form, setForm ] = useState([])
 
-    return ()
+    return
 }
 
 export default Form
