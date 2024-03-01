@@ -15,3 +15,12 @@ const App = () => {
 }
 
 export default App
+
+export const libraryLoader = async() => {
+  try {
+    const res = await fetch(`http://localhost:4000/records`)
+    return await res.json()
+  } catch (error) {
+    return error
+  }
+}
