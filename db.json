@@ -1,0 +1,265 @@
+{
+  "records": [
+    {
+      "id": 9,
+      "inCollection": true,
+      "artist": "Adele",
+      "albumCover": "https://i.discogs.com/cloSggzA3DtGZUTH6_riCYGe_4wApHzxc5iHgbCvW_U/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIxMDQ3/MTYxLTE2NDUwNjQz/MjYtMTczMy5qcGVn.jpeg",
+      "title": "30",
+      "released": 2021,
+      "label": "Columbia"
+    },
+    {
+      "id": 16,
+      "inCollection": true,
+      "artist": "Tessa Violet",
+      "albumCover": "https://i.discogs.com/NQnOxer_YK4JmRaCfJnN9FSbG-Cwfdf9wY31ECqwTBc/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE0NzE1/MzUyLTE1ODAxOTcx/NzAtMjA2OC5qcGVn.jpeg",
+      "title": "Bad Ideas",
+      "released": 2020,
+      "label": "T∆G Music"
+    },
+    {
+      "id": 22,
+      "inCollection": true,
+      "artist": "Shakey Graves",
+      "albumCover": "https://i.discogs.com/jC3o0JyFBlZdnUjoGrmaRbhL8-aVDa1ZBq-iBdYf6_E/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTExOTU2/OTU2LTE2OTU5NTU5/NDktMjExNy5qcGVn.jpeg",
+      "title": "Can't Wake Up",
+      "released": 2018,
+      "label": "Dualtone"
+    },
+    {
+      "id": 6,
+      "inCollection": true,
+      "artist": "The Beatles",
+      "albumCover": "https://i.discogs.com/zr9gLwyt6T70HEFnTUuzbZBQi22eEFXRqTXt1T7z39A/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM3NzU1/NC0xMzQwMzU1MTI2/LTE3MTQuanBlZw.jpeg",
+      "title": "Let It Be",
+      "released": 1970,
+      "label": "Apple Records"
+    },
+    {
+      "id": 1,
+      "inCollection": false,
+      "artist": "ABBA",
+      "albumCover": "https://i.discogs.com/QLvRIsoIF6reDsMjw0V1q_vzRGLdv2rOKS2z9EL4aEQ/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTg1NTE4/Ny0xNTc2Nzk0MzIz/LTYyOTYuanBlZw.jpeg",
+      "title": "The Album",
+      "released": 1978,
+      "label": "Atlantic"
+    },
+    {
+      "id": 2,
+      "inCollection": false,
+      "artist": "Cher",
+      "albumCover": "https://i.discogs.com/F8ZaPubOz001_K-ylYsWX7fKOypELpTHcxz2YPqjajM/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI2NzE4/NDAtMTQ2OTczODYy/MC01MzcxLmpwZWc.jpeg",
+      "title": "Foxy Lady",
+      "released": 1972,
+      "label": "Kapp Records"
+    },
+    {
+      "id": 3,
+      "inCollection": false,
+      "artist": "Led Zeppelin",
+      "albumCover": "https://i.discogs.com/RSqTIbXtl74My5dMw_ElibY_a5Mnn008YMobGUBAsh4/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTY1MjQy/MTItMTU4NDgyNDM3/Ny01NzYzLmpwZWc.jpeg",
+      "title": "Led Zeppelin II",
+      "released": 1969,
+      "label": "Atlantic"
+    },
+    {
+      "id": 4,
+      "inCollection": false,
+      "artist": "The Beatles",
+      "albumCover": "https://i.discogs.com/J_kXjrGE2cBR2NkJV4D85OgxBp9JbmtYkULA1I6fdpQ/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTczODM0/NC0xMjkyMjY2Nzk3/LmpwZWc.jpeg",
+      "title": "Abbey Road",
+      "released": 1978,
+      "label": "Capitol Records"
+    },
+    {
+      "id": 5,
+      "inCollection": false,
+      "artist": "The Beatles",
+      "albumCover": "https://i.discogs.com/eTJnH8j54jpgAhqd52SmxA5d_NX3bBCosvInD2VbE0k/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTMwMjc3/MzEtMTM3NzM5MTE4/My0xNzk4LmpwZWc.jpeg",
+      "title": "Hey Jude",
+      "released": 1971,
+      "label": "Apple Records"
+    },
+    {
+      "id": 7,
+      "inCollection": false,
+      "artist": "Banda Taurina",
+      "albumCover": "https://i.discogs.com/cMAe1QtuQy3DRib7dA_NtCO-peUiFNWapk7_fO7kfSo/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEwNzc3/MzItMTE5MDM5NTg5/MC5qcGVn.jpeg",
+      "title": "¡Torero! La Fiesta Brava, Vol. 3",
+      "released": 1957,
+      "label": "Audio Fidelity"
+    },
+    {
+      "id": 8,
+      "inCollection": false,
+      "artist": "Alex Lilly",
+      "albumCover": "https://i.discogs.com/n1J2-jgJvWlQU-37bbbfXRiMa_ak9wzvKPUuvmF2VP0/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEzMjg5/NTU1LTE1NTE0NjQ3/NjEtOTcxNC5qcGVn.jpeg",
+      "title": "2% Milk",
+      "released": 2019,
+      "label": "Release Me Records"
+    },
+    {
+      "id": 10,
+      "inCollection": false,
+      "artist": "Shakey Graves",
+      "albumCover": "https://i.discogs.com/VcpxEdXieNxFaUIi7-mH17b9rOiNkIorOnOrYNAtDhs/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTYxNTUz/NTYtMTQxMjQ1NTAz/Ny0yODc4LmpwZWc.jpeg",
+      "title": "And The Horse He Rode In On",
+      "released": 2017,
+      "label": "Dualtone"
+    },
+    {
+      "id": 11,
+      "inCollection": false,
+      "artist": "Shakey Graves",
+      "albumCover": "https://i.discogs.com/Vpv7rWSeY1xs1aGpakHtE8Vy--nvdRFvhTYaPzZmnSg/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEwNDky/OTg3LTE0OTg3NTY3/MjctNjUxMy5qcGVn.jpeg",
+      "title": "And The War Came",
+      "released": 2014,
+      "label": "Dualtone"
+    },
+    {
+      "id": 12,
+      "inCollection": false,
+      "artist": "Blondie",
+      "albumCover": "https://i.discogs.com/9sGnG9YK1yNAwbXg_lPD8f51FlTrKSrM_oYiXhivB18/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTExNzgy/MDc2LTE1MjIzNjMy/MTItMTI1NS5qcGVn.jpeg",
+      "title": "Autoamerican",
+      "released": 1980,
+      "label": "Chrysalis"
+    },
+    {
+      "id": 13,
+      "inCollection": false,
+      "artist": "Ashlee Simpson",
+      "albumCover": "https://i.discogs.com/hQ6EeS3ehhA6yGn3UknQ3RY4LstaZx-DF9cgNF1agCw/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE0NTQz/NjMwLTE1NzY3MTk1/ODEtMjk0Ni5wbmc.jpeg",
+      "title": "Autobiography",
+      "released": 2019,
+      "label": "Geffen Records"
+    },
+    {
+      "id": 14,
+      "inCollection": false,
+      "artist": "AC/DC",
+      "albumCover": "https://i.discogs.com/d76FIUjKidhBbOrnvne86-UQ_LQqKK10gP136EyXWr4/rs:fit/g:sm/q:90/h:595/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEwODI3/OTg5LTE1MDQ5NzEy/MzAtOTE2MC5qcGVn.jpeg",
+      "title": "Back In Black",
+      "released": 1980,
+      "label": "Atlantic"
+    },
+    {
+      "id": 15,
+      "inCollection": false,
+      "artist": "Bad Company",
+      "albumCover": "https://i.discogs.com/lMfRi3aMPSYqhZgzwmmEuwBAJYaZrKX4rmeN6HgApaI/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE1Mjc4/ODUtMTI5NzU5Njkw/OC5qcGVn.jpeg",
+      "title": "Bad Co",
+      "released": 1974,
+      "label": "Swan Song"
+    },
+    {
+      "id": 17,
+      "inCollection": false,
+      "artist": "Halsey",
+      "albumCover": "https://i.discogs.com/Zlzi3teg9zbAtveW5wDaMJFomYUUuRYbRf1vMMjkRUc/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTgwODcz/MTktMTQ1NTIwMjUw/Mi01MjI3LmpwZWc.jpeg",
+      "title": "Badlands",
+      "released": 2015,
+      "label": "Astralwerks"
+    },
+    {
+      "id": 18,
+      "inCollection": false,
+      "artist": "Barbra Streisand",
+      "albumCover": "https://i.discogs.com/tUnt2gi5eryW3nACsAyI0rKlRy7OBnCdXQAlmdMZ1eM/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIwMzI1/MTgtMTI3MTk0Mjk3/Ni5qcGVn.jpeg",
+      "title": "Barbra Joan Streisand",
+      "released": 1971,
+      "label": "Columbia"
+    },
+    {
+      "id": 19,
+      "inCollection": false,
+      "artist": "Go-Go's",
+      "albumCover": "https://i.discogs.com/agXa5qG69AxQEDEBfPOQMDOOzLE7Lo7wRotAVmg4Ku8/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE3Njkw/NDEtMTU4OTkyNTYy/My02NzcwLmpwZWc.jpeg",
+      "title": "Beauty And The Beat",
+      "released": 1981,
+      "label": "I.R.S. Records"
+    },
+    {
+      "id": 20,
+      "inCollection": false,
+      "artist": "Joni Mitchell",
+      "albumCover": "https://i.discogs.com/U-pVGWIIE_dljGJWs0eDRLWz9YbB7116lWxNTGY9NkM/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEwMDI4/MzgxLTE0OTAzODMz/MjEtNTc4OS5qcGVn.jpeg",
+      "title": "Blue",
+      "released": 1971,
+      "label": "Reprise Records"
+    },
+    {
+      "id": 23,
+      "inCollection": false,
+      "artist": "Lissie",
+      "albumCover": "https://i.discogs.com/yzUJylNd2l1RLgVkhXCtaW4jVMBKnUT3ephPXlSI_Pg/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIzMzc4/MjAtMTI3NzkzOTkw/NS5qcGVn.jpeg",
+      "title": "Catching A Tiger",
+      "released": 2010,
+      "label": "Columbia"
+    },
+    {
+      "id": 24,
+      "inCollection": false,
+      "artist": "Dominic J Marshall Trio",
+      "albumCover": "https://i.discogs.com/wsrK64FK_4RXd_cx_syG_ttA8iO09k8tshYis4fETag/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEzNDUy/OTIwLTE2MTIyODcx/ODEtMjMxNS5qcGVn.jpeg",
+      "title": "Cave Art Two",
+      "released": 2019,
+      "label": "Paxico Records"
+    },
+    {
+      "id": 25,
+      "inCollection": false,
+      "artist": "Big Brother & The Holding Company",
+      "albumCover": "https://i.discogs.com/B6XTMAPGwEMhxLdKtGIsaIRM4InsKcNAqXU9n9l_V1k/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM5NTM2/NjgtMTUxNjEyNzc2/My01MzAxLmpwZWc.jpeg",
+      "title": "Cheap Thrills",
+      "released": 2011,
+      "label": "Columbia"
+    },
+    {
+      "id": 26,
+      "inCollection": false,
+      "artist": "The Wild Reeds",
+      "albumCover": "https://i.discogs.com/NAktWqZb3J2DB-5FstaUnYSVMHG9fc8XAwZ7_zCMkSE/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEzMzI5/MzMzLTE1NTI1Mzkx/NDMtOTgxMS5qcGVn.jpeg",
+      "title": "Cheers",
+      "released": 2019,
+      "label": "Dualtone"
+    },
+    {
+      "id": 27,
+      "inCollection": false,
+      "artist": "The Lumineers",
+      "albumCover": "https://i.discogs.com/Z_q_344EiCGH80d9FQbUmgbHG_DadUoArFq8S6x8-wY/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTgzNTU0/MTQtMTQ1OTk4MDA4/Ny0zOTMxLmpwZWc.jpeg",
+      "title": "Cleopatra",
+      "released": 2016,
+      "label": "Dualtone"
+    },
+    {
+      "id": 28,
+      "inCollection": false,
+      "artist": "Bobbie Gentry",
+      "albumCover": "https://i.discogs.com/MaWk2P0LsRIN5T-_37j9UnmB6Pd7OGOoGONnzFTjgIs/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTcxNzEx/MTY2LTEyMzYyNjMw/Ni02NjIzLmpwZWc.jpeg",
+      "title": "Bobbie Gentry And Glen Campbell",
+      "released": 1968,
+      "label": "Capitol Records"
+    },
+    {
+      "id": 29,
+      "inCollection": false,
+      "artist": "Carpenters",
+      "albumCover": "https://i.discogs.com/q5qVRSGo72qr3IZbbFF-pW5Xs3DIXPTTr2TJlZhR_7o/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTQ5OTI3/ODQtMTM5NDA3NjY0/OC0yMTQwLmpwZWc.jpeg",
+      "title": "Close To You",
+      "released": 1970,
+      "label": "A&M Records"
+    },
+    {
+      "id": 30,
+      "inCollection": false,
+      "artist": "Chaka Khan",
+      "albumCover": "https://i.discogs.com/9B5MIcG8sqnW22KzXe6TApYtajYZ1Dx7kbFnubVYPbo/rs:fit/g:sm/q:90/h:600/w:596/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI2MDc4/MTctMTQwOTQxMzE3/MS0yMTU4LmpwZWc.jpeg",
+      "title": "Chaka Khan",
+      "released": 1982,
+      "label": "Warner Bros. Records"
+    }
+  ]
+}
