@@ -1,3 +1,5 @@
+// Search lives here! 
+
 const Nav = (searchQuery, handleSearch) => {
 
 

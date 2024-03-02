@@ -1,5 +1,5 @@
 const MyStaxx = () => {
-    return 
+    return
 }
 
 export default MyStaxx
