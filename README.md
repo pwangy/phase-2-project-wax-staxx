@@ -1,19 +1,19 @@
 :: Components
-Card - called by library and mystaxx, component to hold basic info about each album 
-Nav - links to: Home, mystaxx, Form, called in App
-Search - will live in header under nav within App
+Card - called by library and mystaxx, component to hold basic info about each album - pw
+Nav - links to: Home, mystaxx, Form, called in App - zen
+Search - will live in header under nav within App - zen
 
-:: Pages
-Library - displays collection of Cards, click to add to Collection (MVP 1. Display all albums (Lib) - GET) (MVP 1.5 AAdd to collection )
+:: Pages - useMemo to help with mapping info.
+Library - displays collection of Cards, click to add to Collection (MVP 1. Display all albums (Lib) - GET) (MVP 1.5 AAdd to collection ) - pw
 
-MyStaxx - displays user's collection, click to remove  (not Delete)individual albums (MVP 2. view My Collection - POST & GET) (MVP 4. Remove from My Collection ONLY (not allowed to remove from Lib) - PATCH)
+MyStaxx - displays user's collection, click to remove  (not Delete)individual albums (MVP 2. view My Collection - POST & GET) (MVP 4. Remove from My Collection ONLY (not allowed to remove from Lib) - PATCH) - pw
 
-Form - to add new album to lib - POST (MVP 3. Add new album to library & My Collection (Form) - POST)
+Form - to add new album to lib - POST (MVP 3. Add new album to library & My Collection (Form) - POST) - vr
 
 
 :: Other
 LibraryProvider --- figure out how this works
-ErrorPage
+ErrorPage - vr
 
 
 :: Stretch
@@ -23,6 +23,7 @@ ErrorPage
 - Validation on album addition form to check for incoming duplicates
 - When editing Album, edits the MyCollection at the same time (lib is always source of tuth)
 - light mode
+- individual album view
 
 TEMPLATE! 
 
