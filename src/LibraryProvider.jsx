@@ -16,7 +16,7 @@ const AlbumsProvider = ({ children }) => {
             }
         })()
     }, [])
-
+    console.log(albums)
 
 const handleAddAlbum = useCallback(() => {
 
