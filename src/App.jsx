@@ -4,7 +4,6 @@ import { Outlet } from 'react-router-dom'
 import './App.css'
 
 const App = ( ) => {
-  const [count, setCount] = useState(0)
   const [searchQuery, setSearchQuery] = useState('')
 
   const handleSearch = (e) => {
@@ -15,13 +14,14 @@ const App = ( ) => {
 
   return (
     <>
-      <h1>Herro! Welcome to Wax Staxx</h1>
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
+      <header>
         <Nav />
-        {/* We should make it light...it will be dark already! isDarkMode={isDarkMode} onToggleDarkMode={onToggleDarkMode} */}
+          
+          {/* We should make it light...it will be dark already! isDarkMode={isDarkMode} onToggleDarkMode={onToggleDarkMode} */}
+      </header>
+      <main>
         <Outlet context ={{searchQuery, handleSearch}}/>
+      </main>
     </>
   )
 }
