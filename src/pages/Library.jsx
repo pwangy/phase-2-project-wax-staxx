@@ -1,7 +1,15 @@
-// this is our home page which will display the full collection 
+import { useMemo } from 'react'
+import Card from '../components/Card'
 
-const Library = () => {
-    return 
-}
+const Library = ({ albums }) => {
+    const renderAlbums = useMemo(() => albums.map(a => <Card key={a.id} {...a} />
+    ), [albums])
+
+    return (
+        <>
+            <h2>Library</h2>
+            {renderAlbums}
+        </>
+)}
 
 export default Library

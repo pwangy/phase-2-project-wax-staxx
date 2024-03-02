@@ -2,16 +2,16 @@
 import { createRoot } from 'react-dom/client'
 import { RouterProvider } from 'react-router-dom'
 import  router  from './routes.jsx'
-import LibraryProvider from "./LibraryProvider.jsx"
-import './index.css'
+import AlbumsProvider from "./AlbumsProvider.jsx"
+import './index.scss'
 
 const rootElement = document.getElementById('root')
 const root = createRoot(rootElement)
 
 root.render(
 
-  <LibraryProvider>
+  <AlbumsProvider>
     <RouterProvider router={router} />
-  </LibraryProvider>
+  </AlbumsProvider>
 
 )

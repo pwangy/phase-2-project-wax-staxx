@@ -16,10 +16,11 @@ const App = ( ) => {
     <>
       <header>
         <Nav />
-          
+          <h1>I'm the nav!</h1>
           {/* We should make it light...it will be dark already! isDarkMode={isDarkMode} onToggleDarkMode={onToggleDarkMode} */}
       </header>
       <main>
+        <h3>I'm where the App Outlet is.</h3>
         <Outlet context ={{searchQuery, handleSearch}}/>
       </main>
     </>
