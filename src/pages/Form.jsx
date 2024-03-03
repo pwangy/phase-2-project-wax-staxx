@@ -3,7 +3,7 @@ import * as Yup from "yup"
 import { useFormik } from 'formik'
 import { useNavigate } from 'react-router' // useOutletContext, useParams necessary for PATCH
 import { AlbumsContext } from '../AlbumsProvider'
-import { useErrorAlerts } from "./ErrorAlertsProvider"
+// import { useErrorAlerts } from "./ErrorAlertsProvider" // We might need these for PATCH - if fetch fails during patch steps
 
 // const URL = 'http://localhost:4000/records/' //! needed for editing later
 
@@ -15,15 +15,15 @@ import { useErrorAlerts } from "./ErrorAlertsProvider"
     released: Yup.string().required('Release year is required'),
     label: Yup.string().required('Label is required'),
     //! Finish validations 
-  })
+})
 
-  const errorStyle = { color: 'red' , fontWeight: 'bold'}
+const errorStyle = { color: 'red' , fontWeight: 'bold'} //These format our errors, we can change these up if desired or have something else handle it
 
 const AlbumsForm = () => {
     const { handleAddAlbum } = useContext(AlbumsContext)
     // const updateError = useOutletContext() //! needed for editing later
     // const navigate = useNavigate() //! needed for editing later
-    const { error, includeErrorAlerts } = useErrorAlerts()
+    // const { error, includeErrorAlerts } = useErrorAlerts() //! We might need these for PATCH - if fetch fails during patch steps
     const navigate = useNavigate()
 
 
@@ -38,25 +38,33 @@ const AlbumsForm = () => {
 
     const formik = useFormik({
         initialValues,
-        validationSchema,
+        validationSchema, //validates using validationSchema
         onSubmit: ( values, { setSubmitting, resetForm}) => {
         try {
             handleAddAlbum(values)
             resetForm()
-
-        } catch (error) {
-            console.error(error.message);
-        } finally {
-            setSubmitting(false);
-            includeErrorAlerts(`Your Album addition of ${values.artist} has been added!`, () => {
-            navigate("/")    
+        } catch (validationError) { //upon Submit > forEach field not completed display a error at the top of the form
+            const errors = {}
+            validationError.inner.forEach((e) => {
+                errors[e.path] = e.message
             })
+            formik.setErrors(errors)
+        } finally {
+            setSubmitting(false)
+            navigate("/")
+
         }
         },
     })
 
     return (
         <form onSubmit={formik.handleSubmit}>
+            {formik.submitCount > 0 &&   //we are displaying each error here and using formik logic to iterate through them
+                Object.keys(formik.errors).map((field) => (
+                    <div key={field} style={errorStyle}>
+                        {formik.errors[field]}
+                    </div>
+            ))}
             <label htmlFor="artist">Artist Name:</label>
             <input
                 id="artist"
@@ -66,7 +74,7 @@ const AlbumsForm = () => {
                 onBlur={formik.handleBlur}
                 value={formik.values.artist}
             />
-            {formik.touched.artist && formik.errors.artist && <div style={errorStyle}>{formik.errors.artist}</div>}
+            {/* {formik.touched.artist && formik.errors.artist && <div style={errorStyle}>{formik.errors.artist}</div>} */}
 
             <label htmlFor="albumCover">Album Cover Link:</label>
             <input
@@ -77,7 +85,7 @@ const AlbumsForm = () => {
                 onBlur={formik.handleBlur}
                 value={formik.values.albumCover}
             />
-            {formik.touched.albumCover && formik.errors.albumCover && <div style={errorStyle}>{formik.errors.albumCover}</div>}
+            {/* {formik.touched.albumCover && formik.errors.albumCover && <div style={errorStyle}>{formik.errors.albumCover}</div>} */}
 
             <label htmlFor="title">Album Title:</label>
             <input
@@ -88,7 +96,7 @@ const AlbumsForm = () => {
                 onBlur={formik.handleBlur}
                 value={formik.values.title}
             />
-            {formik.touched.title && formik.errors.title && <div style={errorStyle}>{formik.errors.title}</div>}
+            {/* {formik.touched.title && formik.errors.title && <div style={errorStyle}>{formik.errors.title}</div>} */}
 
             <label htmlFor="released">Album Release Year:</label>
             <input
@@ -99,7 +107,7 @@ const AlbumsForm = () => {
                 onBlur={formik.handleBlur}
                 value={formik.values.released}
             />
-            {formik.touched.released && formik.errors.released && <div style={errorStyle}>{formik.errors.released}</div>}
+            {/* {formik.touched.released && formik.errors.released && <div style={errorStyle}>{formik.errors.released}</div>} */}
 
             <label htmlFor="label">Album Label:</label>
             <input
@@ -110,7 +118,7 @@ const AlbumsForm = () => {
                 onBlur={formik.handleBlur}
                 value={formik.values.label}
             />
-            {formik.touched.label && formik.errors.label && <div style={errorStyle}>{formik.errors.label}</div>}
+            {/* {formik.touched.label && formik.errors.label && <div style={errorStyle}>{formik.errors.label}</div>} */}
 
             <label htmlFor="inCollection">Do you want to add this new Album to your collection?:</label>
             <input
@@ -121,8 +129,8 @@ const AlbumsForm = () => {
                 onBlur={formik.handleBlur}
                 checked={formik.values.inCollection}
             />
-            {formik.touched.inCollection && formik.errors.inCollection && <div style={errorStyle}>{formik.errors.inCollection}</div>
-            }
+            {/* {formik.touched.inCollection && formik.errors.inCollection && <div style={errorStyle}>{formik.errors.inCollection}</div>
+            } */}
 
             <button type="submit" disabled={formik.isSubmitting}>
                 Submit
