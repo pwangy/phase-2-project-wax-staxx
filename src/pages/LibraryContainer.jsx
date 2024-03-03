@@ -5,7 +5,6 @@ import Library from './Library'
 import SearchBar from '../components/SearchBar'
 import NavBar from '../components/NavBar'
 import SortButtons from '../components/SortButtons'
-// import MyStaxx from '../pages/MyStaxx'
 
 const LibraryContainer = () => {
     const { albums } = useContext(AlbumsContext)

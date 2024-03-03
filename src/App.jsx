@@ -28,13 +28,12 @@ const App = ( ) => {
       <header>
         <Header />
         <NavBar />
-          <h1>I&apos;m the nav!</h1>
           {/* We should make it light...it will be dark already! isDarkMode={isDarkMode} onToggleDarkMode={onToggleDarkMode} */}
       </header>
       <main>
-        <h3>I&apos;m where the App Outlet is.</h3>
         <Outlet context={{searchQuery, handleSearch, handleSortSelection, sortSelected }}/>
       </main>
+      {/* add a footer with credits and links */}
     </>
   )
 }
@@ -47,5 +46,4 @@ export const libraryLoader = async() => {
     return await res.json()
   } catch (error) {
     return error
-  }
-}
+  }}
