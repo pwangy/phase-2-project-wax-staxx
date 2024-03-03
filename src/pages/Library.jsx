@@ -6,10 +6,10 @@ const Library = ({ albums }) => {
     ), [albums])
 
     return (
-        <>
+        <article className='article-wrapper'>
             <h2>Library</h2>
-            {renderAlbums}
-        </>
+            <div className='article-wrapper'>{renderAlbums}</div>
+        </article>
 )}
 
 export default Library

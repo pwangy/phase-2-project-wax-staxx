@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import Nav from './components/Nav'
 import { Outlet } from 'react-router-dom'
-import './App.css'
 
 const App = ( ) => {
   const [searchQuery, setSearchQuery] = useState('')
@@ -10,17 +9,15 @@ const App = ( ) => {
     setSearchQuery(e.target.value)
 }
 
-
-
   return (
     <>
       <header>
         <Nav />
-          <h1>I'm the nav!</h1>
+          <h1>I&apos;m the nav!</h1>
           {/* We should make it light...it will be dark already! isDarkMode={isDarkMode} onToggleDarkMode={onToggleDarkMode} */}
       </header>
       <main>
-        <h3>I'm where the App Outlet is.</h3>
+        <h3>I&apos;m where the App Outlet is.</h3>
         <Outlet context ={{searchQuery, handleSearch}}/>
       </main>
     </>
