@@ -1,14 +1,20 @@
 import { useContext } from 'react'
+import { useOutletContext } from 'react-router-dom'
 import { AlbumsContext } from '../AlbumsProvider'
 import Library from './Library'
+import SearchBar from '../components/SearchBar'
+import NavBar from '../components/NavBar'
+import SortButtons from '../components/SortButtons'
 
 const LibraryContainer = () => {
     const { albums } = useContext(AlbumsContext)
+    const{handleSearch, searchQuery, handleSortSelection} = useOutletContext()
 
     return (
         <>
-            <Library albums={albums} />
-            {/* should Staxx live for centralization of filter/search logic? would this change our routes? or do we need to add an Outlet? */}
+            <SearchBar handleSearch={handleSearch} searchQuery={searchQuery} />
+            {/* <SortButtons handleSortSelection={handleSortSelection} /> */}
+            <Library albums={albums} searchQuery={searchQuery} />
         </>
 )}
 
