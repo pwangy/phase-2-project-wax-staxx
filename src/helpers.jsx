@@ -1,7 +1,6 @@
 // import { useState } from 'react'
 import { v4 as uuidv4} from "uuid"
 
-
     const useFetchJSON = () => {
         const handleRequest = async (url, method, body = null) => {
         const headers = {
@@ -27,8 +26,13 @@ import { v4 as uuidv4} from "uuid"
         }
     }
 
-        const postJSON = async (url, formData) => {
+        const postJSON = async (url, currentStateVariable, formData) => {
+            const lastVariableArray = currentStateVariable.slice(-1);
+            const id = lastVariableArray.length
+                ? Number(lastVariableArray[0].id) + 1
+                : uuidv4();
         return await handleRequest(url, 'POST', {
+            id,
             inCollection: formData.inCollection,
             artist: formData.artist,
             albumCover: formData.albumCover,

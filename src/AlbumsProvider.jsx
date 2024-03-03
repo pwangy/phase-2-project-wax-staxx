@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react"
-import { addIdPlusOneLastArrayToNewElement as addId } from "./helpers"
+// import { addIdPlusOneLastArrayToNewElement as addId } from "./helpers"
 import useFetchJSON from "./helpers"
 import { useErrorAlerts } from "./pages/ErrorAlertsProvider"
+import { v4 as uuidv4} from "uuid"
 
 const url = 'http://localhost:4000/records'
 
@@ -11,7 +12,7 @@ export const AlbumsContext = React.createContext()
 const AlbumsProvider = ({ children }) => {
     const [albums, setAlbums] = useState([])
     const { postJSON, patchJSON, deleteJSON } = useFetchJSON()
-    const { error, includeErrorAlerts } = useErrorAlerts();
+    const { error, includeErrorAlerts } = useErrorAlerts()
 
 
     // console.log("this is postJSON" + postJSON)
@@ -32,13 +33,21 @@ const AlbumsProvider = ({ children }) => {
 
 
     const handleAddAlbum = async (formData) => {
-        setAlbums((currentAlbums) => addId(currentAlbums, formData))
-        try {
-            const { inCollection, artist, albumCover, title, released, label } = formData
+    try {
+        setAlbums((currentAlbums) => {
+            const lastVariableArray = currentAlbums.slice(-1)
+            const id = lastVariableArray.length
+            ? Number(lastVariableArray[0].id) + 1
+            : uuidv4()
+        const updatedAlbums = [...currentAlbums, { id, ...formData}]
+        return updatedAlbums
+        })
+        const { inCollection, artist, albumCover, title, released, label } = formData
             // console.log(inCollection, artist, albumCover, title, released, label)
-            const result = await postJSON(url, { inCollection, artist, albumCover, title, released, label })
+        const currentAlbums =  albums 
+        const result = await postJSON(url, currentAlbums, { inCollection, artist, albumCover, title, released, label })
             // console.log(result)
-        } catch (err) {
+    } catch (err) {
             includeErrorAlerts(`Re-attempt Action: Process Failed.\nIssue: ${err.message}`)
             setTimeout(() => includeErrorAlerts(''), 5000)
             setAlbums(currentAlbums => currentAlbums.slice(0, -1))  //!This portion needs to be tested after Nav added - turn server off, attempt
