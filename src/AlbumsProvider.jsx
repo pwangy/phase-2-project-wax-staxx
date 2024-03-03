@@ -46,7 +46,7 @@ const AlbumsProvider = ({ children }) => {
             // console.log(inCollection, artist, albumCover, title, released, label)
         const currentAlbums =  albums 
         const result = await postJSON(url, currentAlbums, { inCollection, artist, albumCover, title, released, label })
-            // console.log(result)
+            // console.log(result) //! we can use result to display a "success notification later"
     } catch (err) {
             includeErrorAlerts(`Re-attempt Action: Process Failed.\nIssue: ${err.message}`)
             setTimeout(() => includeErrorAlerts(''), 5000)
@@ -75,7 +75,7 @@ const AlbumsProvider = ({ children }) => {
     const handleDeleteAlbum = async (albumToDelete) => {
         setAlbums(currentAlbums => currentAlbums.filter(album => album.id !== albumToDelete.id))
         try {
-            const result = await postJSON(url, albumToDelete ) // Setup for albumToDelete to be an id! Can grab ID on click or need to deconstruct prior to this
+            const result = await postJSON(url, albumToDelete ) // Setup for albumToDelete to be an id! Can grab ID on click or need to destructure prior to this
             console.log(result)
         } catch (err) {
             includeErrorAlerts(`Re-attempt Action: Process Failed.\nIssue: ${err.message}`)
