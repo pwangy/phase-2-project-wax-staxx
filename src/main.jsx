@@ -2,14 +2,17 @@
 import { createRoot } from 'react-dom/client'
 import { RouterProvider } from 'react-router-dom'
 import  router  from './routes.jsx'
-import AlbumsProvider from "./AlbumsProvider.jsx"
+import AlbumsProvider from './AlbumsProvider.jsx'
 import './index.scss'
+import ErrorAlertsProvider from './pages/ErrorAlertsProvider.jsx'
 
 const rootElement = document.getElementById('root')
 const root = createRoot(rootElement)
 
 root.render(
-  <AlbumsProvider>
-    <RouterProvider router={router} />
-  </AlbumsProvider>
+    <ErrorAlertsProvider>
+        <AlbumsProvider>
+            <RouterProvider router={router} />
+        </AlbumsProvider>
+    </ErrorAlertsProvider>
 )
