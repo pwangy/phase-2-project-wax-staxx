@@ -1,5 +1,7 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect } from "react"
+// import React, { useState, useEffect, useCallback } from "react";
 
+//! looking for AlbumsContext ???
 export const AlbumsContext = React.createContext()
 
 const AlbumsProvider = ({ children }) => {
@@ -13,27 +15,26 @@ const AlbumsProvider = ({ children }) => {
                 setAlbums(data)
             } catch (error) {
                 alert(error)
+                console.error(error)
             }
         })()
     }, [])
     console.log(albums)
 
-const handleAddAlbum = useCallback(() => {
+// const handleAddAlbum = useCallback(() => {
 
-}, [])
+// }, [])
 
+// const handleDeleteAlbum = useCallback(() => {
 
-const handleDeleteAlbum = useCallback(() => {
-
-}, [])
+// }, [])
 
     return (
-        <AlbumsContext.Provider value={{ albums , handleAddAlbum, handleDeleteAlbum}}>
+        // <AlbumsContext.Provider value={{ albums , handleAddAlbum, handleDeleteAlbum}}>
+        <AlbumsContext.Provider value={{ albums }}>
             {children}
         </AlbumsContext.Provider>
     )
 }
 
 export default AlbumsProvider
-
-

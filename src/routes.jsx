@@ -1,10 +1,9 @@
 import { createBrowserRouter } from 'react-router-dom'
 import App, { libraryLoader } from './App'
-import Library from './pages/Library'
+import LibraryContainer from './pages/LibraryContainer'
 import MyStaxx from './pages/MyStaxx'
 import Form from './pages/Form'
 import ErrorPage from './pages/ErrorPage'
-
 
 const router = createBrowserRouter([
     {
@@ -15,7 +14,7 @@ const router = createBrowserRouter([
         children: [
             {
                 path: '/',
-                element: <Library />
+                element: <LibraryContainer />
             },
             {
                 path: '/lib/my-staxx',
