@@ -1,11 +1,8 @@
-import { useContext, useEffect, useState } from 'react' //useRef might be needed for later for PATCH
+import { useState, useContext } from 'react'
+import { Formik, Field, Form, ErrorMessage } from 'formik'
+import * as Yup from 'yup'
 import { AlbumsContext } from '../AlbumsProvider'
-import { useFormik } from 'formik'
-import { useNavigate } from 'react-router' // useOutletContext, useParams necessary for PATCH
-import * as Yup from "yup"
-// import { useErrorAlerts } from "./ErrorAlertsProvider" // We might need these for PATCH - if fetch fails during patch steps
-
-// const URL = 'http://localhost:4000/records/' //! needed for editing later
+import { useNavigate } from 'react-router'
 
 const validationSchema = Yup.object().shape({
     inCollection: Yup.boolean().required('Collection status is required'),
@@ -16,18 +13,16 @@ const validationSchema = Yup.object().shape({
     label: Yup.string().required('Label is required'),
 })
 
-const errorStyle = { color: 'red' , fontWeight: 'bold'} //These format our errors, we can change these up if desired or have something else handle it
+const errorStyle = { color: 'red', fontWeight: 'bold' }
+
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms))
 
 const AlbumsForm = () => {
-    const [formStatus, setFormStatus] = useState('');
+    const [formStatus, setFormStatus] = useState('')
     const { handleAddAlbum } = useContext(AlbumsContext)
-    // const updateError = useOutletContext() //! needed for editing later
-    // const navigate = useNavigate() //! needed for editing later
-    // const { error, includeErrorAlerts } = useErrorAlerts() //! We might need these for PATCH - if fetch fails during patch steps
     const navigate = useNavigate()
 
-
-    const initialValues = {
+    const initialValues = { //Establish your forms initial values
         inCollection: true,
         artist: '',
         albumCover: '',
@@ -35,118 +30,123 @@ const AlbumsForm = () => {
         released: '',
         label: '',
     }
-    const formik = useFormik({
-        initialValues,
-        validationSchema, //validates using validationSchema
-        onSubmit: async ( values, { setSubmitting, resetForm, setStatus }) => { //pass desired formik functions to assist with form control
-        try {
-            await handleAddAlbum(values) // Callback to handle POST
-                setFormStatus('Form submitted successfully!') // Message appears on successful POST
-                resetForm()
-        } catch (validationError) { //upon Submit > forEach field not completed display a error at the top of the form
-            const errors = {}
-            validationError.inner.forEach((e) => {
-                errors[e.path] = e.message
-            })
-            setStatus({}) //removes prior status if one was set
-            formik.setErrors(errors)
-        } finally {           
-            setSubmitting(false) //setSubmitting handles form control 
-            setTimeout(() => {
-                navigate("/")// Navigate back to the main library after 3 seconds
-                setFormStatus('')
-            }, 2000)
-        }
-        },
-    })
 
     return (
         <div>
-            {formStatus && (
-            <div style={{ color: 'green' }}>
-                {formStatus}
-            </div>
-            )}
-            <form onSubmit={formik.handleSubmit}>
-                    {formik.submitCount > 0 &&   //we are displaying each error here and using formik logic to iterate through them
-                        Object.keys(formik.errors).map((field) => (
-                        <div key={field} style={errorStyle}>
-                            {formik.errors[field]}
-                        </div>
+        {formStatus && <div style={{ color: 'green' }}>{formStatus}</div>}
+        <Formik
+            initialValues={initialValues}
+            validationSchema={validationSchema} //validates using validationSchema
+            onSubmit={async (values, { //pass desired formik functions to assist with form control
+                setSubmitting, resetForm, setStatus }) => {
+            try {
+                console.log("Before handleAddAlbum")
+                await handleAddAlbum(values) // Callback to handle POST
+                console.log("After handleAddAlbum")
+                console.log("After handleAddAlbum")  
+                console.log("Before setStatus:", Formik)
+                setFormStatus('Form submitted successfully!') // Message appears on successful POST
+                console.log("after setStatus:", Formik)
+                setTimeout(() => {
+                    navigate('/') // Navigate back to the main library after ...
+                    setFormStatus('') // reset the displayed Formstatus back
+                }, 2000) // 2000 milliseconds / 2 seconds
+                resetForm()
+                console.log("After resetForm:", Formik)
+            } catch (validationError) { //upon Submit > forEach field
+                const errors = {} // not completed display a error at the top of the form
+                validationError.inner.forEach((e) => {
+                errors[e.path] = e.message
+                })
+                console.log("After setErrors:", Formik)
+                setStatus({}) //removes prior status if one was set
+                setSubmitting(false) //setSubmitting handles form control 
+            }
+            }} 
+            //! We need to decide if we want all errors up top or below each option        
+        >
+            {({ isSubmitting, submitCount, errors }) => (
+            <Form>
+                           {/* Displaying each error mapped at the top of the form */}
+                {submitCount > 0 &&
+                Object.keys(errors).map((field) => (
+                    <div key={field} style={errorStyle}>
+                    {errors[field]}
+                    </div>
                 ))}
+
                 <label htmlFor="artist">Artist Name:</label>
-                <input
-                    id="artist"
-                    name="artist"
-                    type="text"
-                    onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
-                    value={formik.values.artist}
+                <Field
+                type="text"
+                id="artist"
+                name="artist"
+                placeholder="Enter artist name"
                 />
-                {/* {formik.touched.artist && formik.errors.artist && <div style={errorStyle}>{formik.errors.artist}</div>} */}
+                <ErrorMessage name="artist" component="div" style={errorStyle} />
 
                 <label htmlFor="albumCover">Album Cover Link:</label>
-                <input
-                    id="albumCover"
-                    name="albumCover"
-                    type="text"
-                    onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
-                    value={formik.values.albumCover}
+                <Field
+                type="text"
+                id="albumCover"
+                name="albumCover"
+                placeholder="Enter album cover link"
                 />
-                {/* {formik.touched.albumCover && formik.errors.albumCover && <div style={errorStyle}>{formik.errors.albumCover}</div>} */}
+                <ErrorMessage
+                name="albumCover"
+                component="div"
+                style={errorStyle}
+                />
 
                 <label htmlFor="title">Album Title:</label>
-                <input
-                    id="title"
-                    name="title"
-                    type="text"
-                    onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
-                    value={formik.values.title}
+                <Field
+                type="text"
+                id="title"
+                name="title"
+                placeholder="Enter album title"
                 />
-                {/* {formik.touched.title && formik.errors.title && <div style={errorStyle}>{formik.errors.title}</div>} */}
+                <ErrorMessage name="title" component="div" style={errorStyle} />
 
                 <label htmlFor="released">Album Release Year:</label>
-                <input
-                    id="released"
-                    name="released"
-                    type="text"
-                    onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
-                    value={formik.values.released}
+                <Field
+                type="text"
+                id="released"
+                name="released"
+                placeholder="Enter release year"
                 />
-                {/* {formik.touched.released && formik.errors.released && <div style={errorStyle}>{formik.errors.released}</div>} */}
+                <ErrorMessage
+                name="released"
+                component="div"
+                style={errorStyle}
+                />
 
                 <label htmlFor="label">Album Label:</label>
-                <input
-                    id="label"
-                    name="label"
-                    type="text"
-                    onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
-                    value={formik.values.label}
+                <Field
+                type="text"
+                id="label"
+                name="label"
+                placeholder="Enter album label"
                 />
-                {/* {formik.touched.label && formik.errors.label && <div style={errorStyle}>{formik.errors.label}</div>} */}
+                <ErrorMessage name="label" component="div" style={errorStyle} />
 
-                <label htmlFor="inCollection">Do you want to add this new Album to your collection?:</label>
-                <input
-                    id="inCollection"
-                    name="inCollection"
-                    type="checkbox"
-                    onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
-                    checked={formik.values.inCollection}
+                <label htmlFor="inCollection">
+                Do you want to add this new Album to your collection?:
+                </label>
+                <Field type="checkbox" id="inCollection" name="inCollection" />
+                <ErrorMessage
+                name="inCollection"
+                component="div"
+                style={errorStyle}
                 />
-                {/* {formik.touched.inCollection && formik.errors.inCollection && <div style={errorStyle}>{formik.errors.inCollection}</div>
-                } */}
 
-                <button type="submit" disabled={formik.isSubmitting}>
-                    Submit
+                <button type="submit" disabled={isSubmitting}>
+                Submit
                 </button>
-            </form>
+            </Form>
+            )}
+        </Formik>
         </div>
     )
 }
+
 
 export default AlbumsForm
