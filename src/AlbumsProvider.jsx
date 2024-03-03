@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react"
-import useFetchJSON from "./helpers"
+import useFetchJSON , { addIdPlusOneLastArrayToNewElement as addId} from "./helpers"
+
+const url = 'http://localhost:4000/records'
 
 //! looking for AlbumsContext ???
 export const AlbumsContext = React.createContext()
@@ -11,7 +13,7 @@ const AlbumsProvider = ({ children }) => {
     useEffect(() => {
         (async () => {
             try {
-                const response = await fetch(`http://localhost:4000/records`)
+                const response = await fetch(url)
                 const data = await response.json()
                 setAlbums(data)
             } catch (error) {
@@ -22,9 +24,11 @@ const AlbumsProvider = ({ children }) => {
     }, [])
     console.log(albums)
 
-const handleAddAlbum = async () => {
+const handleAddAlbum = async (formData) => {
+    setAlbums((currentAlbums) => addId(currentAlbums, formData))
     try {
-        const result = await postJSON('your-post-endpoint', { name: 'example', image: 'example.jpg', price: 10 });
+        // const result = await postJSON(url, { name: , image: , price:  });
+        const result = await postJSON(url, { formData });
         console.log(result);
     } catch (error) {
         console.error(error.message);
