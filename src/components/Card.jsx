@@ -1,7 +1,7 @@
 //Card for both Album and MyAlbums - needs ternary 
 
 const Card = ({ id, artist, albumCover, title }) => {
-    console.log(id)
+   
 
     return (
         <article className='card'>

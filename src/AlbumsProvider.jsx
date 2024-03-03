@@ -5,7 +5,7 @@ import React, { useState, useEffect } from "react"
 export const AlbumsContext = React.createContext()
 
 const AlbumsProvider = ({ children }) => {
-    const [albums, setAlbums] = useState([])
+    const [albums, setAlbums] = useState([]);
 
     useEffect(() => {
         (async () => {
@@ -19,7 +19,7 @@ const AlbumsProvider = ({ children }) => {
             }
         })()
     }, [])
-    console.log(albums)
+   
 
 // const handleAddAlbum = useCallback(() => {
 

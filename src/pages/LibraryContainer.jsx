@@ -1,17 +1,21 @@
 import { useContext } from 'react'
-// import { useOutletContext } from 'react-router-dom'
-
+import { useOutletContext } from 'react-router-dom'
 import { AlbumsContext } from '../AlbumsProvider'
 import Library from './Library'
+import SearchBar from '../components/SearchBar'
+import NavBar from '../components/NavBar'
+import SortButtons from '../components/SortButtons'
 // import MyStaxx from '../pages/MyStaxx'
 
 const LibraryContainer = () => {
     const { albums } = useContext(AlbumsContext)
+    const{handleSearch, searchQuery, handleSortSelection} = useOutletContext()
 
     return (
         <>
-            {/* maybe search does live here ? */}
-            <Library albums={albums} />
+            <SearchBar handleSearch={handleSearch} searchQuery={searchQuery} />
+            {/* <SortButtons handleSortSelection={handleSortSelection} /> */}
+            <Library albums={albums} searchQuery={searchQuery} />
         </>
 )}
 
