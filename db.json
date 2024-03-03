@@ -264,20 +264,11 @@
     {
       "id": 31,
       "inCollection": true,
-      "artist": "dd",
-      "albumCover": "https://m.media-amazon.com/images/I/51cm9yERxFL.jpg",
-      "title": "ff",
-      "released": "3333",
-      "label": "ffff"
-    },
-    {
-      "id": 32,
-      "inCollection": false,
-      "artist": "dd",
-      "albumCover": "https://m.media-amazon.com/images/I/51cm9yERxFL.jpg",
-      "title": "dddd",
-      "released": "fdfd",
-      "label": "dfdfd"
+      "artist": "ss",
+      "albumCover": "sdsd",
+      "title": "sdsds",
+      "released": "sds",
+      "label": "sdsds"
     }
   ]
 }

@@ -21,7 +21,7 @@ const App = ( ) => {
       </header>
       <main>
         <h3>I&apos;m where the App Outlet is.</h3>
-        <Outlet context ={{searchQuery, handleSearch}}/>
+        <Outlet context ={{searchQuery, handleSearch, useErrorAlerts}}/>
       </main>
     </>
   )
