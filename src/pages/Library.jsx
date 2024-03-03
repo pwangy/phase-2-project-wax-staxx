@@ -7,9 +7,19 @@ const Library = ({ albums }) => {
 
     return (
         <article className='article-wrapper'>
-            <h2>Library</h2>
-            <div className='article-wrapper'>{renderAlbums}</div>
+            <div className='article-title'>
+                <h2>Catalog</h2>
+                <hr />
+            </div>
+            <div className='article-wrapper container-view'>
+                {renderAlbums}
+            </div>
         </article>
 )}
 
 export default Library
+
+// Library - displays collection of Cards, 
+// ! click to add to Collection 
+// (MVP 1. Display all albums (Lib) - GET)
+// (MVP 1.5 AAdd to collection )
