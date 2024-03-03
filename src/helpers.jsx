@@ -1,7 +1,7 @@
 // import { useState } from 'react'
 import { v4 as uuidv4} from "uuid"
 
-const useFetchJSON = () => {
+export const useFetchJSON = () => {
     const handleRequest = async (url, method, body = null) => {
     const headers = {
         'Content-Type': 'application/json',
@@ -13,20 +13,27 @@ const useFetchJSON = () => {
         body: body ? JSON.stringify(body) : null,
     }
 
-    const resp = await fetch(url, configObj)
+    try {
+        const resp = await fetch(url, configObj)
 
-    if (!resp.ok) {
-        throw new Error('Failed to fetch because the server is not running!')
-    }
+        if (!resp.ok) {
+            throw new Error('Request Failed: status: ' + resp.status)
+        }
 
-    return await resp.json()
+        return await resp.json()
+    } catch (error) {
+        throw new Error('Failed to Fetch: Is the server running?')
     }
+}
 
     const postJSON = async (url, formData) => {
     return await handleRequest(url, 'POST', {
-        name: formData.name,
-        image: formData.image,
-        price: formData.price,
+        inCollection: formData.inCollection,
+        artist: formData.artist,
+        albumCover: formData.albumCover,
+        title: formData.title,
+        released: formData.released,
+        label: formData.label,
     })
     }
 

@@ -70,9 +70,9 @@ const AlbumsForm = () => {
             type="text"
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
-            value={formik.values.artist}
+            value={formik.values.albumCover}
         />
-        {formik.touched.artist && formik.errors.artist && <div style={errorStyle}>{formik.errors.artist}</div>}
+        {formik.touched.albumCover && formik.errors.albumCover && <div style={errorStyle}>{formik.errors.albumCover}</div>}
 
         <label htmlFor="title">Album Title:</label>
         <input
