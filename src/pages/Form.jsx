@@ -31,6 +31,15 @@ const AlbumsForm = () => {
         label: '',
     }
 
+    const fieldInfo = [
+        { name: 'artist', type: 'text', label: 'Artist Name', placeholder: 'Enter artist name' },
+        { name: 'albumCover', type: 'text', label: 'Album Cover Link', placeholder: 'Enter album cover link' },
+        { name: 'title', type: 'text', label: 'Album Title', placeholder: 'Enter album title' },
+        { name: 'released', type: 'text', label: 'Album Release Year', placeholder: 'Enter release year' },
+        { name: 'label', type: 'text', label: 'Album Label', placeholder: 'Enter album label' },
+        { name: 'inCollection', type: 'checkbox', label: 'Do you want to add this new Album to your collection?' },
+    ]
+
     return (
         <div>
         {formStatus && <div style={{ color: 'green' }}>{formStatus}</div>}
@@ -58,88 +67,32 @@ const AlbumsForm = () => {
             }} 
             //! We need to decide if we want all errors up top or below each option        
         >
-            {({ isSubmitting, submitCount, errors }) => (
+            {({ isSubmitting }) => (
             <Form>
-                           {/* Displaying each error mapped at the top of the form */}
-                {submitCount > 0 &&
-                Object.keys(errors).map((field) => (
-                    <div key={field} style={errorStyle}>
-                    {errors[field]}
-                    </div>
-                ))}
-
-                <label htmlFor="artist">Artist Name:</label>
-                <Field
-                type="text"
-                id="artist"
-                name="artist"
-                placeholder="Enter artist name"
-                />
-                <ErrorMessage name="artist" component="div" style={errorStyle} />
-
-                <label htmlFor="albumCover">Album Cover Link:</label>
-                <Field
-                type="text"
-                id="albumCover"
-                name="albumCover"
-                placeholder="Enter album cover link"
-                />
-                <ErrorMessage
-                name="albumCover"
-                component="div"
-                style={errorStyle}
-                />
-
-                <label htmlFor="title">Album Title:</label>
-                <Field
-                type="text"
-                id="title"
-                name="title"
-                placeholder="Enter album title"
-                />
-                <ErrorMessage name="title" component="div" style={errorStyle} />
-
-                <label htmlFor="released">Album Release Year:</label>
-                <Field
-                type="text"
-                id="released"
-                name="released"
-                placeholder="Enter release year"
-                />
-                <ErrorMessage
-                name="released"
-                component="div"
-                style={errorStyle}
-                />
-
-                <label htmlFor="label">Album Label:</label>
-                <Field
-                type="text"
-                id="label"
-                name="label"
-                placeholder="Enter album label"
-                />
-                <ErrorMessage name="label" component="div" style={errorStyle} />
-
-                <label htmlFor="inCollection">
-                Do you want to add this new Album to your collection?:
-                </label>
-                <Field type="checkbox" id="inCollection" name="inCollection" />
-                <ErrorMessage
-                name="inCollection"
-                component="div"
-                style={errorStyle}
-                />
-
-                <button type="submit" disabled={isSubmitting}>
+            {fieldInfo.map((field) => (
+                <div key={field.name}>
+                <label htmlFor={field.name}>{field.label}:</label>
+                {field.type === 'checkbox' ? (
+                    <Field type={field.type} id={field.name} name={field.name} />
+                ) : (
+                    <Field
+                    type={field.type}
+                    id={field.name}
+                    name={field.name}
+                    placeholder={field.placeholder}
+                    />
+                )}
+                <ErrorMessage name={field.name} component="div" style={errorStyle} />
+                </div>
+            ))}
+            <button type="submit" disabled={isSubmitting}>
                 Submit
-                </button>
+            </button>
             </Form>
-            )}
+        )}
         </Formik>
-        </div>
+    </div>
     )
-}
-
+    }
 
 export default AlbumsForm
