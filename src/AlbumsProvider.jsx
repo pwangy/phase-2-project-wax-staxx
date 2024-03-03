@@ -32,6 +32,7 @@ const AlbumsProvider = ({ children }) => {
     console.log(albums)
 
 
+
     const handleAddAlbum = async (formData) => {
     try {
         setAlbums((currentAlbums) => {

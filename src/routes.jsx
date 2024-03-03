@@ -14,10 +14,10 @@ const router = createBrowserRouter([
         children: [
             {
                 path: '/',
-                element: <LibraryContainer />
+                element: <LibraryContainer />,
             },
             {
-                path: '/lib/my-staxx',
+                path: '/my-staxx',
                 element: <MyStaxx />
             },
             {
