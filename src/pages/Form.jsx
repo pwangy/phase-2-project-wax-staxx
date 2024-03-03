@@ -40,25 +40,18 @@ const AlbumsForm = () => {
             onSubmit={async (values, { //pass desired formik functions to assist with form control
                 setSubmitting, resetForm, setStatus }) => {
             try {
-                console.log("Before handleAddAlbum")
                 await handleAddAlbum(values) // Callback to handle POST
-                console.log("After handleAddAlbum")
-                console.log("After handleAddAlbum")  
-                console.log("Before setStatus:", Formik)
                 setFormStatus('Form submitted successfully!') // Message appears on successful POST
-                console.log("after setStatus:", Formik)
                 setTimeout(() => {
                     navigate('/') // Navigate back to the main library after ...
                     setFormStatus('') // reset the displayed Formstatus back
                 }, 2000) // 2000 milliseconds / 2 seconds
                 resetForm()
-                console.log("After resetForm:", Formik)
             } catch (validationError) { //upon Submit > forEach field
                 const errors = {} // not completed display a error at the top of the form
                 validationError.inner.forEach((e) => {
                 errors[e.path] = e.message
                 })
-                console.log("After setErrors:", Formik)
                 setStatus({}) //removes prior status if one was set
                 setSubmitting(false) //setSubmitting handles form control 
             }
