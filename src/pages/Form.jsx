@@ -35,75 +35,95 @@ const AlbumsForm = () => {
     const formik = useFormik({
         initialValues,
         validationSchema,
-        onSubmit: ( values, { setSubmitting}) => {
+        onSubmit: ( values, { setSubmitting, resetForm}) => {
+        try {
             handleAddAlbum(values)
-            setSubmitting(false)
+            console.log(values)
+
+            resetForm();
+
+        } catch (error) {
+            console.error(error.message);
+        } finally {
+            setSubmitting(false);
         }
+        },
     })
 
     return (
     <form onSubmit={formik.handleSubmit}>
-      <label htmlFor="artist">Artist:</label>
-      <input
-        id="artist"
-        name="artist"
-        type="text"
-        onChange={formik.handleChange}
-        onBlur={formik.handleBlur}
-        value={formik.values.artist}
-      />
-      {formik.touched.artist && formik.errors.artist && <div style={errorStyle}>{formik.errors.artist}</div>}
+        <label htmlFor="artist">Artist Name:</label>
+        <input
+            id="artist"
+            name="artist"
+            type="text"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.artist}
+        />
+        {formik.touched.artist && formik.errors.artist && <div style={errorStyle}>{formik.errors.artist}</div>}
 
-      <label htmlFor="title">Title:</label>
-      <input
-        id="title"
-        name="title"
-        type="text"
-        onChange={formik.handleChange}
-        onBlur={formik.handleBlur}
-        value={formik.values.title}
-      />
-      {formik.touched.title && formik.errors.title && <div style={errorStyle}>{formik.errors.title}</div>}
+        <label htmlFor="albumCover">Album Cover Link:</label>
+        <input
+            id="albumCover"
+            name="albumCover"
+            type="text"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.artist}
+        />
+        {formik.touched.artist && formik.errors.artist && <div style={errorStyle}>{formik.errors.artist}</div>}
 
-      <label htmlFor="released">Release Year:</label>
-      <input
-        id="released"
-        name="released"
-        type="text"
-        onChange={formik.handleChange}
-        onBlur={formik.handleBlur}
-        value={formik.values.released}
-      />
-      {formik.touched.released && formik.errors.released && <div style={errorStyle}>{formik.errors.released}</div>}
+        <label htmlFor="title">Album Title:</label>
+        <input
+            id="title"
+            name="title"
+            type="text"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.title}
+        />
+        {formik.touched.title && formik.errors.title && <div style={errorStyle}>{formik.errors.title}</div>}
 
-      <label htmlFor="label">Label:</label>
-      <input
-        id="label"
-        name="label"
-        type="text"
-        onChange={formik.handleChange}
-        onBlur={formik.handleBlur}
-        value={formik.values.label}
-      />
-      {formik.touched.label && formik.errors.label && <div style={errorStyle}>{formik.errors.label}</div>}
+        <label htmlFor="released">Album Release Year:</label>
+        <input
+            id="released"
+            name="released"
+            type="text"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.released}
+        />
+        {formik.touched.released && formik.errors.released && <div style={errorStyle}>{formik.errors.released}</div>}
 
-      <label htmlFor="inCollection">In Collection:</label>
-      <input
-        id="inCollection"
-        name="inCollection"
-        type="checkbox"
-        onChange={formik.handleChange}
-        onBlur={formik.handleBlur}
-        checked={formik.values.inCollection}
-      />
-      {formik.touched.inCollection && formik.errors.inCollection && <div style={errorStyle}>{formik.errors.inCollection}</div>
-      }
-      
-      <button type="submit" disabled={formik.isSubmitting}>
-        Submit
-      </button>
+        <label htmlFor="label">Album Label:</label>
+        <input
+            id="label"
+            name="label"
+            type="text"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.label}
+        />
+        {formik.touched.label && formik.errors.label && <div style={errorStyle}>{formik.errors.label}</div>}
+
+        <label htmlFor="inCollection">Do you want to add this new Album to your collection?:</label>
+        <input
+            id="inCollection"
+            name="inCollection"
+            type="checkbox"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            checked={formik.values.inCollection}
+        />
+        {formik.touched.inCollection && formik.errors.inCollection && <div style={errorStyle}>{formik.errors.inCollection}</div>
+        }
+
+        <button type="submit" disabled={formik.isSubmitting}>
+            Submit
+        </button>
     </form>
-  )
+    )
 }
 
 export default AlbumsForm
