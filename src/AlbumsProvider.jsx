@@ -31,8 +31,6 @@ const AlbumsProvider = ({ children }) => {
     }, [includeErrorAlerts])
     console.log(albums)
 
-
-
     const handleAddAlbum = async (formData) => {
     try {
         setAlbums((currentAlbums) => {
@@ -54,6 +52,7 @@ const AlbumsProvider = ({ children }) => {
             setAlbums(currentAlbums => currentAlbums.slice(0, -1))  //!This portion needs to be tested after Nav added - turn server off, attempt
         }
     }
+    
     //     We need to add a "handleChangeEditingMode callback function that changes state based on when a album is selected for edit and pass that editing mode here to allow us to use it as the ID portion of the URL/JSON to PATCH" //!DE-COMMENT TO READ BETTER
     // const handlePatchAllAlbums = async (updatedAlbum) => {
 
