@@ -4,7 +4,7 @@ import { RouterProvider } from 'react-router-dom'
 import  router  from './routes.jsx'
 import AlbumsProvider from './AlbumsProvider.jsx'
 import './index.scss'
-import ErrorAlertsProvider from './pages/ErrorAlertsProvider.jsx'
+import ErrorAlertsProvider from './ErrorAlertsProvider.jsx'
 
 const rootElement = document.getElementById('root')
 const root = createRoot(rootElement)
