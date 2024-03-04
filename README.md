@@ -12,12 +12,12 @@
 
 ## Components
 - [x] Card - called by library and mystaxx, component to hold basic info about each album - pw
-- [ ] Nav - links to: Home, mystaxx, Form, called in App - zen
-- [ ] Search - called in LibraryContainer - zen
+- [x] Nav - links to: Home, mystaxx, Form, called in App - zen
+- [x] Search - called in LibraryContainer - zen
 
 ## Other
 - [x] LibraryProvider --- figure out how this works
-- [ ] ErrorPage - vr
+- [x] ErrorPage - vr
 - [ ] libraryLoader --- understand this and use it if appropriate
 - [ ] Writeup and clean up readme
 - [ ] load logo and favico
@@ -26,7 +26,7 @@
 - [ ] rev Matteo's code best practices
 
 ## Stretch
-- [ ]  Search by Artist
+- [x]  Search by Artist
 - [ ]  Improve search functionality, include more than just Artist
 - [ ]  Edit Album info - PATCH only to Lib (allowing for mutations of albums specific to user)
 - [ ]  Validation on album addition form to check for incoming duplicates
