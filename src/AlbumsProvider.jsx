@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 // import { addIdPlusOneLastArrayToNewElement as addId } from "./helpers"
 import useFetchJSON from "./helpers"
-import { useErrorAlerts } from "./pages/ErrorAlertsProvider"
+import { useErrorAlerts } from "./ErrorAlertsProvider"
 import { v4 as uuidv4} from "uuid"
 
 const url = 'http://localhost:4000/records'
