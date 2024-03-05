@@ -3,11 +3,11 @@ import { useOutletContext, useLocation } from 'react-router-dom'
 import { AlbumsContext } from '../AlbumsProvider'
 import Library from './Library'
 import SearchBar from '../components/SearchBar'
-// import SortButtons from '../components/SortButtons'
+import SortButtons from '../components/SortButtons'
 
 const LibraryContainer = () => {
     const { albums } = useContext(AlbumsContext)
-    const{handleSearch, searchQuery, handleSortSelection} = useOutletContext()
+    const{handleSearch, searchQuery, handleSortSelection, sortSelected} = useOutletContext()
     const [showStaxx, setShowStaxx] = useState(false)
     let location = useLocation()
     
@@ -24,8 +24,8 @@ const LibraryContainer = () => {
     return (
         <>
             <SearchBar handleSearch={handleSearch} searchQuery={searchQuery} />
-            {/* <SortButtons handleSortSelection={handleSortSelection} /> */}
-            <Library albums={albums} searchQuery={searchQuery} showStaxx={showStaxx} />
+            <SortButtons handleSortSelection={handleSortSelection} />
+            <Library albums={albums} searchQuery={searchQuery} showStaxx={showStaxx} sortSelected={sortSelected} />
         </>
 )}
 

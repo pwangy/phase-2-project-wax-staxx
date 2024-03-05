@@ -14,7 +14,7 @@ const App = () => {
   }
 
   const handleSortSelection = (e) => {
-    const selectedOption = e.target.textContent
+    const selectedOption = e.target.name
     setSortSelected(selectedOption)
   }
 
