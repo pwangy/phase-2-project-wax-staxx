@@ -13,7 +13,7 @@ const AlbumsProvider = ({ children }) => {
     const { error, includeErrorAlerts } = useErrorAlerts()
     // console.log('this is postJSON' + postJSON)
 
-    useEffect(() => { // initial data fetch
+    useEffect(() => {
         (async () => {
             try {
                 const res = await fetch(url)
@@ -25,7 +25,6 @@ const AlbumsProvider = ({ children }) => {
             }
         })()
     }, [includeErrorAlerts])
-    // console.log(albums)
 
     const handleAddAlbum = async (formData) => {
         try {
@@ -37,7 +36,6 @@ const AlbumsProvider = ({ children }) => {
             return updatedAlbums
             })
             const { inCollection, artist, albumCover, title, released, label } = formData
-                // console.log(inCollection, artist, albumCover, title, released, label)
             const currentAlbums =  albums 
             const result = await postJSON(url, currentAlbums, { inCollection, artist, albumCover, title, released, label })
                 // console.log(result) //! we can use result to display a 'success notification later'
