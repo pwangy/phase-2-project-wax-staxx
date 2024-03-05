@@ -13,10 +13,8 @@ const LibraryContainer = () => {
     
     useEffect(() => {
         if (location.pathname === '/my-staxx') {
-            console.log('show staxx')
             setShowStaxx(true)
         } else {
-            console.log('show')
             setShowStaxx(false)
         }
     }, [location])
