@@ -42,8 +42,8 @@ import { v4 as uuidv4} from "uuid"
         })
         }
 
-        const patchJSON = async (url, idEditingMode, formData) => {
-            return await handleRequest(`${url}/${idEditingMode}`, 'PATCH', formData)
+        const patchJSON = async (url, idOrEditingMode, formData) => {
+            return await handleRequest(`${url}/${idOrEditingMode}`, 'PATCH', formData)
         }
 
         const deleteJSON = async (url, id) => {
