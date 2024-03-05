@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from "react";
 import Gif from "../images/Wax-staxx.mp4";
 import Logo from '../images/Wax-staxx.svg'
 
-
 function Header() {
   const [videoEnded, setVideoEnded] = useState(false);
   const videoRef = useRef(null);

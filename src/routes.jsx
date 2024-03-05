@@ -1,10 +1,11 @@
 import { createBrowserRouter } from 'react-router-dom'
 import App from './App'
 import LibraryContainer from './pages/LibraryContainer'
-import MyStaxx from './pages/MyStaxx'
+// import MyStaxx from './pages/MyStaxx'
 import Form from './pages/Form'
 import ErrorPage from './pages/ErrorPage'
 
+// ! Outlets: App
 const router = createBrowserRouter([
     {
         path: '/',
@@ -15,10 +16,11 @@ const router = createBrowserRouter([
             {
                 path: '/',
                 element: <LibraryContainer />,
+                index: true
             },
             {
                 path: '/my-staxx',
-                element: <MyStaxx />
+                element: <LibraryContainer />
             },
             {
                 path: '/add-album',
@@ -26,7 +28,6 @@ const router = createBrowserRouter([
             }
         ]
     }
-
 ])
 
 export default router
