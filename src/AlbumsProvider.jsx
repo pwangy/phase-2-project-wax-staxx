@@ -4,10 +4,8 @@ import { v4 as uuidv4} from 'uuid'
 import useFetchJSON from './utils/helpers'
 import { useErrorAlerts } from './ErrorAlertsProvider'
 
-//! looking for AlbumsContext ???
 export const AlbumsContext = React.createContext()
-
-const url = 'http://localhost:4000/records'
+export const url = 'http://localhost:4000/records'
 
 const AlbumsProvider = ({ children }) => {
     const [albums, setAlbums] = useState([])
@@ -18,8 +16,8 @@ const AlbumsProvider = ({ children }) => {
     useEffect(() => {
         (async () => {
             try {
-                const response = await fetch(url)
-                const data = await response.json()
+                const res = await fetch(url)
+                const data = await res.json()
                 setAlbums(data)
             } catch (err) {
                 includeErrorAlerts(`Re-attempt Action: Process Failed.\nIssue: ${err.message}`)
@@ -29,25 +27,49 @@ const AlbumsProvider = ({ children }) => {
     }, [includeErrorAlerts])
     // console.log(albums)
 
-    const handleAddAlbum = async (formData) => {
-    try {
-        setAlbums((currentAlbums) => {
-            const lastVariableArray = currentAlbums.slice(-1)
-            const id = lastVariableArray.length
-            ? Number(lastVariableArray[0].id) + 1
-            : uuidv4()
-        const updatedAlbums = [...currentAlbums, { id, ...formData}]
-        return updatedAlbums
+
+    const handleCollection = () => {
+
+
+               //use album id to find correct album to edit
+        //PATCH request to url
+        //update 'inCollection' value to true 
+        const thisAlbum = albums.filter(a => a.id !== albumToRemove.id)
+        console.log('setting inCollection to false!')
+        // patchJSON(thisAlbum)
+        useEffect(() => {
+            (async () => {
+                try {
+                    const res = await fetch(url)
+                    const data = await res.json()
+                    // call function(data)
+                } catch (err) {
+                    includeErrorAlerts(`Re-attempt Action: Process Failed.\nIssue: ${err.message}`)
+                    setTimeout(() => includeErrorAlerts(''), 5000)
+                }
+            })
         })
-        const { inCollection, artist, albumCover, title, released, label } = formData
-            // console.log(inCollection, artist, albumCover, title, released, label)
-        const currentAlbums =  albums 
-        const result = await postJSON(url, currentAlbums, { inCollection, artist, albumCover, title, released, label })
-            // console.log(result) //! we can use result to display a 'success notification later'
-    } catch (err) {
-            includeErrorAlerts(`Re-attempt Action: Process Failed.\nIssue: ${err.message}`)
-            setTimeout(() => includeErrorAlerts(''), 5000)
-            setAlbums(currentAlbums => currentAlbums.slice(0, -1))  //!This portion needs to be tested after Nav added - turn server off, attempt
+    }
+
+    const handleAddAlbum = async (formData) => {
+        try {
+            setAlbums((currentAlbums) => {
+                const lastVariableArray = currentAlbums.slice(-1)
+                const id = lastVariableArray.length
+                ? Number(lastVariableArray[0].id) + 1
+                : uuidv4()
+            const updatedAlbums = [...currentAlbums, { id, ...formData}]
+            return updatedAlbums
+            })
+            const { inCollection, artist, albumCover, title, released, label } = formData
+                // console.log(inCollection, artist, albumCover, title, released, label)
+            const currentAlbums =  albums 
+            const result = await postJSON(url, currentAlbums, { inCollection, artist, albumCover, title, released, label })
+                // console.log(result) //! we can use result to display a 'success notification later'
+        } catch (err) {
+                includeErrorAlerts(`Re-attempt Action: Process Failed.\nIssue: ${err.message}`)
+                setTimeout(() => includeErrorAlerts(''), 5000)
+                setAlbums(currentAlbums => currentAlbums.slice(0, -1))  //!This portion needs to be tested after Nav added - turn server off, attempt
         }
     }
     

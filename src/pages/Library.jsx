@@ -2,7 +2,7 @@ import { useMemo } from 'react'
 import Card from '../components/Card'
 
 // ! this is our LIST
-const Library = ({ showStaxx, albums, searchQuery, sortSelected }) => {
+const Library = ({ showStaxx, albums, searchQuery, sortSelected, handleCollection }) => {
     const renderLibrary = useMemo(() => albums
     .filter(album => {
         if (!album.artist || !album.title) return false;
@@ -11,7 +11,7 @@ const Library = ({ showStaxx, albums, searchQuery, sortSelected }) => {
         album.title.toLowerCase().includes(searchQuery.toLowerCase())
         )
     })
-    .map(a => ( <Card key={a.id} {...a} handleAddToStaxx={handleAddToStaxx} showStaxx={showStaxx} />
+    .map(a => (<Card key={a.id} {...a} handleCollection={handleCollection} action={add} />
     )), [albums, searchQuery])
 
     const renderStaxx = useMemo(() => albums
@@ -25,7 +25,7 @@ const Library = ({ showStaxx, albums, searchQuery, sortSelected }) => {
             album.title.toLowerCase().includes(searchQuery.toLowerCase())
             )
         })
-        .map(a => <Card key={a.id} {...a} handleRemoveFromStaxx={handleRemoveFromStaxx} showStaxx={showStaxx} />
+        .map(a => <Card key={a.id} {...a} handleCollection={handleCollection} action={remove} />
     ), [albums, searchQuery])
 
     return (
