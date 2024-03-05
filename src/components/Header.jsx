@@ -1,4 +1,4 @@
-import Logo from '../images/Wax-staxx.svg'
+import Logo from '../assets/Wax-staxx.svg'
 
 function Header() {
 	return (

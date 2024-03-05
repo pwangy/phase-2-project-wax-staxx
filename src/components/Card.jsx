@@ -1,10 +1,16 @@
-const Card = ({ id, artist, albumCover, title, inCollection, handleStaxx, action }) => {
+import { useContext } from 'react'
+import { AlbumsContext } from '../AlbumsProvider'
+
+const Card = ({ id, inCollection, artist, albumCover, title , showStaxx }) => {
+    const { handlePatchInCollection } = useContext(AlbumsContext)
+    const displayButton = showStaxx ? 'Delete Album Your Library' : 'Add Album To Your Library'
 
     return (
-        <section className='card' onClick={() => handleStaxx({ id, inCollection }, action)}>
+        <section className='card'>
             <img src={albumCover} alt={title} className='album-art' />
             <p className='album-title'>{title}</p>
             <p className='artist'>{artist}</p>
+            <button onClick={() => handlePatchInCollection(id, inCollection)}>{displayButton}</button>
         </section>
 )}
 

@@ -26,16 +26,16 @@ const useFetchJSON = () => {
     const postJSON = async (url, currentStateVariable, formData) => {
         const lastVariableArray = currentStateVariable.slice(-1)
         const id = lastVariableArray.length ? Number(lastVariableArray[0].id) + 1 : uuidv4()
-            
-        return await handleRequest(url, 'POST', {
-            id,
-            inCollection: formData.inCollection,
-            artist: formData.artist,
-            albumCover: formData.albumCover,
-            title: formData.title,
-            released: formData.released,
-            label: formData.label,
-        })
+            return await handleRequest(url, 'POST', {
+                id,
+                inCollection: formData.inCollection,
+                artist: formData.artist,
+                albumCover: formData.albumCover,
+                title: formData.title,
+                released: formData.released,
+                label: formData.label,
+            }
+        )
     }
 
     const patchJSON = async (url, idEditingMode, formData) => {

@@ -1,9 +1,9 @@
 function SearchBar({ handleSearch, searchQuery }) {
     return (
         <input
-            type="text"
-            className="search-bar"
-            placeholder="Search..."
+            type='text'
+            className='search-bar'
+            placeholder='Search...'
             onChange={handleSearch}
             value={searchQuery}
         />

@@ -182,7 +182,7 @@
     },
     {
       "id": "20",
-      "inCollection": false,
+      "inCollection": true,
       "artist": "Joni Mitchell",
       "albumCover": "https://i.discogs.com/U-pVGWIIE_dljGJWs0eDRLWz9YbB7116lWxNTGY9NkM/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEwMDI4/MzgxLTE0OTAzODMz/MjEtNTc4OS5qcGVn.jpeg",
       "title": "Blue",
@@ -251,6 +251,15 @@
       "title": "Close To You",
       "released": 1970,
       "label": "A&M Records"
+    },
+    {
+      "id": "30",
+      "inCollection": true,
+      "artist": "ss",
+      "albumCover": "sds",
+      "title": "sds",
+      "released": "sds",
+      "label": "sds"
     }
   ]
 }
