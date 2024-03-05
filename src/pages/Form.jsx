@@ -14,7 +14,6 @@ const validationSchema = Yup.object().shape({
 })
 
 const errorStyle = { color: 'red', fontWeight: 'bold' }
-
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms))
 
 const AlbumsForm = () => {
@@ -73,26 +72,25 @@ const AlbumsForm = () => {
                 <div key={field.name}>
                 <label htmlFor={field.name}>{field.label}:</label>
                 {field.type === 'checkbox' ? (
-                    <Field type={field.type} id={field.name} name={field.name} />
-                ) : (
-                    <Field
-                    type={field.type}
-                    id={field.name}
-                    name={field.name}
-                    placeholder={field.placeholder}
-                    />
+                        <Field type={field.type} id={field.name} name={field.name} />
+                    ) : (
+                        <Field
+                        type={field.type}
+                        id={field.name}
+                        name={field.name}
+                        placeholder={field.placeholder}
+                        />
                 )}
-                <ErrorMessage name={field.name} component="div" style={errorStyle} />
+                <ErrorMessage name={field.name} component='div' style={errorStyle} />
                 </div>
             ))}
-            <button type="submit" disabled={isSubmitting}>
+            <button type='submit' disabled={isSubmitting}>
                 Submit
             </button>
             </Form>
         )}
         </Formik>
     </div>
-    )
-    }
+)}
 
 export default AlbumsForm

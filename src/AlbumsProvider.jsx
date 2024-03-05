@@ -9,11 +9,12 @@ export const url = 'http://localhost:4000/records'
 
 const AlbumsProvider = ({ children }) => {
     const [albums, setAlbums] = useState([])
+    const [staxx, setStaxx] = useState([])
     const { postJSON, patchJSON, deleteJSON } = useFetchJSON()
     const { error, includeErrorAlerts } = useErrorAlerts()
     // console.log('this is postJSON' + postJSON)
 
-    useEffect(() => {
+    useEffect(() => { // initial data fetch
         (async () => {
             try {
                 const res = await fetch(url)
@@ -28,15 +29,31 @@ const AlbumsProvider = ({ children }) => {
     // console.log(albums)
 
 
-    const handleCollection = () => {
+    const handlePortfolio = (stockToWorkOn, num) => {
+        if (num) {
+          const match = portfolio.find(stock => stock.id === stockToWorkOn.id)
+          return match ? null : setPortfolio(currentPortfolio => [...currentPortfolio, stockToWorkOn])
+        }
+        else {
+          setPortfolio(currentPortfolio => currentPortfolio.filter(stock => stock.id !== stockToWorkOn.id))
+        }
+      }
 
+    // const handleStaxx = (whichAlbum, action) => {
+    //     const thisAlbum = albums.filter(a => a.id === whichAlbum.id)
+    //     //use album id to find correct album to edit
+    //     //PATCH request to url
+    //     //update 'inCollection' value to true 
+    //     if (action === 'remove') {
+    //         console.log('setting inCollection to false!')
+    //         return thisAlbum ? null : setStaxx(currentStaxx => [...currentPortfolio, whichAlbum])
+    //     } else if (action === 'add') {
+    //         console.log('setting inCollection to true')
+    //         return setStaxx
+    //     } else {
+    //         null
+    //     }
 
-               //use album id to find correct album to edit
-        //PATCH request to url
-        //update 'inCollection' value to true 
-        const thisAlbum = albums.filter(a => a.id !== albumToRemove.id)
-        console.log('setting inCollection to false!')
-        // patchJSON(thisAlbum)
         useEffect(() => {
             (async () => {
                 try {
@@ -56,8 +73,7 @@ const AlbumsProvider = ({ children }) => {
             setAlbums((currentAlbums) => {
                 const lastVariableArray = currentAlbums.slice(-1)
                 const id = lastVariableArray.length
-                ? Number(lastVariableArray[0].id) + 1
-                : uuidv4()
+                ? Number(lastVariableArray[0].id) + 1 : uuidv4()
             const updatedAlbums = [...currentAlbums, { id, ...formData}]
             return updatedAlbums
             })
@@ -70,8 +86,7 @@ const AlbumsProvider = ({ children }) => {
                 includeErrorAlerts(`Re-attempt Action: Process Failed.\nIssue: ${err.message}`)
                 setTimeout(() => includeErrorAlerts(''), 5000)
                 setAlbums(currentAlbums => currentAlbums.slice(0, -1))  //!This portion needs to be tested after Nav added - turn server off, attempt
-        }
-    }
+    }}
     
     //     We need to add a 'handleChangeEditingMode callback function that changes state based on when a album is selected for edit and pass that editing mode here to allow us to use it as the ID portion of the URL/JSON to PATCH' //!DE-COMMENT TO READ BETTER
     // const handlePatchAllAlbums = async (updatedAlbum) => {

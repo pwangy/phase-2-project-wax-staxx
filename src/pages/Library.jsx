@@ -2,31 +2,48 @@ import { useMemo } from 'react'
 import Card from '../components/Card'
 
 // ! this is our LIST
-const Library = ({ showStaxx, albums, searchQuery, sortSelected, handleCollection }) => {
+const Library = ({ showStaxx, albums, searchQuery, sortSelected, handleStaxx }) => {
+
     const renderLibrary = useMemo(() => albums
-    .filter(album => {
-        if (!album.artist || !album.title) return false;
-        return (
-        album.artist.toLowerCase().includes(searchQuery.toLowerCase())||
-        album.title.toLowerCase().includes(searchQuery.toLowerCase())
-        )
-    })
-    .map(a => (<Card key={a.id} {...a} handleCollection={handleCollection} action={add} />
-    )), [albums, searchQuery])
+        .filter(album => {
+            if (!album.artist || !album.title) return false
+                return (
+                album.artist.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                album.title.toLowerCase().includes(searchQuery.toLowerCase()
+                ))
+        })
+        .sort ((a, b) => {
+            if (sortSelected!== 'All') {
+                return a[sortSelected].toLowerCase().localeCompare(b[sortSelected].toLowerCase())
+            } else {
+                return true
+            }
+        })
+        .map(a => <Card key={a.id} {...a} handleStaxx={handleStaxx} action={add} />
+        ), [albums, searchQuery, sortSelected]
+    )
 
     const renderStaxx = useMemo(() => albums
         .filter(a => {
             return (a.inCollection === true)
         })
         .filter(album => {
-            if (!album.artist || !album.title) return false;
-            return (
-            album.artist.toLowerCase().includes(searchQuery.toLowerCase())||
-            album.title.toLowerCase().includes(searchQuery.toLowerCase())
-            )
+            if (!album.artist || !album.title) return false
+                return (
+                album.artist.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                album.title.toLowerCase().includes(searchQuery.toLowerCase()
+                ))
         })
-        .map(a => <Card key={a.id} {...a} handleCollection={handleCollection} action={remove} />
-    ), [albums, searchQuery])
+        .sort ((a, b) => {
+            if (sortSelected!== 'All') {
+                return a[sortSelected].toLowerCase().localeCompare(b[sortSelected].toLowerCase())
+            } else {
+                return true
+            }
+        })
+        .map(a => <Card key={a.id} {...a} handleStaxx={handleStaxx} action={remove} />
+        ), [albums, searchQuery, sortSelected]
+    )
 
     return (
         <article className='article-wrapper'>
@@ -42,8 +59,5 @@ const Library = ({ showStaxx, albums, searchQuery, sortSelected, handleCollectio
 
 export default Library
 
-// Library - displays collection of Cards, 
-// ! click to add to myStaxx 
-// (MVP 1. Display all albums (Lib) - GET)
 // (MVP 1.5 AAdd to collection )
 // MyStaxx - displays user's collection, click to remove  (not Delete)individual albums (MVP 2. view My Collection - POST & GET) (MVP 4. Remove from My Collection ONLY (not allowed to remove from Lib) - PATCH) - pw

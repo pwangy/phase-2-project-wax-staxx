@@ -1,5 +1,4 @@
 function SearchBar({ handleSearch, searchQuery }) {
-
     return (
         <input
             type="text"
@@ -8,9 +7,6 @@ function SearchBar({ handleSearch, searchQuery }) {
             onChange={handleSearch}
             value={searchQuery}
         />
-    )
-}
+)}
 
 export default SearchBar
-
-            
