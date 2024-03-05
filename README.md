@@ -7,8 +7,8 @@
 - [ ] MyStaxx
     - [x] (MVP 2. view My Collection - POST & GET) 
     - [ ] (MVP 4. Remove from My Collection ONLY (not allowed to remove from Lib) - PATCH) - pw
-- [ ] Form
-  - [ ] (MVP 3. Add new album to library & My Collection (Form) - POST) - vr
+- [x] Form
+  - [x] (MVP 3. Add new album to library & My Collection (Form) - POST) - vr
 
 ## Components
 - [x] Card - called by library and mystaxx, component to hold basic info about each album - pw

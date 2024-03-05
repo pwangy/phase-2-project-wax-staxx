@@ -1,23 +1,22 @@
 import { useState } from 'react'
+import { Outlet } from 'react-router-dom'
 import NavBar from './components/NavBar'
 import Header from './components/Header'
-import { Outlet } from 'react-router-dom'
-
 import { useErrorAlerts } from './ErrorAlertsProvider'
 
-const App = ( ) => {
+const App = () => {
   const [searchQuery, setSearchQuery] = useState('')
+  const [sortSelected, setSortSelected] = useState('All')
   const { error } = useErrorAlerts()
-  const [sortSelected, setSortSelected] = useState("All");
 
   const handleSearch = (e) => {
     setSearchQuery(e.target.value)
   }
 
   const handleSortSelection = (e) => {
-    const selectedOption = e.target.textContent;
-    setSortSelected(selectedOption);
-  };
+    const selectedOption = e.target.textContent
+    setSortSelected(selectedOption)
+  }
 
   return (
     <>
@@ -28,7 +27,7 @@ const App = ( ) => {
           {error && <div style={{ color: 'red' }}>{error}</div>}
       </header>
       <main>
-        <Outlet context={{searchQuery, handleSearch, handleSortSelection, sortSelected, useErrorAlerts }}/>
+        <Outlet context={{ searchQuery, handleSearch, handleSortSelection, sortSelected, useErrorAlerts }}/>
       </main>
       {/* add a footer with credits and links */}
     </>
