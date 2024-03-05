@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
-// import { addIdPlusOneLastArrayToNewElement as addId } from './helpers'
-import useFetchJSON from './helpers'
-import { useErrorAlerts } from './ErrorAlertsProvider'
 import { v4 as uuidv4} from 'uuid'
+// import { addIdPlusOneLastArrayToNewElement as addId } from './helpers'
+import useFetchJSON from './utils/helpers'
+import { useErrorAlerts } from './ErrorAlertsProvider'
 
 //! looking for AlbumsContext ???
 export const AlbumsContext = React.createContext()

@@ -1,36 +1,32 @@
 // import { useState } from 'react'
-import { v4 as uuidv4} from "uuid"
+import { v4 as uuidv4} from 'uuid'
 
-    const useFetchJSON = () => {
-        const handleRequest = async (url, method, body = null) => {
+const useFetchJSON = () => {
+    const handleRequest = async (url, method, body = null) => {
         const headers = {
             'Content-Type': 'application/json',
         }
-        
         const configObj = {
             method,
             headers,
             body: body ? JSON.stringify(body) : null,
         }
-
         try {
             const resp = await fetch(url, configObj)
-
             if (!resp.ok) {
                 throw new Error('Request Failed: status: ' + resp.status)
             }
-
             return await resp.json()
-        } catch (error) {
+        } 
+        catch (error) {
             throw new Error('Failed to Fetch: Is the server running?')
         }
     }
 
-        const postJSON = async (url, currentStateVariable, formData) => {
-            const lastVariableArray = currentStateVariable.slice(-1);
-            const id = lastVariableArray.length
-                ? Number(lastVariableArray[0].id) + 1
-                : uuidv4();
+    const postJSON = async (url, currentStateVariable, formData) => {
+        const lastVariableArray = currentStateVariable.slice(-1)
+        const id = lastVariableArray.length ? Number(lastVariableArray[0].id) + 1 : uuidv4()
+            
         return await handleRequest(url, 'POST', {
             id,
             inCollection: formData.inCollection,
@@ -40,27 +36,25 @@ import { v4 as uuidv4} from "uuid"
             released: formData.released,
             label: formData.label,
         })
-        }
-
-        const patchJSON = async (url, idEditingMode, formData) => {
-            return await handleRequest(`${url}/${idEditingMode}`, 'PATCH', formData)
-        }
-
-        const deleteJSON = async (url, id) => {
-            return await handleRequest(`${url}/${id}`, 'DELETE')
-        }
-
-        return { postJSON, patchJSON, deleteJSON }
     }
 
+    const patchJSON = async (url, idEditingMode, formData) => {
+        return await handleRequest(`${url}/${idEditingMode}`, 'PATCH', formData)
+    }
 
+    const deleteJSON = async (url, id) => {
+        return await handleRequest(`${url}/${id}`, 'DELETE')
+    }
+
+    return { postJSON, patchJSON, deleteJSON }
+}
 
 export const addIdPlusOneLastArrayToNewElement = (currentStateVariable, formData) => {
     const lastVariableArray = currentStateVariable.slice(-1)
     const id = lastVariableArray.length
-    ? Number(lastVariableArray[0].id) + 1
-    : uuidv4()
-    return [...currentStateVariable, { id, ...formData}]
+        ? Number(lastVariableArray[0].id) + 1
+        : uuidv4()
+    return [...currentStateVariable, { id, ...formData }]
 }
 
 export default useFetchJSON

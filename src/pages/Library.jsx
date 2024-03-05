@@ -3,9 +3,6 @@ import Card from '../components/Card'
 
 // ! this is our LIST
 const Library = ({ showStaxx, albums, searchQuery, sortSelected }) => {
-    const handleAdd = () => {}
-    const handleRemove = () => {}
-
     const renderLibrary = useMemo(() => albums
     .filter(album => {
         if (!album.artist || !album.title) return false;
@@ -14,7 +11,7 @@ const Library = ({ showStaxx, albums, searchQuery, sortSelected }) => {
         album.title.toLowerCase().includes(searchQuery.toLowerCase())
         )
     })
-    .map(a => ( <Card key={a.id} {...a} onClick={handleAdd}/>
+    .map(a => ( <Card key={a.id} {...a} handleAddToStaxx={handleAddToStaxx} showStaxx={showStaxx} />
     )), [albums, searchQuery])
 
     const renderStaxx = useMemo(() => albums
@@ -28,7 +25,7 @@ const Library = ({ showStaxx, albums, searchQuery, sortSelected }) => {
             album.title.toLowerCase().includes(searchQuery.toLowerCase())
             )
         })
-        .map(a => <Card key={a.id} {...a} onClick={handleRemove} />
+        .map(a => <Card key={a.id} {...a} handleRemoveFromStaxx={handleRemoveFromStaxx} showStaxx={showStaxx} />
     ), [albums, searchQuery])
 
     return (

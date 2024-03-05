@@ -1,9 +1,9 @@
 import { createBrowserRouter } from 'react-router-dom'
-import App from './App'
-import LibraryContainer from './pages/LibraryContainer'
+import App from '../App'
+import LibraryContainer from '../pages/LibraryContainer'
 // import MyStaxx from './pages/MyStaxx'
-import Form from './pages/Form'
-import ErrorPage from './pages/ErrorPage'
+import Form from '../pages/Form'
+import ErrorPage from '../pages/ErrorPage'
 
 // ! Outlets: App
 const router = createBrowserRouter([
