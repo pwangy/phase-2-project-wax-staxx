@@ -4,18 +4,24 @@ import Card from '../components/Card'
 // ! this is our LIST
 const Library = ({ showStaxx, albums, searchQuery, sortSelected }) => {
 
-    const renderLibrary = useMemo(() => albums
+    const renderLibrary = albums
     .filter(album => {
         if (!album.artist || !album.title) return false;
         return (
         album.artist.toLowerCase().includes(searchQuery.toLowerCase())||
         album.title.toLowerCase().includes(searchQuery.toLowerCase())
-        )
+        );
     })
-    .map(a => ( <Card key={a.id} {...a} />
-    )), [albums, searchQuery])
+    .sort ((a,b) => {
+        if (sortSelected!== "All") {
+            return a[sortSelected].toLowerCase().localeCompare(b[sortSelected].toLowerCase())
+        } else {
+            return true
+        }
+    })
+    .map((a) => <Card key={a.id} {...a} />)
 
-    const renderStaxx = useMemo(() => albums
+    const renderStaxx = albums
         .filter(a => {
             return (a.inCollection === true)
         })
@@ -26,8 +32,15 @@ const Library = ({ showStaxx, albums, searchQuery, sortSelected }) => {
             album.title.toLowerCase().includes(searchQuery.toLowerCase())
             )
         })
+        .sort ((a,b) => {
+            if (sortSelected!== "All") {
+                return a[sortSelected].toLowerCase().localeCompare(b[sortSelected].toLowerCase())
+            } else {
+                return true
+            }
+        })
         .map(a => <Card key={a.id} {...a} />
-    ), [albums, searchQuery])
+    )
 
     return (
         <article className='article-wrapper'>

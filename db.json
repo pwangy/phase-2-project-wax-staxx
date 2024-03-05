@@ -92,7 +92,7 @@
     },
     {
       "id": "8",
-      "inCollection": false,
+      "inCollection": true,
       "artist": "Alex Lilly",
       "albumCover": "https://i.discogs.com/n1J2-jgJvWlQU-37bbbfXRiMa_ak9wzvKPUuvmF2VP0/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEzMjg5/NTU1LTE1NTE0NjQ3/NjEtOTcxNC5qcGVn.jpeg",
       "title": "2% Milk",
@@ -110,7 +110,7 @@
     },
     {
       "id": "11",
-      "inCollection": false,
+      "inCollection": true,
       "artist": "Shakey Graves",
       "albumCover": "https://i.discogs.com/Vpv7rWSeY1xs1aGpakHtE8Vy--nvdRFvhTYaPzZmnSg/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEwNDky/OTg3LTE0OTg3NTY3/MjctNjUxMy5qcGVn.jpeg",
       "title": "And The War Came",
@@ -164,7 +164,7 @@
     },
     {
       "id": "18",
-      "inCollection": false,
+      "inCollection": true,
       "artist": "Barbra Streisand",
       "albumCover": "https://i.discogs.com/tUnt2gi5eryW3nACsAyI0rKlRy7OBnCdXQAlmdMZ1eM/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIwMzI1/MTgtMTI3MTk0Mjk3/Ni5qcGVn.jpeg",
       "title": "Barbra Joan Streisand",
