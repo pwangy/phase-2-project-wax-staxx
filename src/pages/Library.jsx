@@ -39,7 +39,7 @@ const Library = ({ showStaxx, albums, searchQuery, sortSelected }) => {
                 return true
             }
         })
-        .map(a => <Card key={a.id} {...a} />
+        .map(a => <Card key={a.id} {...a} showStaxx={showStaxx} />
     )
 
     return (
