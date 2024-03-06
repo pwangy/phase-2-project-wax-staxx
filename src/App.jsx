@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Outlet } from 'react-router-dom'
 import NavBar from './components/NavBar'
 import Header from './components/Header'
-import { useErrorAlerts } from './ErrorAlertsProvider'
+import { useErrorAlerts } from '../src/context/ErrorAlertsProvider'
 
 const App = () => {
   const [searchQuery, setSearchQuery] = useState('')

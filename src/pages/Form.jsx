@@ -1,7 +1,7 @@
 import { useState, useContext } from 'react'
 import { Formik, Field, Form, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
-import { AlbumsContext } from '../AlbumsProvider'
+import { AlbumsContext } from '../context/AlbumsProvider'
 import { useNavigate } from 'react-router'
 
 const validationSchema = Yup.object().shape({

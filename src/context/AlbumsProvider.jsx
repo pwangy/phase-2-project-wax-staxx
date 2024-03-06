@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { v4 as uuidv4 } from 'uuid'
 // import { addIdPlusOneLastArrayToNewElement as addId } from './helpers'
-import useFetchJSON from './utils/helpers'
+import useFetchJSON from '../utils/helpers'
 import { useErrorAlerts } from './ErrorAlertsProvider'
 
 export const AlbumsContext = React.createContext()
@@ -25,7 +25,6 @@ const AlbumsProvider = ({ children }) => {
             }
         })()
     }, [includeErrorAlerts])
-
     const handleAddAlbum = async (formData) => {
         try {
             setAlbums((currentAlbums) => {

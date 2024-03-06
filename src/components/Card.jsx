@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import { AlbumsContext } from '../AlbumsProvider'
+import { AlbumsContext } from '../context/AlbumsProvider'
 import { Link } from 'react-router-dom'
 
 const Card = ({ id, inCollection, artist, albumCover, title}) => {
