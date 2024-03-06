@@ -50,10 +50,11 @@ const AlbumsForm = () => {
             try {
                 await handleAddAlbum(values) // Callback to handle POST
                 setFormStatus(`You Have Successfully Added ${values.title} by ${values.artist}`) // Message appears on successful POST
-                setTimeout(() => {
+                // setTimeout(() => {
+                await sleep(4000)
                     navigate('/') // Navigate back to the main library after ...
                     setFormStatus('') // reset the displayed Formstatus back
-                }, 3000) // 2000 milliseconds / 2 seconds
+                // }, 3000) // 2000 milliseconds / 2 seconds
                 resetForm()
             } catch (validationError) { //upon Submit > forEach field
                 const errors = {} // not completed display a error at the top of the form

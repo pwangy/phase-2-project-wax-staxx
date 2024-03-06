@@ -39,7 +39,7 @@ const AlbumsProvider = ({ children }) => {
         } catch (err) {
                 includeErrorAlerts(err)
                 setTimeout(() => includeErrorAlerts(''), 5000)
-                setAlbums(currentAlbums => currentAlbums.slice(0, -1))  //!This portion needs to be tested after Nav added - turn server off, attempt
+                setAlbums(currentAlbums => currentAlbums.slice(0, -1))
     }}
 
     const inCollectionUpdate = (id) => {
@@ -54,7 +54,7 @@ const AlbumsProvider = ({ children }) => {
         } catch (err) {
             includeErrorAlerts(err)
             setTimeout(() => includeErrorAlerts(''), 5000)
-            setAlbums(currentAlbums => currentAlbums.slice(0, -1))  //!This portion needs to be tested after Nav added - turn server off, attempt
+            setAlbums(albums.map((album) => album.id === id ? { ...album, inCollection: album.inCollection } : album))  
         } 
     }
 

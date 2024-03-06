@@ -2,7 +2,7 @@
   "records": [
     {
       "id": "9",
-      "inCollection": true,
+      "inCollection": false,
       "artist": "Adele",
       "albumCover": "https://i.discogs.com/cloSggzA3DtGZUTH6_riCYGe_4wApHzxc5iHgbCvW_U/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIxMDQ3/MTYxLTE2NDUwNjQz/MjYtMTczMy5qcGVn.jpeg",
       "title": "30",
@@ -11,7 +11,7 @@
     },
     {
       "id": "16",
-      "inCollection": true,
+      "inCollection": false,
       "artist": "Tessa Violet",
       "albumCover": "https://i.discogs.com/NQnOxer_YK4JmRaCfJnN9FSbG-Cwfdf9wY31ECqwTBc/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE0NzE1/MzUyLTE1ODAxOTcx/NzAtMjA2OC5qcGVn.jpeg",
       "title": "Bad Ideas",
@@ -20,7 +20,7 @@
     },
     {
       "id": "22",
-      "inCollection": true,
+      "inCollection": false,
       "artist": "Shakey Graves",
       "albumCover": "https://i.discogs.com/jC3o0JyFBlZdnUjoGrmaRbhL8-aVDa1ZBq-iBdYf6_E/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTExOTU2/OTU2LTE2OTU5NTU5/NDktMjExNy5qcGVn.jpeg",
       "title": "Can't Wake Up",
@@ -29,7 +29,7 @@
     },
     {
       "id": "6",
-      "inCollection": true,
+      "inCollection": false,
       "artist": "The Beatles",
       "albumCover": "https://i.discogs.com/zr9gLwyt6T70HEFnTUuzbZBQi22eEFXRqTXt1T7z39A/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM3NzU1/NC0xMzQwMzU1MTI2/LTE3MTQuanBlZw.jpeg",
       "title": "Let It Be",
@@ -47,7 +47,7 @@
     },
     {
       "id": "2",
-      "inCollection": true,
+      "inCollection": false,
       "artist": "Cher",
       "albumCover": "https://i.discogs.com/F8ZaPubOz001_K-ylYsWX7fKOypELpTHcxz2YPqjajM/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI2NzE4/NDAtMTQ2OTczODYy/MC01MzcxLmpwZWc.jpeg",
       "title": "Foxy Lady",
@@ -56,7 +56,7 @@
     },
     {
       "id": "3",
-      "inCollection": true,
+      "inCollection": false,
       "artist": "Led Zeppelin",
       "albumCover": "https://i.discogs.com/RSqTIbXtl74My5dMw_ElibY_a5Mnn008YMobGUBAsh4/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTY1MjQy/MTItMTU4NDgyNDM3/Ny01NzYzLmpwZWc.jpeg",
       "title": "Led Zeppelin II",
@@ -92,7 +92,7 @@
     },
     {
       "id": "8",
-      "inCollection": true,
+      "inCollection": false,
       "artist": "Alex Lilly",
       "albumCover": "https://i.discogs.com/n1J2-jgJvWlQU-37bbbfXRiMa_ak9wzvKPUuvmF2VP0/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEzMjg5/NTU1LTE1NTE0NjQ3/NjEtOTcxNC5qcGVn.jpeg",
       "title": "2% Milk",
@@ -101,7 +101,7 @@
     },
     {
       "id": "10",
-      "inCollection": true,
+      "inCollection": false,
       "artist": "Shakey Graves",
       "albumCover": "https://i.discogs.com/VcpxEdXieNxFaUIi7-mH17b9rOiNkIorOnOrYNAtDhs/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTYxNTUz/NTYtMTQxMjQ1NTAz/Ny0yODc4LmpwZWc.jpeg",
       "title": "And The Horse He Rode In On",
@@ -218,7 +218,7 @@
     },
     {
       "id": "26",
-      "inCollection": true,
+      "inCollection": false,
       "artist": "The Wild Reeds",
       "albumCover": "https://i.discogs.com/NAktWqZb3J2DB-5FstaUnYSVMHG9fc8XAwZ7_zCMkSE/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEzMzI5/MzMzLTE1NTI1Mzkx/NDMtOTgxMS5qcGVn.jpeg",
       "title": "Cheers",
@@ -227,7 +227,7 @@
     },
     {
       "id": "27",
-      "inCollection": true,
+      "inCollection": false,
       "artist": "The Lumineers",
       "albumCover": "https://i.discogs.com/Z_q_344EiCGH80d9FQbUmgbHG_DadUoArFq8S6x8-wY/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTgzNTU0/MTQtMTQ1OTk4MDA4/Ny0zOTMxLmpwZWc.jpeg",
       "title": "Cleopatra",
@@ -236,7 +236,7 @@
     },
     {
       "id": "28",
-      "inCollection": false,
+      "inCollection": true,
       "artist": "Bobbie Gentry",
       "albumCover": "https://i.discogs.com/MaWk2P0LsRIN5T-_37j9UnmB6Pd7OGOoGONnzFTjgIs/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTcxNzEx/MTY2LTEyMzYyNjMw/Ni02NjIzLmpwZWc.jpeg",
       "title": "Bobbie Gentry And Glen Campbell",
@@ -255,38 +255,11 @@
     {
       "id": "30",
       "inCollection": true,
-      "artist": "sadas",
-      "albumCover": "sdas",
+      "artist": "sasdas",
+      "albumCover": "sadasd",
       "title": "sadas",
-      "released": "sadsa",
-      "label": "sadsa"
-    },
-    {
-      "id": "31",
-      "inCollection": true,
-      "artist": "sadasdads",
-      "albumCover": "asasas",
-      "title": "sasda",
-      "released": "sadas",
-      "label": "sasdasds"
-    },
-    {
-      "id": "32",
-      "inCollection": true,
-      "artist": "xzczx",
-      "albumCover": "xzzx",
-      "title": "xzzx",
-      "released": "zxzxxz",
-      "label": "xzxxzzxxxzx"
-    },
-    {
-      "id": "33",
-      "inCollection": true,
-      "artist": "asds",
-      "albumCover": "sdasd",
-      "title": "asdas",
-      "released": 1988,
-      "label": "dasds"
+      "released": 2222,
+      "label": "sadas"
     }
   ]
 }
