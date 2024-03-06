@@ -1,12 +1,14 @@
 import { NavLink } from 'react-router-dom'
 
 function NavBar() {
-    return (
-        <nav>
-            <NavLink id='link' to='/' className='nav-link'>Home</NavLink>
-            <NavLink id='link' to='/my-staxx' className='nav-link'>My Staxx</NavLink>
-            <NavLink id='link' to='/add-album' className='nav-link'>Add an Album</NavLink>
-        </nav>
+  return (
+     <nav>
+      <ul>
+        <NavLink id='link' to='/'>Home</NavLink>
+        <NavLink id='link' to='/my-staxx' className='navLink'>My Staxx</NavLink>
+        <NavLink id='link' to='/add-album' className='navLink'>Add an Album</NavLink>
+      </ul>
+    </nav>
 )}
 
 export default NavBar

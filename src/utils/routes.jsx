@@ -10,6 +10,7 @@ const router = createBrowserRouter([
         path: '/',
         element: <App />,
         errorElement: <ErrorPage />,
+        // loader: libraryLoader,
         children: [
             {
                 path: '/',

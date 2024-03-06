@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { Outlet } from 'react-router-dom'
-import { useErrorAlerts } from './ErrorAlertsProvider'
 import NavBar from './components/NavBar'
-import Logo from './assets/waxstaxx.svg'
+import Header from './components/Header'
+import { useErrorAlerts } from './ErrorAlertsProvider'
 
 const App = () => {
   const [searchQuery, setSearchQuery] = useState('')
@@ -21,8 +21,9 @@ const App = () => {
   return (
     <>
       <header>
-        <img src={Logo} alt='Wax Staxx logo' id='logo' />
+        <Header />
         <NavBar />
+          {/* We should make it light...it will be dark already! isDarkMode={isDarkMode} onToggleDarkMode={onToggleDarkMode} */}
           {error && <div style={{ color: 'red' }}>{error}</div>}
       </header>
       <main>
