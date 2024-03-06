@@ -4,8 +4,7 @@ import { AlbumsContext } from "../AlbumsProvider"
 const Card = ({ id, inCollection, artist, albumCover, title , showStaxx}) => {
     const { handlePatchInCollection } = useContext(AlbumsContext)
 
-    const isInCollectionAlready = !inCollection? 'Add To Your Library' : 'Remove From Your Library'
-    const displayButton = !showStaxx ? 'Add Album To Your Library' : isInCollectionAlready
+    const displayButton = !showStaxx ? '+ my staxx' : '- my staxx'
     const disableButton = inCollection && !showStaxx
 
 

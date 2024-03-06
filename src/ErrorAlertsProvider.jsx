@@ -7,15 +7,14 @@ const ErrorAlertsProvider = ({ children }) => {
 	const [success, setSuccess] = useState('')
 
 	const includeErrorAlerts = (err) => {
-		setError(`Re-attempt Action: Process Failed.\nIssue: ${err.message}`)
+		setError(`Oops! Something went wrong. Please, try again. \nIssue: ${err.message}`)
 		setTimeout(() => setError(''), 5000)}
 
 	const includeSuccessAlerts = ({inCollection, title}) => {
-		const addedToMyStaxx = `You Have Successfully Added ${title} To Your MyStaxx`
-		const removedFromMyStaxx = `You Have Successfully Removed ${title} From Your MyStaxx`
+		const addedToMyStaxx = `Added ${title} to MyStaxx`
+		const removedFromMyStaxx = `Removed ${title} from MyStaxx`
 		setSuccess(inCollection ? addedToMyStaxx : removedFromMyStaxx)
 		setTimeout(() => setSuccess(''), 5000)}
-
 
 	return (
 		<ErrorAlertsContext.Provider value={{ error, includeErrorAlerts , includeSuccessAlerts , success}}>
