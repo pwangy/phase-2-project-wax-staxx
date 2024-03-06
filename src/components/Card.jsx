@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import { AlbumsContext } from '../AlbumsProvider'
+import { AlbumsContext } from '../context/AlbumsProvider'
 
 const Card = ({ id, inCollection, artist, albumCover, title , showStaxx }) => {
     const { handlePatchInCollection } = useContext(AlbumsContext)

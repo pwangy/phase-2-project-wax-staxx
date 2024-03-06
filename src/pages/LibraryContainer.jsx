@@ -1,6 +1,6 @@
 import { useContext, useState, useEffect } from 'react'
 import { useOutletContext, useLocation } from 'react-router-dom'
-import { AlbumsContext } from '../AlbumsProvider'
+import { AlbumsContext } from '../context/AlbumsProvider'
 import Library from './Library'
 import SearchBar from '../components/SearchBar'
 import SortButtons from '../components/SortButtons'

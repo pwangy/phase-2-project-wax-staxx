@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Outlet } from 'react-router-dom'
-import { useErrorAlerts } from './ErrorAlertsProvider'
+import { useErrorAlerts } from './context/ErrorAlertsProvider'
 import NavBar from './components/NavBar'
 import Logo from './assets/waxstaxx.svg'
 
