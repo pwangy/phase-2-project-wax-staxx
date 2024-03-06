@@ -21,10 +21,8 @@ const LibraryContainer = () => {
 
     return (
         <>
-            <div id='search-sort'>
-                <SearchBar handleSearch={handleSearch} searchQuery={searchQuery} />
-                <SortButtons handleSortSelection={handleSortSelection} />
-            </div>
+            <SearchBar handleSearch={handleSearch} searchQuery={searchQuery} />
+            <SortButtons handleSortSelection={handleSortSelection} />
             <Library albums={albums} searchQuery={searchQuery} showStaxx={showStaxx} sortSelected={sortSelected} />
         </>
 )}

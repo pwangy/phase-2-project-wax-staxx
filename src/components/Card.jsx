@@ -3,7 +3,7 @@ import { AlbumsContext } from '../AlbumsProvider'
 
 const Card = ({ id, inCollection, artist, albumCover, title , showStaxx }) => {
     const { handlePatchInCollection } = useContext(AlbumsContext)
-    const displayButton = showStaxx ? '- my staxx' : '+ my staxx'
+    const displayButton = showStaxx ? 'Delete Album Your Library' : 'Add Album To Your Library'
 
     return (
         <section className='card'>
