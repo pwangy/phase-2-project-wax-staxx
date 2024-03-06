@@ -34,33 +34,55 @@
 - [ ]  light mode
 
 ------------
-~* README template *~ 
 # Wax Staxx
 
-Foobar is a Python library for dealing with word pluralization.
+Welcome to Wax Staxx! -  a React web application that provides information about various vinyl albums, allowing users to showcase their personal collection. for collectors it fun to talk about music and what albums you have this website is clean and to the point to be able to keep your collection up to date. 
+
+## Features
+
+- Browse a collection of Albums.
+- Search and filter albums by artist and album title.
+- Sort albums by artist or album title in alphabetical order
+- Add new albums to the collective and your personal staxx at the same time using the submission form.
+- An option to remove an album from your personal collection but not from the collective. 
+- (Optional) view more album details by clicking on the album itself. 
+
+## Project Structure
+
+The project is structured with the following components:
+
+- `App`: The main component.
+- `Library`: The landing page of the website.
+- `SearchBar` and `SortButtons`: Component for searching and filtering albums.
+- `Form`: Form for submitting new albums.
+- `Library` and `AlbumProvider`: Components for displaying a list of albums in the collective or in your `my staxx`, respectively.
+- `SingleAlbumDetails`: Component for identifying /:id to get a specific albums details
+
+### Additional Components (if applicable)
+
+- `Header`: Header component (considered optional).
+- `ErrorPage`: Page for handling errors (considered optional).
+- `Nav`: Navigation component for linking to specific pages.
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
-
-```bash
-pip install foobar
-```
+1. Clone this repository.
+2. Open a terminal window to open this repository in your code editor
+3. Install dependencies: `npm install`
+4. Run `npm run server` This will start the server on port http://localhost:4000/records and watch for changes in the db.json file .
+5. Run the application: `npm start` which should open http://localhost:5173/
+6.  - http://localhost:5173/ is fetching from http://localhost:4000/records which is required to run the application
 
 ## Usage
 
-```python
-import foobar
+???
 
-# returns 'words'
-foobar.pluralize('word')
 
-# returns 'geese'
-foobar.pluralize('goose')
+## Authors
 
-# returns 'phenomenon'
-foobar.singularize('phenomena')
-```
+- Vinny Revard
+- Peggy Wang
+- Xen Contreras
 
 ## Contributing
 
@@ -68,7 +90,3 @@ Pull requests are welcome. For major changes, please open an issue first
 to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
-
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
