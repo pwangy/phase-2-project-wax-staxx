@@ -3,7 +3,6 @@ import App from '../App'
 import ErrorPage from '../pages/ErrorPage'
 import LibraryContainer from '../pages/LibraryContainer'
 import Form from '../pages/Form'
-import SingleAlbumDetails from '../pages/SingleAlbumDetails'
 
 // ! Outlets: App
 const router = createBrowserRouter([
@@ -25,10 +24,6 @@ const router = createBrowserRouter([
             {
                 path: '/add-album',
                 element: <Form />
-            },
-            {
-                path: '/album/:id',
-                element: <SingleAlbumDetails />
             }
         ]
     }
