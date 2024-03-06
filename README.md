@@ -33,6 +33,7 @@
 - [ ]  When editing Album, edits the MyCollection at the same time (lib is always source of tuth)
 - [ ]  light mode
 - [ ]  individual album view - xen
+- [ ]  make icon clickable '/' 
 
 ------------
 ~* README template *~ 
