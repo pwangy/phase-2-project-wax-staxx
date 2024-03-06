@@ -12,11 +12,8 @@ $dark-primary: #191414;
 $dark-secondary: #333;
 
 
-//! error pages, make notifications sticky
-// the form 
-// search/sort spacing on form
+//! error pages, the form, and the album detail page?
 
-// and the album detail page?
 
 * {
   margin: 0;
@@ -34,12 +31,116 @@ $dark-secondary: #333;
   -moz-osx-font-smoothing: grayscale;
   color: $text;
   line-height: $line-height;
-  background-color: $background-color;
+  background-color: $dark-primary;
   display: block;
 }
 
-// Header
+// Header Styles
+header {
+  margin: 0 0 25px 21px;
+  padding: 0;
+  display: flex;
+  flex-direction: row nowrap;
+  align-items: end;
+  justify-content: start;
+  // background-color: cyan;
+}
 
+#logo {
+  height: 16vh;
+  margin: 16px 0 0 0;
+  padding: 0;
+  // background-color: violet;
+}
+
+nav > .nav-link {
+  margin-left: 25px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $text;
+  // background: yellow;
+}
+
+a.active {
+  text-underline-offset: 9px;
+  text-decoration: underline;
+  color: $accent;
+}
+
+// Links & Buttons
+// a {
+//   font-weight: 500;
+//   color: #646cff;
+//   text-decoration: none;
+// }
+
+// a:hover {
+//   color: #535bf2;
+// }
+
+button {
+  margin-top: 12px;
+  border-radius: 3px;
+  padding: 0.5em .5em;
+  font-size: x-small;
+  font-weight: 900;
+  font-family: inherit;
+  background-color: $secondary;
+  cursor: pointer;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+}
+
+button:hover {
+  color: $accent;
+  background-color: $dark-secondary;
+  border: 1px solid $accent;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.err {
+  margin-right: 15px;
+}
+
+.filter-wrapper {
+  margin: 0;
+  padding: 0;
+  // background-color: limegreen;
+}
+
+.filter-button {
+  margin: 0 0 0 15px;
+  font-size: small;
+  letter-spacing: .02em;
+}
+
+input {
+  width: 250px;
+  height: 20px;
+  padding: 5px;
+  line-height: $line-height;
+  border: none;
+  border-radius: 3px;
+  // background-color: orange;
+}
+
+#search-sort {
+  height: 40px;
+  margin: 0 0 16px 0;
+  padding: 3px 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  // background-color: $dark-secondary;
+  border-top: 1px solid $dark-secondary;
+  border-bottom: 1px solid $dark-secondary;
+  border-radius: 3px;
+}
 
 // Body
 body {
@@ -49,71 +150,52 @@ body {
   display: flex;
   align-content: center;
   border: none;
-
-}
+}  
 
 main {
   margin: 0 16px;
-}
+}  
 
-a {
-  // font-weight: 500;
-  // color: #646cff;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #535bf2;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-h1, h2, h3 {
+h1, h2, h5 {
   margin: 0;
   padding: 0;
   // border: none;
 }
 
+h1 {
+  margin-bottom: 6px;
+  font-size: 2.5em;
+  line-height: 1.1;
+}
+
 h2 {
-  color: $accent;
+  margin-left: 6px;
   text-transform: uppercase;
-  // background: teal;
+  color: $text;
   border: none;
+  // background: teal;
+}
+
+h5 {
+  display: inline;
 }
 
 hr {
   margin-bottom: 1em;
   height: 1px;
-  background: #333;
+  background: $dark-secondary;
   border: none;
 }
 
 section {
   border: none;
+  // background-color: hotpink;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #ebe1e1;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-
-button:hover {
-  border-color: #646cff;
-}
-
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+// Error Pages
+// white-space: pre-wrap;
+.err-wrapper {
+  margin: 25px 0 0 25px;
 }
 
 // Album View
@@ -140,12 +222,12 @@ button:focus-visible {
 }
 
 .card {
-  margin-right: 1em;
+  margin: 1em 1em 1.8em 0;
+  margin-bottom: 1.8em;
   display: flex;
-  margin-bottom: 1em;
   flex-flow: column nowrap;
   // background-color: darkgray;
-  border: none;
+  // border: none;
 }
 
 .card > p {
@@ -154,12 +236,12 @@ button:focus-visible {
 
 .album-title {
   margin-top: 6px;
-  font-size: .65em;
+  font-size: .67em;
   font-weight: 900;
 }
 
 .artist {
-  font-size: x-small;
+  font-size: .65em;
 }
 
 .album-art {
@@ -168,15 +250,15 @@ button:focus-visible {
   border: none;
   }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
+// @media (prefers-color-scheme: dark) {
+//   :root {
+//     color: #213547;
+//     background-color: #ffffff;
+//   }
+//   a:hover {
+//     color: #747bff;
+//   }
+//   button {
+//     background-color: #f9f9f9;
+//   }
+// }

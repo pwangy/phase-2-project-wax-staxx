@@ -2,9 +2,9 @@ import { useContext } from 'react'
 import { AlbumsContext } from '../context/AlbumsProvider'
 import { Link } from 'react-router-dom'
 
-const Card = ({ id, inCollection, artist, albumCover, title}) => {
+const Card = ({ id, inCollection, artist, albumCover, title, showStaxx}) => {
     const { handlePatchInCollection } = useContext(AlbumsContext)
-    const displayButton = inCollection ? 'Delete Album Your Library' : 'Add Album To Your Library'
+    const displayButton = showStaxx ? '- my staxx' : '+ my staxx'
 
     return (
         <section className='card'>
