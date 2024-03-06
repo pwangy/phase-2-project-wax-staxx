@@ -9,7 +9,7 @@ const validationSchema = Yup.object().shape({
     artist: Yup.string().required('Artist is required'),
     albumCover: Yup.string().required('Album cover image link is required'),
     title: Yup.string().required('Title is required'),
-    released: Yup.string().required('Release year is required'),
+    released: Yup.number().required('Release year is required'),
     label: Yup.string().required('Label is required'),
 })
 
@@ -34,7 +34,7 @@ const AlbumsForm = () => {
         { name: 'artist', type: 'text', label: '', placeholder: 'Enter Artist Name' },
         { name: 'albumCover', type: 'text', label: '', placeholder: 'Enter Album Cover Link' },
         { name: 'title', type: 'text', label: '', placeholder: 'Enter Album Title' },
-        { name: 'released', type: 'text', label: '', placeholder: 'Enter Album Release Year' },
+        { name: 'released', type: 'number', label: '', placeholder: 'Enter Album Release Year' },
         { name: 'label', type: 'text', label: '', placeholder: 'Enter Album Label' },
         { name: 'inCollection', type: 'checkbox', label: 'Do you want to add this new Album to your collection?' },
     ]

@@ -251,6 +251,42 @@
       "title": "Close To You",
       "released": 1970,
       "label": "A&M Records"
+    },
+    {
+      "id": "30",
+      "inCollection": true,
+      "artist": "sadas",
+      "albumCover": "sdas",
+      "title": "sadas",
+      "released": "sadsa",
+      "label": "sadsa"
+    },
+    {
+      "id": "31",
+      "inCollection": true,
+      "artist": "sadasdads",
+      "albumCover": "asasas",
+      "title": "sasda",
+      "released": "sadas",
+      "label": "sasdasds"
+    },
+    {
+      "id": "32",
+      "inCollection": true,
+      "artist": "xzczx",
+      "albumCover": "xzzx",
+      "title": "xzzx",
+      "released": "zxzxxz",
+      "label": "xzxxzzxxxzx"
+    },
+    {
+      "id": "33",
+      "inCollection": true,
+      "artist": "asds",
+      "albumCover": "sdasd",
+      "title": "asdas",
+      "released": 1988,
+      "label": "dasds"
     }
   ]
 }

@@ -26,14 +26,13 @@ const AlbumsProvider = ({ children }) => {
     }, [includeErrorAlerts])
 
     const handleAddAlbum = async (formData) => {
-        try {
             setAlbums((currentAlbums) => {
                 const lastVariableArray = currentAlbums.slice(-1)
                 const id = lastVariableArray.length
                 ? Number(lastVariableArray[0].id) + 1 : uuidv4()
-            const updatedAlbums = [...currentAlbums, { id, ...formData}]
-            return updatedAlbums
+                return [...currentAlbums, { id, ...formData}]
             })
+        try {
             const { inCollection, artist, albumCover, title, released, label } = formData
             const currentAlbums =  albums 
             await postJSON(url, currentAlbums, { inCollection, artist, albumCover, title, released, label })
