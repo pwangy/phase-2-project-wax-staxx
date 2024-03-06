@@ -1,5 +1,6 @@
 import { useContext } from 'react'
 import { AlbumsContext } from '../AlbumsProvider'
+import { Link } from 'react-router-dom'
 
 const Card = ({ id, inCollection, artist, albumCover, title , showStaxx }) => {
     const { handlePatchInCollection } = useContext(AlbumsContext)
@@ -7,7 +8,9 @@ const Card = ({ id, inCollection, artist, albumCover, title , showStaxx }) => {
 
     return (
         <section className='card'>
+           <Link to={`/album/${id}`}>
             <img src={albumCover} alt={title} className='album-art' />
+            </Link>
             <p className='album-title'>{title}</p>
             <p className='artist'>{artist}</p>
             <button onClick={() => handlePatchInCollection(id, inCollection)}>{displayButton}</button>
