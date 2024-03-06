@@ -1,7 +1,8 @@
-import { useContext } from "react"
-import { AlbumsContext } from "../AlbumsProvider"
+import { useContext } from 'react'
+import { AlbumsContext } from '../context/AlbumsProvider'
+import { Link } from 'react-router-dom'
 
-const Card = ({ id, inCollection, artist, albumCover, title , showStaxx}) => {
+const Card = ({ id, inCollection, artist, albumCover, title, showStaxx}) => {
     const { handlePatchInCollection } = useContext(AlbumsContext)
 
     const displayButton = !showStaxx ? '+ my staxx' : '- my staxx'
@@ -9,14 +10,16 @@ const Card = ({ id, inCollection, artist, albumCover, title , showStaxx}) => {
 
 
     return (
-        <article className='card'>
+        <section className='card'>
+           <Link to={`/album/${id}`}>
             <img src={albumCover} alt={title} className='album-art' />
+            </Link>
             <p className='album-title'>{title}</p>
             <p className='artist'>{artist}</p>
             <button disabled={disableButton} onClick={() => handlePatchInCollection(id, !inCollection )}>
             {displayButton}
             </button>
-        </article>
+        </section>
 )}
 
 export default Card

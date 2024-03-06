@@ -1,4 +1,4 @@
-import { useErrorAlerts } from '../ErrorAlertsProvider'
+import { useErrorAlerts } from '../context/ErrorAlertsProvider'
 import { useNavigate, useRouteError } from 'react-router-dom'
 
 const ErrorPage = () => {
@@ -14,10 +14,10 @@ const ErrorPage = () => {
 	}
 
 	return (
-		<div>
-			<h1> {error.error.message} </h1>
-			<button onClick={handleGoBackAPage}> Go Back a Page </button>
-			<button onClick={handleGoToHome}> Return Home </button>
+		<div className='err-wrapper'>
+			<h1>Whoops! { error.error.message }</h1>
+			<button onClick={handleGoBackAPage} className='err'> Go Back a Page </button>
+			<button onClick={handleGoToHome} className='err'> Return Home </button>
 		</div>
 	)
 }

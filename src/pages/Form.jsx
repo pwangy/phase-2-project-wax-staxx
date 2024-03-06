@@ -1,7 +1,7 @@
 import { useState, useContext } from 'react'
 import { Formik, Field, Form, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
-import { AlbumsContext } from '../AlbumsProvider'
+import { AlbumsContext } from '../context/AlbumsProvider'
 import { useNavigate } from 'react-router'
 
 const validationSchema = Yup.object().shape({
@@ -40,7 +40,12 @@ const AlbumsForm = () => {
     ]
 
     return (
-        <div>
+        <article className='article-wrapper'>
+            <div className='article-title'>
+                <h2>Notice something missing?</h2>
+                <hr />
+            </div>
+        <p>Go ahead and add it to our main collection and if you own it and want it in your Staxx, keep the checkbox below checked!<br/><br/>All fields are required.</p>
         {formStatus && <div style={{ color: 'green' }}>{formStatus}</div>}
         <Formik
             initialValues={initialValues}
@@ -50,11 +55,9 @@ const AlbumsForm = () => {
             try {
                 await handleAddAlbum(values) // Callback to handle POST
                 setFormStatus(`You Have Successfully Added ${values.title} by ${values.artist}`) // Message appears on successful POST
-                // setTimeout(() => {
                 await sleep(4000)
-                    navigate('/') // Navigate back to the main library after ...
-                    setFormStatus('') // reset the displayed Formstatus back
-                // }, 3000) // 2000 milliseconds / 2 seconds
+                navigate('/') // Navigate back to the main library after ...
+                setFormStatus('') // reset the displayed Formstatus back
                 resetForm()
             } catch (validationError) { //upon Submit > forEach field
                 const errors = {} // not completed display a error at the top of the form
@@ -91,7 +94,7 @@ const AlbumsForm = () => {
             </Form>
         )}
         </Formik>
-    </div>
+    </article>
 )}
 
 export default AlbumsForm
