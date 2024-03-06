@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react'
-import { v4 as uuidv4 } from 'uuid'
 // import { addIdPlusOneLastArrayToNewElement as addId } from './helpers'
-import useFetchJSON from './utils/helpers'
+import useFetchJSON from './helpers'
 import { useErrorAlerts } from './ErrorAlertsProvider'
+import { v4 as uuidv4} from 'uuid'
 
+//! looking for AlbumsContext ???
 export const AlbumsContext = React.createContext()
-export const url = 'http://localhost:4000/records'
+
+const url = 'http://localhost:4000/records'
 
 const AlbumsProvider = ({ children }) => {
     const [albums, setAlbums] = useState([])
@@ -16,8 +18,8 @@ const AlbumsProvider = ({ children }) => {
     useEffect(() => {
         (async () => {
             try {
-                const res = await fetch(url)
-                const data = await res.json()
+                const response = await fetch(url)
+                const data = await response.json()
                 setAlbums(data)
             } catch (err) {
                 includeErrorAlerts(`Re-attempt Action: Process Failed.\nIssue: ${err.message}`)
@@ -25,25 +27,29 @@ const AlbumsProvider = ({ children }) => {
             }
         })()
     }, [includeErrorAlerts])
+    // console.log(albums)
 
     const handleAddAlbum = async (formData) => {
-        try {
-            setAlbums((currentAlbums) => {
-                const lastVariableArray = currentAlbums.slice(-1)
-                const id = lastVariableArray.length
-                ? Number(lastVariableArray[0].id) + 1 : uuidv4()
-            const updatedAlbums = [...currentAlbums, { id, ...formData}]
-            return updatedAlbums
-            })
-            const { inCollection, artist, albumCover, title, released, label } = formData
-            const currentAlbums =  albums 
-            const result = await postJSON(url, currentAlbums, { inCollection, artist, albumCover, title, released, label })
-                // console.log(result) //! we can use result to display a 'success notification later'
-        } catch (err) {
-                includeErrorAlerts(`Re-attempt Action: Process Failed.\nIssue: ${err.message}`)
-                setTimeout(() => includeErrorAlerts(''), 5000)
-                setAlbums(currentAlbums => currentAlbums.slice(0, -1))  //!This portion needs to be tested after Nav added - turn server off, attempt
-    }}
+    try {
+        setAlbums((currentAlbums) => {
+            const lastVariableArray = currentAlbums.slice(-1)
+            const id = lastVariableArray.length
+            ? Number(lastVariableArray[0].id) + 1
+            : uuidv4()
+        const updatedAlbums = [...currentAlbums, { id, ...formData}]
+        return updatedAlbums
+        })
+        const { inCollection, artist, albumCover, title, released, label } = formData
+            // console.log(inCollection, artist, albumCover, title, released, label)
+        const currentAlbums =  albums 
+        const result = await postJSON(url, currentAlbums, { inCollection, artist, albumCover, title, released, label })
+            // console.log(result) //! we can use result to display a 'success notification later'
+    } catch (err) {
+            includeErrorAlerts(`Re-attempt Action: Process Failed.\nIssue: ${err.message}`)
+            setTimeout(() => includeErrorAlerts(''), 5000)
+            setAlbums(currentAlbums => currentAlbums.slice(0, -1))  //!This portion needs to be tested after Nav added - turn server off, attempt
+        }
+    }
     
         // We need to add a 'handleChangeEditingMode callback function that changes state based on when a album is selected for edit and pass that editing mode here to allow us to use it as the ID portion of the URL/JSON to PATCH' //!DE-COMMENT TO READ BETTER
     // const handlePatchAllAlbums = async (updatedAlbum) => {
@@ -62,7 +68,6 @@ const AlbumsProvider = ({ children }) => {
     //         setAlbums(currentAlbums => currentAlbums.slice(0, -1))  //!This portion needs to be tested after Nav added - turn server off, attempt
     //     }
     // }
-
     const patchJSON = async (url, idOrIdEditingMode, plantToUpdate) => {
         const resp = await fetch(`${url}/${idOrIdEditingMode}`, {
             method: "PATCH",
@@ -89,7 +94,8 @@ const AlbumsProvider = ({ children }) => {
             includeErrorAlerts(`Re-attempt Action: Process Failed.\nIssue: ${err.message}`)
             setTimeout(() => includeErrorAlerts(''), 5000)
             setAlbums(currentAlbums => currentAlbums.slice(0, -1))  //!This portion needs to be tested after Nav added - turn server off, attempt
-    } }
+        }
+    }
 
     const handleDeleteAlbum = async (albumToDelete) => {
         setAlbums(currentAlbums => currentAlbums.filter(album => album.id !== albumToDelete.id))
@@ -105,7 +111,7 @@ const AlbumsProvider = ({ children }) => {
     }
 
     return (
-        //! We add handlePatchAllAlbums here once ready
+        // <AlbumsContext.Provider value={{ albums , handleAddAlbum, handleDeleteAlbum}}>  //! We add handlePatchAllAlbums here once ready
         <AlbumsContext.Provider value={{ albums , handleAddAlbum, handleDeleteAlbum , handlePatchInCollection , error}}> 
             {children}
         </AlbumsContext.Provider>

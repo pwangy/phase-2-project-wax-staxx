@@ -9,6 +9,7 @@ function NavBar() {
         <NavLink id='link' to='/add-album' className='navLink'>Add an Album</NavLink>
       </ul>
     </nav>
-)}
+  )
+}
 
 export default NavBar
