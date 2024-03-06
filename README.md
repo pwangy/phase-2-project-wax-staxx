@@ -1,24 +1,24 @@
 # Wax Staxx - MVP
 
 ## Pages
-- [x] Library
+- [ ] Library
     - [x] (MVP 1. Display all albums (Lib) - GET) - pw
-    - [x] (MVP 1.5 Click - add to collection ) - pw
-- [x] MyStaxx
+    - [ ] (MVP 1.5 Click - add to collection ) - pw
+- [ ] MyStaxx
     - [x] (MVP 2. view My Collection - POST & GET) 
-    - [x] (MVP 4. Remove from My Collection ONLY (not allowed to remove from Lib) - PATCH) - pw
+    - [ ] (MVP 4. Remove from My Collection ONLY (not allowed to remove from Lib) - PATCH) - pw
 - [x] Form
   - [x] (MVP 3. Add new album to library & My Collection (Form) - POST) - vr
 
 ## Components
 - [x] Card - called by library and mystaxx, component to hold basic info about each album - pw
-- [x] Nav - links to: Home, mystaxx, Form, called in App - xen
-- [x] Search - called in LibraryContainer - xen
+- [x] Nav - links to: Home, mystaxx, Form, called in App - zen
+- [x] Search - called in LibraryContainer - zen
 
 ## Other
 - [x] LibraryProvider --- figure out how this works
 - [x] ErrorPage - vr
-- [x] libraryLoader - understand this and use it if appropriate - rm
+- [ ] libraryLoader --- understand this and use it if appropriate
 - [ ] Writeup and clean up readme
 - [ ] load logo and favico
 - [ ] finish styling
@@ -27,13 +27,12 @@
 
 ## Stretch
 - [x]  Search by Artist
-- [x]  Improve search functionality, include more than just Artist
+- [ ]  Improve search functionality, include more than just Artist
 - [ ]  Edit Album info - PATCH only to Lib (allowing for mutations of albums specific to user)
 - [ ]  Validation on album addition form to check for incoming duplicates
 - [ ]  When editing Album, edits the MyCollection at the same time (lib is always source of tuth)
 - [ ]  light mode
-- [ ]  individual album view - xen
-- [ ]  make icon clickable '/' 
+- [ ]  individual album view
 
 ------------
 ~* README template *~ 

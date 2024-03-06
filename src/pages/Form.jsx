@@ -40,12 +40,7 @@ const AlbumsForm = () => {
     ]
 
     return (
-        <article className='article-wrapper'>
-            <div className='article-title'>
-                <h2>Notice something missing?</h2>
-                <hr />
-            </div>
-            <p>Go ahead and add it to our main collection and if you own it and want it in your Staxx, keep the checkbox below checked!<br/><br/>All fields are required.</p>
+        <div>
         {formStatus && <div style={{ color: 'green' }}>{formStatus}</div>}
         <Formik
             initialValues={initialValues}
@@ -95,7 +90,7 @@ const AlbumsForm = () => {
             </Form>
         )}
         </Formik>
-        </article>
+    </div>
 )}
 
 export default AlbumsForm

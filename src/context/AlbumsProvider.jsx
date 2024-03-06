@@ -63,17 +63,17 @@ const AlbumsProvider = ({ children }) => {
     // }
 
     const patchJSON = async (url, idOrIdEditingMode, plantToUpdate) => {
-        const res = await fetch(`${url}/${idOrIdEditingMode}`, {
+        const resp = await fetch(`${url}/${idOrIdEditingMode}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify(plantToUpdate)
         });
-        if (!res.ok) {
+        if (!resp.ok) {
             throw new Error("Failed to fetch because server is not running");
         }
-        return await res.json();
+        return await resp.json();
     }
     const inCollectionUpdate = (id) => (
         setAlbums(albums.map(album => album.id === id ? { ...album, inCollection: !album.inCollection } : album))
