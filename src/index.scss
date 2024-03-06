@@ -12,6 +12,9 @@ $dark-primary: #191414;
 $dark-secondary: #333;
 
 
+//! error pages, the form, and the album detail page?
+
+
 * {
   margin: 0;
   padding: 0;
@@ -100,11 +103,14 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.err {
+  margin-right: 15px;
+}
+
 .filter-wrapper {
   margin: 0;
   padding: 0;
   // background-color: limegreen;
-  
 }
 
 .filter-button {
@@ -150,16 +156,16 @@ main {
   margin: 0 16px;
 }  
 
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
 h1, h2, h5 {
   margin: 0;
   padding: 0;
   // border: none;
+}
+
+h1 {
+  margin-bottom: 6px;
+  font-size: 2.5em;
+  line-height: 1.1;
 }
 
 h2 {
@@ -184,6 +190,12 @@ hr {
 section {
   border: none;
   // background-color: hotpink;
+}
+
+// Error Pages
+// white-space: pre-wrap;
+.err-wrapper {
+  margin: 25px 0 0 25px;
 }
 
 // Album View
