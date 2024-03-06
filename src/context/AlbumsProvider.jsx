@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { v4 as uuidv4 } from 'uuid'
-// import { addIdPlusOneLastArrayToNewElement as addId } from './helpers'
 import useFetchJSON from '../utils/helpers'
 import { useErrorAlerts } from './ErrorAlertsProvider'
 
@@ -11,7 +10,6 @@ const AlbumsProvider = ({ children }) => {
     const [albums, setAlbums] = useState([])
     const { postJSON, patchJSON } = useFetchJSON()
     const { error, includeErrorAlerts, includeSuccessAlerts } = useErrorAlerts()
-    // console.log('this is postJSON' + postJSON)
 
     useEffect(() => {
         (async () => {
@@ -39,9 +37,9 @@ const AlbumsProvider = ({ children }) => {
             const currentAlbums =  albums 
             await postJSON(url, currentAlbums, { inCollection, artist, albumCover, title, released, label })
         } catch (err) {
-                includeErrorAlerts(`Re-attempt Action: Process Failed.\nIssue: ${err.message}`)
+                includeErrorAlerts(err.message)
                 setTimeout(() => includeErrorAlerts(''), 5000)
-                setAlbums(currentAlbums => currentAlbums.slice(0, -1))  //!This portion needs to be tested after Nav added - turn server off, attempt
+                setAlbums(currentAlbums => currentAlbums.slice(0, -1))
     }}
 
     const inCollectionUpdate = (id) => (
@@ -56,12 +54,11 @@ const AlbumsProvider = ({ children }) => {
         } catch (err) {
             includeErrorAlerts(err.message)
             setTimeout(() => includeErrorAlerts(''), 5000)
-            setAlbums(currentAlbums => currentAlbums.slice(0, -1))  //!This portion needs to be tested after Nav added - turn server off, attempt
+            setAlbums(currentAlbums => currentAlbums.slice(0, -1))
     }
 }
 
     return (
-        //! We add handlePatchAllAlbums here once ready
         <AlbumsContext.Provider value={{ albums , handleAddAlbum , handlePatchInCollection , error}}> 
             {children}
         </AlbumsContext.Provider>
