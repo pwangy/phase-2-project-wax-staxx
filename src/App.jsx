@@ -25,7 +25,7 @@ const App = () => {
         <NavBar />
           {/* We should make it light...it will be dark already! isDarkMode={isDarkMode} onToggleDarkMode={onToggleDarkMode} */}
           {error && <div className='alerts'>{error}</div>}
-          {success && <div className='alerts-green'}>{success}</div>}
+          {success && <div className='alerts-green'>{success}</div>}
       </header>
       <main>
         <Outlet context={{ searchQuery, handleSearch, handleSortSelection, sortSelected, useErrorAlerts }}/>
