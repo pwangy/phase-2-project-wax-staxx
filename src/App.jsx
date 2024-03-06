@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Outlet } from 'react-router-dom'
+import { Outlet, Link } from 'react-router-dom'
 import { useErrorAlerts } from '../src/context/ErrorAlertsProvider'
 import NavBar from './components/NavBar'
 import Logo from './assets/waxstaxx.svg'
@@ -21,10 +21,10 @@ const App = () => {
   return (
     <>
       <header>
-        <img src={Logo} alt='Wax Staxx logo' id='logo' />
+        <Link to='/'><img src={Logo} alt='Wax Staxx logo' id='logo' /></Link>
         <NavBar />
           {/* We should make it light...it will be dark already! isDarkMode={isDarkMode} onToggleDarkMode={onToggleDarkMode} */}
-          {error && <div style={{ color: 'red' }}>{error}</div>}
+          {error && <div className='alerts'>{error}</div>}
       </header>
       <main>
         <Outlet context={{ searchQuery, handleSearch, handleSortSelection, sortSelected, useErrorAlerts }}/>

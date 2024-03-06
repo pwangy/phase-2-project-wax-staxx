@@ -13,7 +13,6 @@ const validationSchema = Yup.object().shape({
     label: Yup.string().required('Label is required'),
 })
 
-const errorStyle = { color: 'red', fontWeight: 'bold' }
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms))
 
 const AlbumsForm = () => {
@@ -46,7 +45,7 @@ const AlbumsForm = () => {
                 <hr />
             </div>
             <p>Go ahead and add it to our main collection and if you own it and want it in your Staxx, keep the checkbox below checked!<br/><br/>All fields are required.</p>
-            {formStatus && <div style={{ color: 'green' }}>{formStatus}</div>}
+            {formStatus && <div className='alert-green'>{formStatus}</div>}
             <Formik
                 initialValues={initialValues}
                 validationSchema={validationSchema} //validates using validationSchema
@@ -86,7 +85,7 @@ const AlbumsForm = () => {
                         placeholder={field.placeholder}
                         />
                 )}
-                <ErrorMessage name={field.name} component='div' style={errorStyle} />
+                <ErrorMessage name={field.name} component='div' className='alerts' />
                 </div>
             ))}
             <button type='submit' disabled={isSubmitting}>
