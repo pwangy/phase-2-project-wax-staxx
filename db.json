@@ -233,15 +233,6 @@
       "title": "Cleopatra",
       "released": 2016,
       "label": "Dualtone"
-    },
-    {
-      "id": "28",
-      "inCollection": false,
-      "artist": "New Name",
-      "albumCover": "New Album",
-      "title": "New Title",
-      "released": 1222,
-      "label": "Yes"
     }
   ]
 }
