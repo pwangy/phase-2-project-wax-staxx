@@ -38,7 +38,7 @@
     },
     {
       "id": "1",
-      "inCollection": false,
+      "inCollection": true,
       "artist": "ABBA",
       "albumCover": "https://i.discogs.com/QLvRIsoIF6reDsMjw0V1q_vzRGLdv2rOKS2z9EL4aEQ/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTg1NTE4/Ny0xNTc2Nzk0MzIz/LTYyOTYuanBlZw.jpeg",
       "title": "The Album",
@@ -47,7 +47,7 @@
     },
     {
       "id": "2",
-      "inCollection": false,
+      "inCollection": true,
       "artist": "Cher",
       "albumCover": "https://i.discogs.com/F8ZaPubOz001_K-ylYsWX7fKOypELpTHcxz2YPqjajM/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI2NzE4/NDAtMTQ2OTczODYy/MC01MzcxLmpwZWc.jpeg",
       "title": "Foxy Lady",
@@ -92,7 +92,7 @@
     },
     {
       "id": "8",
-      "inCollection": true,
+      "inCollection": false,
       "artist": "Alex Lilly",
       "albumCover": "https://i.discogs.com/n1J2-jgJvWlQU-37bbbfXRiMa_ak9wzvKPUuvmF2VP0/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEzMjg5/NTU1LTE1NTE0NjQ3/NjEtOTcxNC5qcGVn.jpeg",
       "title": "2% Milk",
@@ -110,7 +110,7 @@
     },
     {
       "id": "11",
-      "inCollection": true,
+      "inCollection": false,
       "artist": "Shakey Graves",
       "albumCover": "https://i.discogs.com/Vpv7rWSeY1xs1aGpakHtE8Vy--nvdRFvhTYaPzZmnSg/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEwNDky/OTg3LTE0OTg3NTY3/MjctNjUxMy5qcGVn.jpeg",
       "title": "And The War Came",
@@ -164,7 +164,7 @@
     },
     {
       "id": "18",
-      "inCollection": true,
+      "inCollection": false,
       "artist": "Barbra Streisand",
       "albumCover": "https://i.discogs.com/tUnt2gi5eryW3nACsAyI0rKlRy7OBnCdXQAlmdMZ1eM/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIwMzI1/MTgtMTI3MTk0Mjk3/Ni5qcGVn.jpeg",
       "title": "Barbra Joan Streisand",
@@ -182,7 +182,7 @@
     },
     {
       "id": "20",
-      "inCollection": true,
+      "inCollection": false,
       "artist": "Joni Mitchell",
       "albumCover": "https://i.discogs.com/U-pVGWIIE_dljGJWs0eDRLWz9YbB7116lWxNTGY9NkM/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEwMDI4/MzgxLTE0OTAzODMz/MjEtNTc4OS5qcGVn.jpeg",
       "title": "Blue",
