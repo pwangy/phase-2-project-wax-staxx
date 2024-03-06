@@ -4,7 +4,10 @@ import { Link } from 'react-router-dom'
 
 const Card = ({ id, inCollection, artist, albumCover, title, showStaxx}) => {
     const { handlePatchInCollection } = useContext(AlbumsContext)
-    const displayButton = showStaxx ? '- my staxx' : '+ my staxx'
+
+    const displayButton = !showStaxx ? '+ my staxx' : '- my staxx'
+    const disableButton = inCollection && !showStaxx
+
 
     return (
         <section className='card'>
@@ -13,7 +16,9 @@ const Card = ({ id, inCollection, artist, albumCover, title, showStaxx}) => {
             </Link>
             <p className='album-title'>{title}</p>
             <p className='artist'>{artist}</p>
-            <button onClick={() => handlePatchInCollection(id, inCollection)}>{displayButton}</button>
+            <button disabled={disableButton} onClick={() => handlePatchInCollection(id, !inCollection )}>
+            {displayButton}
+            </button>
         </section>
 )}
 

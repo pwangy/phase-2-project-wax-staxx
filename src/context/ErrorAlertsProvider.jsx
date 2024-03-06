@@ -4,13 +4,20 @@ const ErrorAlertsContext = React.createContext()
 
 const ErrorAlertsProvider = ({ children }) => {
 	const [error, setError] = useState('')
+	const [success, setSuccess] = useState('')
 
 	const includeErrorAlerts = (err) => {
-		setError(`Re-attempt Action: Process Failed.\nIssue: ${err.message}`)
-		setTimeout(() => setError(''), 5000)
-	}
+		setError(`Oops! Something went wrong. Please, try again. \nIssue: ${err.message}`)
+		setTimeout(() => setError(''), 5000)}
+
+	const includeSuccessAlerts = ({inCollection, title}) => {
+		const addedToMyStaxx = `Added ${title} to MyStaxx`
+		const removedFromMyStaxx = `Removed ${title} from MyStaxx`
+		setSuccess(inCollection ? addedToMyStaxx : removedFromMyStaxx)
+		setTimeout(() => setSuccess(''), 5000)}
+
 	return (
-		<ErrorAlertsContext.Provider value={{ error, includeErrorAlerts }}>
+		<ErrorAlertsContext.Provider value={{ error, includeErrorAlerts , includeSuccessAlerts , success}}>
 			{children}
 		</ErrorAlertsContext.Provider>
 	)
