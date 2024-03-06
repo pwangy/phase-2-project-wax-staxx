@@ -12,8 +12,22 @@ $dark-primary: #191414;
 $dark-secondary: #333;
 
 
-//! error pages, the form, and the album detail page?
+// todo!
+// make logo clickable
+// the form
+// white-space: pre-wrap;
 
+// search/sort spacing on form
+
+// album detail page?
+// form: move error msg up
+// error pages, make notifications sticky
+// look at why disabled buttons are hoverable
+//  style disable buttons to visually cue to user that it is disabled
+
+// db check
+// code clean
+// readme
 
 * {
   margin: 0;
@@ -101,10 +115,6 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
-}
-
-.err {
-  margin-right: 15px;
 }
 
 .filter-wrapper {
@@ -198,6 +208,21 @@ section {
   margin: 25px 0 0 25px;
 }
 
+.err {
+  margin-right: 15px;
+}
+
+.alerts {
+  color: hotpink;
+  font-weight: 700;
+  white-space: pre-wrap;
+}
+
+.alert-green {
+  color: green;
+  white-space: pre-wrap;
+}
+
 // Album View
 .article-wrapper {
   display: flex;
@@ -238,10 +263,12 @@ section {
   margin-top: 6px;
   font-size: .67em;
   font-weight: 900;
+  white-space: pre-line;
 }
 
 .artist {
   font-size: .65em;
+  white-space: pre-line;
 }
 
 .album-art {
@@ -249,6 +276,13 @@ section {
   width: 10em;
   border: none;
   }
+
+// Album Detail View
+.detail-album-art {
+  width: 300px;
+  height: 300px;
+  border-radius: 3px;
+}
 
 // @media (prefers-color-scheme: dark) {
 //   :root {

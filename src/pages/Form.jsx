@@ -13,7 +13,6 @@ const validationSchema = Yup.object().shape({
     label: Yup.string().required('Label is required'),
 })
 
-const errorStyle = { color: 'red', fontWeight: 'bold' }
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms))
 
 const AlbumsForm = () => {
@@ -45,8 +44,8 @@ const AlbumsForm = () => {
                 <h2>Notice something missing?</h2>
                 <hr />
             </div>
-        {formStatus && <div style={{ color: 'green' }}>{formStatus}</div>}    
-        <p>Go ahead and add it to our main collection and if you own it and want it in your Staxx, keep the checkbox below checked!<br/><br/>All fields are required.</p>
+            {formStatus && <div className='alert-green'>{formStatus}</div>}
+           <p>Go ahead and add it to our main collection and if you own it and want it in your Staxx, keep the checkbox below checked!<br/><br/>All fields are required.</p>
         <Formik
             initialValues={initialValues}
             validationSchema={validationSchema} //validates using validationSchema
@@ -66,10 +65,10 @@ const AlbumsForm = () => {
                 })
                 setStatus({}) //removes prior status if one was set
                 setSubmitting(false) //setSubmitting handles form control 
-            }
-            }} 
-            //! We need to decide if we want all errors up top or below each option        
-        >
+                }
+                }} 
+                //! We need to decide if we want all errors up top or below each option
+            >
             {({ isSubmitting }) => (
             <Form>
             {fieldInfo.map((field) => (
@@ -85,7 +84,7 @@ const AlbumsForm = () => {
                         placeholder={field.placeholder}
                         />
                 )}
-                <ErrorMessage name={field.name} component='div' style={errorStyle} />
+                <ErrorMessage name={field.name} component='div' className='alerts' />
                 </div>
             ))}
             <button type='submit' disabled={isSubmitting}>

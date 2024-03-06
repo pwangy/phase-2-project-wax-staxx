@@ -24,11 +24,7 @@ const SingleAlbumDetails = () => {
       <div>
         <br />
         <div>
-          <img
-            src={albumCover}
-            alt={title}
-            style={{ width: '300px', height: '300px', borderRadius: '10px' }}
-          />
+          <img src={albumCover} alt={title} className='detail-album-art' />
         </div>
       </div>
       <div id='singlealbumdetails'>

@@ -15,8 +15,8 @@ const ErrorPage = () => {
 	return (
 		<div className='err-wrapper'>
 			<h1>Whoops! { error.error.message }</h1>
-			<button onClick={handleGoBackAPage} className='err'> Go Back a Page </button>
-			<button onClick={handleGoToHome} className='err'> Return Home </button>
+			<button onClick={handleGoBackAPage} className='err'>Go Back a Page</button>
+			<button onClick={handleGoToHome} className='err'>Return Home</button>
 		</div>
 	)
 }
