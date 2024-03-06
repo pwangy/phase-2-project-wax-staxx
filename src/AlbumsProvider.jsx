@@ -9,7 +9,7 @@ export const url = 'http://localhost:4000/records'
 
 const AlbumsProvider = ({ children }) => {
     const [albums, setAlbums] = useState([])
-    const { postJSON, deleteJSON } = useFetchJSON()
+    const { postJSON, patchJSON ,deleteJSON } = useFetchJSON()
     const { error, includeErrorAlerts } = useErrorAlerts()
     // console.log('this is postJSON' + postJSON)
 
@@ -44,41 +44,10 @@ const AlbumsProvider = ({ children }) => {
                 setTimeout(() => includeErrorAlerts(''), 5000)
                 setAlbums(currentAlbums => currentAlbums.slice(0, -1))  //!This portion needs to be tested after Nav added - turn server off, attempt
     }}
-    
-        // We need to add a 'handleChangeEditingMode callback function that changes state based on when a album is selected for edit and pass that editing mode here to allow us to use it as the ID portion of the URL/JSON to PATCH' //!DE-COMMENT TO READ BETTER
-    // const handlePatchAllAlbums = async (updatedAlbum) => {
 
-    //     setAlbums(currentAlbums => currentAlbums.map(album => {
-    //         album.id === updatedAlbum.id ? updatedAlbum : album
-    //     }))
-    //     try {
-    //         const { inCollection, artist, albumCover, title, released, label } = updatedAlbum
-    //         console.log(inCollection, artist, albumCover, title, released, label)
-    //         const result = await postJSON(`${url}/${isEditingMode}`, { inCollection, artist, albumCover, title, released, label })
-    //         console.log(result)
-    //     } catch (err) {
-    //         includeErrorAlerts(`Re-attempt Action: Process Failed.\nIssue: ${err.message}`)
-    //         setTimeout(() => includeErrorAlerts(''), 5000)
-    //         setAlbums(currentAlbums => currentAlbums.slice(0, -1))  //!This portion needs to be tested after Nav added - turn server off, attempt
-    //     }
-    // }
-
-    const patchJSON = async (url, idOrIdEditingMode, plantToUpdate) => {
-        const resp = await fetch(`${url}/${idOrIdEditingMode}`, {
-            method: "PATCH",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(plantToUpdate)
-        });
-        if (!resp.ok) {
-            throw new Error("Failed to fetch because server is not running");
-        }
-        return await resp.json();
-    }
-    const inCollectionUpdate = (id) => (
-        setAlbums(albums.map(album => album.id === id ? { ...album, inCollection: !album.inCollection } : album))
-        )
+    const inCollectionUpdate = (id) => {
+        setAlbums(albums.map((album) => album.id === id ? { ...album, inCollection: !album.inCollection } : album))
+}
 
     const handlePatchInCollection = async (id, inCollection) => {
         inCollectionUpdate(id)
@@ -89,24 +58,25 @@ const AlbumsProvider = ({ children }) => {
             includeErrorAlerts(`Re-attempt Action: Process Failed.\nIssue: ${err.message}`)
             setTimeout(() => includeErrorAlerts(''), 5000)
             setAlbums(currentAlbums => currentAlbums.slice(0, -1))  //!This portion needs to be tested after Nav added - turn server off, attempt
-    } }
-
-    const handleDeleteAlbum = async (albumToDelete) => {
-        setAlbums(currentAlbums => currentAlbums.filter(album => album.id !== albumToDelete.id))
-        try {
-            const result = await postJSON(url, albumToDelete ) // Setup for albumToDelete to be an id! Can grab ID on click or need to destructure prior to this
-            console.log(result)
-        } catch (err) {
-            includeErrorAlerts(`Re-attempt Action: Process Failed.\nIssue: ${err.message}`)
-            setTimeout(() => includeErrorAlerts(''), 5000)
-            setAlbums(current => [...current, albumToDelete]) //!This portion needs to be tested after Nav added - turn server off, attempt
-        }
-        // .then(() => navigate('/projects'))
+        } 
     }
+
+    // const handleDeleteAlbum = async (albumToDelete) => {
+    //     setAlbums(currentAlbums => currentAlbums.filter(album => album.id !== albumToDelete.id))
+    //     try {
+    //         const result = await postJSON(url, albumToDelete ) // Setup for albumToDelete to be an id! Can grab ID on click or need to destructure prior to this
+    //         console.log(result)
+    //     } catch (err) {
+    //         includeErrorAlerts(`Re-attempt Action: Process Failed.\nIssue: ${err.message}`)
+    //         setTimeout(() => includeErrorAlerts(''), 5000)
+    //         setAlbums(current => [...current, albumToDelete]) //!This portion needs to be tested after Nav added - turn server off, attempt
+    //     }
+    //     // .then(() => navigate('/projects'))
+    // }
 
     return (
         //! We add handlePatchAllAlbums here once ready
-        <AlbumsContext.Provider value={{ albums , handleAddAlbum, handleDeleteAlbum , handlePatchInCollection , error}}> 
+        <AlbumsContext.Provider value={{ albums , handleAddAlbum , handlePatchInCollection , error}}> 
             {children}
         </AlbumsContext.Provider>
     )

@@ -38,7 +38,7 @@
     },
     {
       "id": "1",
-      "inCollection": false,
+      "inCollection": true,
       "artist": "ABBA",
       "albumCover": "https://i.discogs.com/QLvRIsoIF6reDsMjw0V1q_vzRGLdv2rOKS2z9EL4aEQ/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTg1NTE4/Ny0xNTc2Nzk0MzIz/LTYyOTYuanBlZw.jpeg",
       "title": "The Album",
@@ -128,7 +128,7 @@
     },
     {
       "id": "13",
-      "inCollection": false,
+      "inCollection": true,
       "artist": "Ashlee Simpson",
       "albumCover": "https://i.discogs.com/hQ6EeS3ehhA6yGn3UknQ3RY4LstaZx-DF9cgNF1agCw/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE0NTQz/NjMwLTE1NzY3MTk1/ODEtMjk0Ni5wbmc.jpeg",
       "title": "Autobiography",
@@ -137,7 +137,7 @@
     },
     {
       "id": "14",
-      "inCollection": false,
+      "inCollection": true,
       "artist": "AC/DC",
       "albumCover": "https://i.discogs.com/d76FIUjKidhBbOrnvne86-UQ_LQqKK10gP136EyXWr4/rs:fit/g:sm/q:90/h:595/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEwODI3/OTg5LTE1MDQ5NzEy/MzAtOTE2MC5qcGVn.jpeg",
       "title": "Back In Black",
@@ -146,7 +146,7 @@
     },
     {
       "id": "15",
-      "inCollection": false,
+      "inCollection": true,
       "artist": "Bad Company",
       "albumCover": "https://i.discogs.com/lMfRi3aMPSYqhZgzwmmEuwBAJYaZrKX4rmeN6HgApaI/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE1Mjc4/ODUtMTI5NzU5Njkw/OC5qcGVn.jpeg",
       "title": "Bad Co",
@@ -191,7 +191,7 @@
     },
     {
       "id": "23",
-      "inCollection": false,
+      "inCollection": true,
       "artist": "Lissie",
       "albumCover": "https://i.discogs.com/yzUJylNd2l1RLgVkhXCtaW4jVMBKnUT3ephPXlSI_Pg/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIzMzc4/MjAtMTI3NzkzOTkw/NS5qcGVn.jpeg",
       "title": "Catching A Tiger",
@@ -218,7 +218,7 @@
     },
     {
       "id": "26",
-      "inCollection": false,
+      "inCollection": true,
       "artist": "The Wild Reeds",
       "albumCover": "https://i.discogs.com/NAktWqZb3J2DB-5FstaUnYSVMHG9fc8XAwZ7_zCMkSE/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEzMzI5/MzMzLTE1NTI1Mzkx/NDMtOTgxMS5qcGVn.jpeg",
       "title": "Cheers",
@@ -245,7 +245,7 @@
     },
     {
       "id": "29",
-      "inCollection": false,
+      "inCollection": true,
       "artist": "Carpenters",
       "albumCover": "https://i.discogs.com/q5qVRSGo72qr3IZbbFF-pW5Xs3DIXPTTr2TJlZhR_7o/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTQ5OTI3/ODQtMTM5NDA3NjY0/OC0yMTQwLmpwZWc.jpeg",
       "title": "Close To You",

@@ -25,7 +25,7 @@ const useFetchJSON = () => {
 
     const postJSON = async (url, currentStateVariable, formData) => {
         const lastVariableArray = currentStateVariable.slice(-1)
-        const id = lastVariableArray.length ? Number(lastVariableArray[0].id) + 1 : uuidv4()
+        const id = lastVariableArray.length ? String(Number(lastVariableArray[0].id) + 1) : uuidv4()
             return await handleRequest(url, 'POST', {
                 id,
                 inCollection: formData.inCollection,
