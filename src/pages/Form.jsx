@@ -40,32 +40,37 @@ const AlbumsForm = () => {
     ]
 
     return (
-        <div>
-        {formStatus && <div style={{ color: 'green' }}>{formStatus}</div>}
-        <Formik
-            initialValues={initialValues}
-            validationSchema={validationSchema} //validates using validationSchema
-            onSubmit={async (values, { //pass desired formik functions to assist with form control
-                setSubmitting, resetForm, setStatus }) => {
-            try {
-                await handleAddAlbum(values) // Callback to handle POST
-                setFormStatus('Form submitted successfully!') // Message appears on successful POST
-                setTimeout(() => {
-                    navigate('/') // Navigate back to the main library after ...
-                    setFormStatus('') // reset the displayed Formstatus back
-                }, 2000) // 2000 milliseconds / 2 seconds
-                resetForm()
-            } catch (validationError) { //upon Submit > forEach field
-                const errors = {} // not completed display a error at the top of the form
-                validationError.inner.forEach((e) => {
-                errors[e.path] = e.message
-                })
-                setStatus({}) //removes prior status if one was set
-                setSubmitting(false) //setSubmitting handles form control 
-            }
-            }} 
-            //! We need to decide if we want all errors up top or below each option        
-        >
+        <article className='article-wrapper'>
+            <div className='article-title'>
+                <h2>Notice something missing?</h2>
+                <hr />
+            </div>
+            <p>Go ahead and add it to our main collection and if you own it and want it in your Staxx, keep the checkbox below checked!<br/><br/>All fields are required.</p>
+            {formStatus && <div style={{ color: 'green' }}>{formStatus}</div>}
+            <Formik
+                initialValues={initialValues}
+                validationSchema={validationSchema} //validates using validationSchema
+                onSubmit={async (values, { //pass desired formik functions to assist with form control
+                    setSubmitting, resetForm, setStatus }) => {
+                try {
+                    await handleAddAlbum(values) // Callback to handle POST
+                    setFormStatus('Form submitted successfully!') // Message appears on successful POST
+                    setTimeout(() => {
+                        navigate('/') // Navigate back to the main library after ...
+                        setFormStatus('') // reset the displayed Formstatus back
+                    }, 2000) // 2000 milliseconds / 2 seconds
+                    resetForm()
+                } catch (validationError) { //upon Submit > forEach field
+                    const errors = {} // not completed display a error at the top of the form
+                    validationError.inner.forEach((e) => {
+                    errors[e.path] = e.message
+                    })
+                    setStatus({}) //removes prior status if one was set
+                    setSubmitting(false) //setSubmitting handles form control 
+                }
+                }} 
+                //! We need to decide if we want all errors up top or below each option
+            >
             {({ isSubmitting }) => (
             <Form>
             {fieldInfo.map((field) => (
@@ -90,7 +95,7 @@ const AlbumsForm = () => {
             </Form>
         )}
         </Formik>
-    </div>
+    </article>
 )}
 
 export default AlbumsForm
