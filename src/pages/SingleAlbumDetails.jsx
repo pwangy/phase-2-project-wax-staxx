@@ -49,8 +49,6 @@ const SingleAlbumDetails = () => {
           <mark className="singleMark">Label:</mark> {label}
         </div>
         <br />
-        <div>{inCollection}</div>
-        <br />
         <button onClick={() => handlePatchInCollection(id, inCollection)}>{displayButton}</button>
       </div>
     </>
