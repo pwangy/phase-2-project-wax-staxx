@@ -1,17 +1,20 @@
-import { useContext } from 'react'
-import { AlbumsContext } from '../AlbumsProvider'
+import { useContext } from "react"
+import { AlbumsContext } from "../AlbumsProvider"
 
-const Card = ({ id, inCollection, artist, albumCover, title , showStaxx }) => {
+const Card = ({ id, inCollection, artist, albumCover, title , showStaxx}) => {
     const { handlePatchInCollection } = useContext(AlbumsContext)
+
     const displayButton = showStaxx ? 'Delete Album Your Library' : 'Add Album To Your Library'
 
     return (
-        <section className='card'>
+        <article className='card'>
             <img src={albumCover} alt={title} className='album-art' />
             <p className='album-title'>{title}</p>
             <p className='artist'>{artist}</p>
-            <button onClick={() => handlePatchInCollection(id, inCollection)}>{displayButton}</button>
-        </section>
+            <button onClick={() => handlePatchInCollection(id, inCollection )}>
+            {displayButton}
+            </button>
+        </article>
 )}
 
 export default Card
