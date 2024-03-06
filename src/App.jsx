@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Outlet } from 'react-router-dom'
 import { useErrorAlerts } from './context/ErrorAlertsProvider'
 import NavBar from './components/NavBar'
-// import Logo from './assets/waxstaxx.svg'
+import Logo from './assets/waxstaxx.svg'
 
 const App = () => {
   const [searchQuery, setSearchQuery] = useState('')
