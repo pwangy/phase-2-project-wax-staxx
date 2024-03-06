@@ -29,7 +29,7 @@
     },
     {
       "id": "6",
-      "inCollection": true,
+      "inCollection": false,
       "artist": "The Beatles",
       "albumCover": "https://i.discogs.com/zr9gLwyt6T70HEFnTUuzbZBQi22eEFXRqTXt1T7z39A/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM3NzU1/NC0xMzQwMzU1MTI2/LTE3MTQuanBlZw.jpeg",
       "title": "Let It Be",
@@ -56,7 +56,7 @@
     },
     {
       "id": "3",
-      "inCollection": false,
+      "inCollection": true,
       "artist": "Led Zeppelin",
       "albumCover": "https://i.discogs.com/RSqTIbXtl74My5dMw_ElibY_a5Mnn008YMobGUBAsh4/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTY1MjQy/MTItMTU4NDgyNDM3/Ny01NzYzLmpwZWc.jpeg",
       "title": "Led Zeppelin II",
@@ -65,7 +65,7 @@
     },
     {
       "id": "4",
-      "inCollection": false,
+      "inCollection": true,
       "artist": "The Beatles",
       "albumCover": "https://i.discogs.com/J_kXjrGE2cBR2NkJV4D85OgxBp9JbmtYkULA1I6fdpQ/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTczODM0/NC0xMjkyMjY2Nzk3/LmpwZWc.jpeg",
       "title": "Abbey Road",
@@ -119,7 +119,7 @@
     },
     {
       "id": "12",
-      "inCollection": false,
+      "inCollection": true,
       "artist": "Blondie",
       "albumCover": "https://i.discogs.com/9sGnG9YK1yNAwbXg_lPD8f51FlTrKSrM_oYiXhivB18/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTExNzgy/MDc2LTE1MjIzNjMy/MTItMTI1NS5qcGVn.jpeg",
       "title": "Autoamerican",
@@ -233,6 +233,15 @@
       "title": "Cleopatra",
       "released": 2016,
       "label": "Dualtone"
+    },
+    {
+      "id": "28",
+      "inCollection": false,
+      "artist": "New Name",
+      "albumCover": "New Album",
+      "title": "New Title",
+      "released": 1222,
+      "label": "Yes"
     }
   ]
 }

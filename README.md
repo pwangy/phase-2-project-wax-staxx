@@ -19,20 +19,19 @@
 - [x] LibraryProvider --- figure out how this works
 - [x] ErrorPage - vr
 - [x] libraryLoader - understand this and use it if appropriate - rm
+- [x] load logo and favicon
 - [ ] Writeup and clean up readme
-- [ ] load logo and favico
 - [ ] finish styling
-	@@ -27,12 +27,13 @@
 
 ## Stretch
 - [x]  Search by Artist
 - [x]  Improve search functionality, include more than just Artist
+- [x]  individual album view - xen
+- [x]  make icon clickable '/'
 - [ ]  Edit Album info - PATCH only to Lib (allowing for mutations of albums specific to user)
 - [ ]  Validation on album addition form to check for incoming duplicates
-- [ ]  When editing Album, edits the MyCollection at the same time (lib is always source of tuth)
+- [ ]  When editing Album, edits the MyCollection at the same time (lib is always source of truth)
 - [ ]  light mode
-- [ ]  individual album view - xen
-- [ ]  make icon clickable '/' 
 
 ------------
 ~* README template *~ 
