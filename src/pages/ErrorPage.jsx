@@ -1,4 +1,3 @@
-import { useErrorAlerts } from '../context/ErrorAlertsProvider'
 import { useNavigate, useRouteError } from 'react-router-dom'
 
 const ErrorPage = () => {
