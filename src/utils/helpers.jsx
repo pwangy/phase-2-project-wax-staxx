@@ -38,8 +38,8 @@ const useFetchJSON = () => {
         )
     }
 
-    const patchJSON = async (url, idEditingMode, formData) => {
-        return await handleRequest(`${url}/${idEditingMode}`, 'PATCH', formData)
+    const patchJSON = async (url, idOrIdEditingMode, formData) => {
+        return await handleRequest(`${url}/${idOrIdEditingMode}`, 'PATCH', formData)
     }
 
     const deleteJSON = async (url, id) => {

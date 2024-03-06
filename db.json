@@ -38,7 +38,7 @@
     },
     {
       "id": "1",
-      "inCollection": true,
+      "inCollection": false,
       "artist": "ABBA",
       "albumCover": "https://i.discogs.com/QLvRIsoIF6reDsMjw0V1q_vzRGLdv2rOKS2z9EL4aEQ/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTg1NTE4/Ny0xNTc2Nzk0MzIz/LTYyOTYuanBlZw.jpeg",
       "title": "The Album",
@@ -47,7 +47,7 @@
     },
     {
       "id": "2",
-      "inCollection": false,
+      "inCollection": true,
       "artist": "Cher",
       "albumCover": "https://i.discogs.com/F8ZaPubOz001_K-ylYsWX7fKOypELpTHcxz2YPqjajM/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI2NzE4/NDAtMTQ2OTczODYy/MC01MzcxLmpwZWc.jpeg",
       "title": "Foxy Lady",
@@ -56,7 +56,7 @@
     },
     {
       "id": "3",
-      "inCollection": false,
+      "inCollection": true,
       "artist": "Led Zeppelin",
       "albumCover": "https://i.discogs.com/RSqTIbXtl74My5dMw_ElibY_a5Mnn008YMobGUBAsh4/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTY1MjQy/MTItMTU4NDgyNDM3/Ny01NzYzLmpwZWc.jpeg",
       "title": "Led Zeppelin II",
@@ -101,7 +101,7 @@
     },
     {
       "id": "10",
-      "inCollection": false,
+      "inCollection": true,
       "artist": "Shakey Graves",
       "albumCover": "https://i.discogs.com/VcpxEdXieNxFaUIi7-mH17b9rOiNkIorOnOrYNAtDhs/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTYxNTUz/NTYtMTQxMjQ1NTAz/Ny0yODc4LmpwZWc.jpeg",
       "title": "And The Horse He Rode In On",
@@ -110,7 +110,7 @@
     },
     {
       "id": "11",
-      "inCollection": true,
+      "inCollection": false,
       "artist": "Shakey Graves",
       "albumCover": "https://i.discogs.com/Vpv7rWSeY1xs1aGpakHtE8Vy--nvdRFvhTYaPzZmnSg/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEwNDky/OTg3LTE0OTg3NTY3/MjctNjUxMy5qcGVn.jpeg",
       "title": "And The War Came",
@@ -128,7 +128,7 @@
     },
     {
       "id": "13",
-      "inCollection": true,
+      "inCollection": false,
       "artist": "Ashlee Simpson",
       "albumCover": "https://i.discogs.com/hQ6EeS3ehhA6yGn3UknQ3RY4LstaZx-DF9cgNF1agCw/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE0NTQz/NjMwLTE1NzY3MTk1/ODEtMjk0Ni5wbmc.jpeg",
       "title": "Autobiography",
@@ -137,7 +137,7 @@
     },
     {
       "id": "14",
-      "inCollection": true,
+      "inCollection": false,
       "artist": "AC/DC",
       "albumCover": "https://i.discogs.com/d76FIUjKidhBbOrnvne86-UQ_LQqKK10gP136EyXWr4/rs:fit/g:sm/q:90/h:595/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEwODI3/OTg5LTE1MDQ5NzEy/MzAtOTE2MC5qcGVn.jpeg",
       "title": "Back In Black",
@@ -146,7 +146,7 @@
     },
     {
       "id": "15",
-      "inCollection": true,
+      "inCollection": false,
       "artist": "Bad Company",
       "albumCover": "https://i.discogs.com/lMfRi3aMPSYqhZgzwmmEuwBAJYaZrKX4rmeN6HgApaI/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE1Mjc4/ODUtMTI5NzU5Njkw/OC5qcGVn.jpeg",
       "title": "Bad Co",
@@ -164,7 +164,7 @@
     },
     {
       "id": "18",
-      "inCollection": true,
+      "inCollection": false,
       "artist": "Barbra Streisand",
       "albumCover": "https://i.discogs.com/tUnt2gi5eryW3nACsAyI0rKlRy7OBnCdXQAlmdMZ1eM/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIwMzI1/MTgtMTI3MTk0Mjk3/Ni5qcGVn.jpeg",
       "title": "Barbra Joan Streisand",
@@ -182,7 +182,7 @@
     },
     {
       "id": "20",
-      "inCollection": true,
+      "inCollection": false,
       "artist": "Joni Mitchell",
       "albumCover": "https://i.discogs.com/U-pVGWIIE_dljGJWs0eDRLWz9YbB7116lWxNTGY9NkM/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEwMDI4/MzgxLTE0OTAzODMz/MjEtNTc4OS5qcGVn.jpeg",
       "title": "Blue",
@@ -191,7 +191,7 @@
     },
     {
       "id": "23",
-      "inCollection": true,
+      "inCollection": false,
       "artist": "Lissie",
       "albumCover": "https://i.discogs.com/yzUJylNd2l1RLgVkhXCtaW4jVMBKnUT3ephPXlSI_Pg/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIzMzc4/MjAtMTI3NzkzOTkw/NS5qcGVn.jpeg",
       "title": "Catching A Tiger",
@@ -236,7 +236,7 @@
     },
     {
       "id": "28",
-      "inCollection": true,
+      "inCollection": false,
       "artist": "Bobbie Gentry",
       "albumCover": "https://i.discogs.com/MaWk2P0LsRIN5T-_37j9UnmB6Pd7OGOoGONnzFTjgIs/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTcxNzEx/MTY2LTEyMzYyNjMw/Ni02NjIzLmpwZWc.jpeg",
       "title": "Bobbie Gentry And Glen Campbell",
@@ -245,7 +245,7 @@
     },
     {
       "id": "29",
-      "inCollection": true,
+      "inCollection": false,
       "artist": "Carpenters",
       "albumCover": "https://i.discogs.com/q5qVRSGo72qr3IZbbFF-pW5Xs3DIXPTTr2TJlZhR_7o/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTQ5OTI3/ODQtMTM5NDA3NjY0/OC0yMTQwLmpwZWc.jpeg",
       "title": "Close To You",

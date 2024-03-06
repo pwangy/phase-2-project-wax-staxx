@@ -31,11 +31,11 @@ const AlbumsForm = () => {
     }
 
     const fieldInfo = [
-        { name: 'artist', type: 'text', label: 'Artist Name', placeholder: 'Enter artist name' },
-        { name: 'albumCover', type: 'text', label: 'Album Cover Link', placeholder: 'Enter album cover link' },
-        { name: 'title', type: 'text', label: 'Album Title', placeholder: 'Enter album title' },
-        { name: 'released', type: 'text', label: 'Album Release Year', placeholder: 'Enter release year' },
-        { name: 'label', type: 'text', label: 'Album Label', placeholder: 'Enter album label' },
+        { name: 'artist', type: 'text', label: '', placeholder: 'Enter Artist Name' },
+        { name: 'albumCover', type: 'text', label: '', placeholder: 'Enter Album Cover Link' },
+        { name: 'title', type: 'text', label: '', placeholder: 'Enter Album Title' },
+        { name: 'released', type: 'text', label: '', placeholder: 'Enter Album Release Year' },
+        { name: 'label', type: 'text', label: '', placeholder: 'Enter Album Label' },
         { name: 'inCollection', type: 'checkbox', label: 'Do you want to add this new Album to your collection?' },
     ]
 
@@ -49,11 +49,11 @@ const AlbumsForm = () => {
                 setSubmitting, resetForm, setStatus }) => {
             try {
                 await handleAddAlbum(values) // Callback to handle POST
-                setFormStatus('Form submitted successfully!') // Message appears on successful POST
+                setFormStatus(`You Have Successfully Added ${values.title} by ${values.artist}`) // Message appears on successful POST
                 setTimeout(() => {
                     navigate('/') // Navigate back to the main library after ...
                     setFormStatus('') // reset the displayed Formstatus back
-                }, 2000) // 2000 milliseconds / 2 seconds
+                }, 3000) // 2000 milliseconds / 2 seconds
                 resetForm()
             } catch (validationError) { //upon Submit > forEach field
                 const errors = {} // not completed display a error at the top of the form
@@ -70,7 +70,7 @@ const AlbumsForm = () => {
             <Form>
             {fieldInfo.map((field) => (
                 <div key={field.name}>
-                <label htmlFor={field.name}>{field.label}:</label>
+                <label htmlFor={field.name}>{field.label}</label>
                 {field.type === 'checkbox' ? (
                         <Field type={field.type} id={field.name} name={field.name} />
                     ) : (

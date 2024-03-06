@@ -7,7 +7,7 @@ import { useErrorAlerts } from './ErrorAlertsProvider'
 const App = () => {
   const [searchQuery, setSearchQuery] = useState('')
   const [sortSelected, setSortSelected] = useState('All')
-  const { error } = useErrorAlerts()
+  const { error , success } = useErrorAlerts()
 
   const handleSearch = (e) => {
     setSearchQuery(e.target.value)
@@ -25,6 +25,7 @@ const App = () => {
         <NavBar />
           {/* We should make it light...it will be dark already! isDarkMode={isDarkMode} onToggleDarkMode={onToggleDarkMode} */}
           {error && <div style={{ color: 'red' }}>{error}</div>}
+          {success && <div style={{color: 'green'}}>{success}</div>}
       </header>
       <main>
         <Outlet context={{ searchQuery, handleSearch, handleSortSelection, sortSelected, useErrorAlerts }}/>

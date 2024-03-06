@@ -9,9 +9,8 @@ export const url = 'http://localhost:4000/records'
 
 const AlbumsProvider = ({ children }) => {
     const [albums, setAlbums] = useState([])
-    const { postJSON, patchJSON ,deleteJSON } = useFetchJSON()
-    const { error, includeErrorAlerts } = useErrorAlerts()
-    // console.log('this is postJSON' + postJSON)
+    const { postJSON, patchJSON } = useFetchJSON()
+    const { error, includeErrorAlerts, includeSuccessAlerts } = useErrorAlerts()
 
     useEffect(() => {
         (async () => {
@@ -20,7 +19,7 @@ const AlbumsProvider = ({ children }) => {
                 const data = await res.json()
                 setAlbums(data)
             } catch (err) {
-                includeErrorAlerts(`Re-attempt Action: Process Failed.\nIssue: ${err.message}`)
+                includeErrorAlerts(err)
                 setTimeout(() => includeErrorAlerts(''), 5000)
             }
         })()
@@ -37,10 +36,9 @@ const AlbumsProvider = ({ children }) => {
             })
             const { inCollection, artist, albumCover, title, released, label } = formData
             const currentAlbums =  albums 
-            const result = await postJSON(url, currentAlbums, { inCollection, artist, albumCover, title, released, label })
-                // console.log(result) //! we can use result to display a 'success notification later'
+            await postJSON(url, currentAlbums, { inCollection, artist, albumCover, title, released, label })
         } catch (err) {
-                includeErrorAlerts(`Re-attempt Action: Process Failed.\nIssue: ${err.message}`)
+                includeErrorAlerts(err)
                 setTimeout(() => includeErrorAlerts(''), 5000)
                 setAlbums(currentAlbums => currentAlbums.slice(0, -1))  //!This portion needs to be tested after Nav added - turn server off, attempt
     }}
@@ -53,9 +51,9 @@ const AlbumsProvider = ({ children }) => {
         inCollectionUpdate(id)
         try {
             const result = await patchJSON(url, id, { inCollection : inCollection })
-            console.log(result)
+            includeSuccessAlerts(result)
         } catch (err) {
-            includeErrorAlerts(`Re-attempt Action: Process Failed.\nIssue: ${err.message}`)
+            includeErrorAlerts(err)
             setTimeout(() => includeErrorAlerts(''), 5000)
             setAlbums(currentAlbums => currentAlbums.slice(0, -1))  //!This portion needs to be tested after Nav added - turn server off, attempt
         } 
