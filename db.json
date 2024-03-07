@@ -11,7 +11,7 @@
     },
     {
       "id": "16",
-      "inCollection": true,
+      "inCollection": false,
       "artist": "Tessa Violet",
       "albumCover": "https://i.discogs.com/NQnOxer_YK4JmRaCfJnN9FSbG-Cwfdf9wY31ECqwTBc/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE0NzE1/MzUyLTE1ODAxOTcx/NzAtMjA2OC5qcGVn.jpeg",
       "title": "Bad Ideas",
@@ -29,7 +29,7 @@
     },
     {
       "id": "6",
-      "inCollection": true,
+      "inCollection": false,
       "artist": "The Beatles",
       "albumCover": "https://i.discogs.com/zr9gLwyt6T70HEFnTUuzbZBQi22eEFXRqTXt1T7z39A/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM3NzU1/NC0xMzQwMzU1MTI2/LTE3MTQuanBlZw.jpeg",
       "title": "Let It Be",
@@ -38,7 +38,7 @@
     },
     {
       "id": "1",
-      "inCollection": true,
+      "inCollection": false,
       "artist": "ABBA",
       "albumCover": "https://i.discogs.com/QLvRIsoIF6reDsMjw0V1q_vzRGLdv2rOKS2z9EL4aEQ/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTg1NTE4/Ny0xNTc2Nzk0MzIz/LTYyOTYuanBlZw.jpeg",
       "title": "The Album",
@@ -65,7 +65,7 @@
     },
     {
       "id": "4",
-      "inCollection": false,
+      "inCollection": true,
       "artist": "The Beatles",
       "albumCover": "https://i.discogs.com/J_kXjrGE2cBR2NkJV4D85OgxBp9JbmtYkULA1I6fdpQ/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTczODM0/NC0xMjkyMjY2Nzk3/LmpwZWc.jpeg",
       "title": "Abbey Road",
@@ -83,7 +83,7 @@
     },
     {
       "id": "7",
-      "inCollection": false,
+      "inCollection": true,
       "artist": "Banda Taurina",
       "albumCover": "https://i.discogs.com/cMAe1QtuQy3DRib7dA_NtCO-peUiFNWapk7_fO7kfSo/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEwNzc3/MzItMTE5MDM5NTg5/MC5qcGVn.jpeg",
       "title": "¡Torero! La Fiesta Brava, Vol. 3",
@@ -101,7 +101,7 @@
     },
     {
       "id": "10",
-      "inCollection": false,
+      "inCollection": true,
       "artist": "Shakey Graves",
       "albumCover": "https://i.discogs.com/VcpxEdXieNxFaUIi7-mH17b9rOiNkIorOnOrYNAtDhs/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTYxNTUz/NTYtMTQxMjQ1NTAz/Ny0yODc4LmpwZWc.jpeg",
       "title": "And The Horse He Rode In On",
@@ -110,7 +110,7 @@
     },
     {
       "id": "11",
-      "inCollection": false,
+      "inCollection": true,
       "artist": "Shakey Graves",
       "albumCover": "https://i.discogs.com/Vpv7rWSeY1xs1aGpakHtE8Vy--nvdRFvhTYaPzZmnSg/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEwNDky/OTg3LTE0OTg3NTY3/MjctNjUxMy5qcGVn.jpeg",
       "title": "And The War Came",
@@ -137,7 +137,7 @@
     },
     {
       "id": "14",
-      "inCollection": false,
+      "inCollection": true,
       "artist": "AC/DC",
       "albumCover": "https://i.discogs.com/d76FIUjKidhBbOrnvne86-UQ_LQqKK10gP136EyXWr4/rs:fit/g:sm/q:90/h:595/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEwODI3/OTg5LTE1MDQ5NzEy/MzAtOTE2MC5qcGVn.jpeg",
       "title": "Back In Black",
@@ -146,7 +146,7 @@
     },
     {
       "id": "15",
-      "inCollection": false,
+      "inCollection": true,
       "artist": "Bad Company",
       "albumCover": "https://i.discogs.com/lMfRi3aMPSYqhZgzwmmEuwBAJYaZrKX4rmeN6HgApaI/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE1Mjc4/ODUtMTI5NzU5Njkw/OC5qcGVn.jpeg",
       "title": "Bad Co",
@@ -155,7 +155,7 @@
     },
     {
       "id": "17",
-      "inCollection": false,
+      "inCollection": true,
       "artist": "Halsey",
       "albumCover": "https://i.discogs.com/Zlzi3teg9zbAtveW5wDaMJFomYUUuRYbRf1vMMjkRUc/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTgwODcz/MTktMTQ1NTIwMjUw/Mi01MjI3LmpwZWc.jpeg",
       "title": "Badlands",
@@ -164,7 +164,7 @@
     },
     {
       "id": "18",
-      "inCollection": false,
+      "inCollection": true,
       "artist": "Barbra Streisand",
       "albumCover": "https://i.discogs.com/tUnt2gi5eryW3nACsAyI0rKlRy7OBnCdXQAlmdMZ1eM/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIwMzI1/MTgtMTI3MTk0Mjk3/Ni5qcGVn.jpeg",
       "title": "Barbra Joan Streisand",
@@ -182,7 +182,7 @@
     },
     {
       "id": "20",
-      "inCollection": false,
+      "inCollection": true,
       "artist": "Joni Mitchell",
       "albumCover": "https://i.discogs.com/U-pVGWIIE_dljGJWs0eDRLWz9YbB7116lWxNTGY9NkM/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEwMDI4/MzgxLTE0OTAzODMz/MjEtNTc4OS5qcGVn.jpeg",
       "title": "Blue",
@@ -200,7 +200,7 @@
     },
     {
       "id": "24",
-      "inCollection": false,
+      "inCollection": true,
       "artist": "Dominic J Marshall Trio",
       "albumCover": "https://i.discogs.com/wsrK64FK_4RXd_cx_syG_ttA8iO09k8tshYis4fETag/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEzNDUy/OTIwLTE2MTIyODcx/ODEtMjMxNS5qcGVn.jpeg",
       "title": "Cave Art Two",
