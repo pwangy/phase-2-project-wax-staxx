@@ -18,8 +18,8 @@ const AlbumsProvider = ({ children }) => {
                 const data = await res.json()
                 setAlbums(data)
             } catch (err) {
-                includeErrorAlerts(err.message)
-                setTimeout(() => includeErrorAlerts(''), 5000)
+                includeErrorAlerts(err)
+                setTimeout(() => includeErrorAlerts(''), 6000)
             }
         })()
     }, [includeErrorAlerts])
@@ -37,7 +37,7 @@ const AlbumsProvider = ({ children }) => {
             const currentAlbums =  albums 
             await postJSON(url, currentAlbums, { inCollection, artist, albumCover, title, released, label })
         } catch (err) {
-                includeErrorAlerts(err.message)
+                includeErrorAlerts(err)
                 setTimeout(() => includeErrorAlerts(''), 5000)
                 setAlbums(currentAlbums => currentAlbums.slice(0, -1))
     }}
@@ -52,7 +52,7 @@ const AlbumsProvider = ({ children }) => {
             const result = await patchJSON(url, id, { inCollection : inCollection })
             includeSuccessAlerts(result)
         } catch (err) {
-            includeErrorAlerts(err.message)
+            includeErrorAlerts(err)
             setTimeout(() => includeErrorAlerts(''), 5000)
             setAlbums(currentAlbums => currentAlbums.slice(0, -1))
     }
