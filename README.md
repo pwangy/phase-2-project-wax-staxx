@@ -1,7 +1,6 @@
 # Wax Staxx
 Welcome to Wax Staxx! - A React app that provides information about various albums, allowing users to track and showcase their personal collection. 
-
-
+![Screenshot 2024-03-07 at 10 57 12](https://github.com/pwangy/phase-2-project-wax-staxx/assets/64912576/cfbd6282-0f2e-46a0-b26a-a4033fecfcad)
 
 ## Features
 - Browse the main Collection of albums.
