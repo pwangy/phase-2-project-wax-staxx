@@ -90,7 +90,7 @@ button {
   border: 1px solid transparent;
 }
 
-.disabled {
+button.disabled {
   background-color: #666;
   pointer-events: none;
 }

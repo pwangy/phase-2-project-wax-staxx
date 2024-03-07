@@ -2,7 +2,7 @@
   "records": [
     {
       "id": "9",
-      "inCollection": false,
+      "inCollection": true,
       "artist": "Adele",
       "albumCover": "https://i.discogs.com/cloSggzA3DtGZUTH6_riCYGe_4wApHzxc5iHgbCvW_U/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIxMDQ3/MTYxLTE2NDUwNjQz/MjYtMTczMy5qcGVn.jpeg",
       "title": "30",
@@ -20,7 +20,7 @@
     },
     {
       "id": "22",
-      "inCollection": false,
+      "inCollection": true,
       "artist": "Shakey Graves",
       "albumCover": "https://i.discogs.com/jC3o0JyFBlZdnUjoGrmaRbhL8-aVDa1ZBq-iBdYf6_E/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTExOTU2/OTU2LTE2OTU5NTU5/NDktMjExNy5qcGVn.jpeg",
       "title": "Can't Wake Up",
@@ -29,7 +29,7 @@
     },
     {
       "id": "6",
-      "inCollection": true,
+      "inCollection": false,
       "artist": "The Beatles",
       "albumCover": "https://i.discogs.com/zr9gLwyt6T70HEFnTUuzbZBQi22eEFXRqTXt1T7z39A/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM3NzU1/NC0xMzQwMzU1MTI2/LTE3MTQuanBlZw.jpeg",
       "title": "Let It Be",
@@ -47,7 +47,7 @@
     },
     {
       "id": "2",
-      "inCollection": true,
+      "inCollection": false,
       "artist": "Cher",
       "albumCover": "https://i.discogs.com/F8ZaPubOz001_K-ylYsWX7fKOypELpTHcxz2YPqjajM/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI2NzE4/NDAtMTQ2OTczODYy/MC01MzcxLmpwZWc.jpeg",
       "title": "Foxy Lady",
@@ -56,7 +56,7 @@
     },
     {
       "id": "3",
-      "inCollection": true,
+      "inCollection": false,
       "artist": "Led Zeppelin",
       "albumCover": "https://i.discogs.com/RSqTIbXtl74My5dMw_ElibY_a5Mnn008YMobGUBAsh4/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTY1MjQy/MTItMTU4NDgyNDM3/Ny01NzYzLmpwZWc.jpeg",
       "title": "Led Zeppelin II",
@@ -65,7 +65,7 @@
     },
     {
       "id": "4",
-      "inCollection": false,
+      "inCollection": true,
       "artist": "The Beatles",
       "albumCover": "https://i.discogs.com/J_kXjrGE2cBR2NkJV4D85OgxBp9JbmtYkULA1I6fdpQ/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTczODM0/NC0xMjkyMjY2Nzk3/LmpwZWc.jpeg",
       "title": "Abbey Road",
@@ -74,7 +74,7 @@
     },
     {
       "id": "5",
-      "inCollection": true,
+      "inCollection": false,
       "artist": "The Beatles",
       "albumCover": "https://i.discogs.com/eTJnH8j54jpgAhqd52SmxA5d_NX3bBCosvInD2VbE0k/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTMwMjc3/MzEtMTM3NzM5MTE4/My0xNzk4LmpwZWc.jpeg",
       "title": "Hey Jude",
@@ -92,7 +92,7 @@
     },
     {
       "id": "8",
-      "inCollection": true,
+      "inCollection": false,
       "artist": "Alex Lilly",
       "albumCover": "https://i.discogs.com/n1J2-jgJvWlQU-37bbbfXRiMa_ak9wzvKPUuvmF2VP0/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEzMjg5/NTU1LTE1NTE0NjQ3/NjEtOTcxNC5qcGVn.jpeg",
       "title": "2% Milk",
@@ -101,7 +101,7 @@
     },
     {
       "id": "10",
-      "inCollection": false,
+      "inCollection": true,
       "artist": "Shakey Graves",
       "albumCover": "https://i.discogs.com/VcpxEdXieNxFaUIi7-mH17b9rOiNkIorOnOrYNAtDhs/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTYxNTUz/NTYtMTQxMjQ1NTAz/Ny0yODc4LmpwZWc.jpeg",
       "title": "And The Horse He Rode In On",
@@ -110,7 +110,7 @@
     },
     {
       "id": "11",
-      "inCollection": false,
+      "inCollection": true,
       "artist": "Shakey Graves",
       "albumCover": "https://i.discogs.com/Vpv7rWSeY1xs1aGpakHtE8Vy--nvdRFvhTYaPzZmnSg/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEwNDky/OTg3LTE0OTg3NTY3/MjctNjUxMy5qcGVn.jpeg",
       "title": "And The War Came",
@@ -137,7 +137,7 @@
     },
     {
       "id": "14",
-      "inCollection": false,
+      "inCollection": true,
       "artist": "AC/DC",
       "albumCover": "https://i.discogs.com/d76FIUjKidhBbOrnvne86-UQ_LQqKK10gP136EyXWr4/rs:fit/g:sm/q:90/h:595/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEwODI3/OTg5LTE1MDQ5NzEy/MzAtOTE2MC5qcGVn.jpeg",
       "title": "Back In Black",
@@ -200,7 +200,7 @@
     },
     {
       "id": "24",
-      "inCollection": false,
+      "inCollection": true,
       "artist": "Dominic J Marshall Trio",
       "albumCover": "https://i.discogs.com/wsrK64FK_4RXd_cx_syG_ttA8iO09k8tshYis4fETag/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEzNDUy/OTIwLTE2MTIyODcx/ODEtMjMxNS5qcGVn.jpeg",
       "title": "Cave Art Two",
@@ -209,7 +209,7 @@
     },
     {
       "id": "25",
-      "inCollection": true,
+      "inCollection": false,
       "artist": "Big Brother & The Holding Company",
       "albumCover": "https://i.discogs.com/B6XTMAPGwEMhxLdKtGIsaIRM4InsKcNAqXU9n9l_V1k/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM5NTM2/NjgtMTUxNjEyNzc2/My01MzAxLmpwZWc.jpeg",
       "title": "Cheap Thrills",
@@ -218,7 +218,7 @@
     },
     {
       "id": "26",
-      "inCollection": true,
+      "inCollection": false,
       "artist": "The Wild Reeds",
       "albumCover": "https://i.discogs.com/NAktWqZb3J2DB-5FstaUnYSVMHG9fc8XAwZ7_zCMkSE/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEzMzI5/MzMzLTE1NTI1Mzkx/NDMtOTgxMS5qcGVn.jpeg",
       "title": "Cheers",

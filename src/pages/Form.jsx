@@ -30,11 +30,11 @@ const AlbumsForm = () => {
     }
 
     const fieldInfo = [
-        { name: 'artist', type: 'text', label: '', placeholder: 'Artist Name' },
-        { name: 'albumCover', type: 'text', label: '', placeholder: 'Album Cover Link' },
-        { name: 'title', type: 'text', label: '', placeholder: 'Album Title' },
-        { name: 'released', type: 'number', label: '', placeholder: 'Album Release Year' },
-        { name: 'label', type: 'text', label: '', placeholder: 'Album Label' },
+        { name: 'artist', type: 'text', placeholder: 'Artist Name' },
+        { name: 'albumCover', type: 'text',  placeholder: 'Album Cover Link' },
+        { name: 'title', type: 'text', placeholder: 'Album Title' },
+        { name: 'released', type: 'number',  placeholder: 'Album Release Year' },
+        { name: 'label', type: 'text',  placeholder: 'Album Label' },
         { name: 'inCollection', type: 'checkbox', label: 'Add album to your collection?' },
     ]
 
