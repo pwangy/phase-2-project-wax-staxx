@@ -18,9 +18,7 @@ $alert-green: #99c270;
 
 
 // todo!
-
-// the form
-// form: move error msg up
+// add/rm: move alerts msg
 // error pages, make notifications sticky
 
 // look at why disabled buttons are hoverable
@@ -36,6 +34,7 @@ $alert-green: #99c270;
 }
 
 :root {
+  max-width: 1080px;
   font-family: $font-stack;
   font-size: $font-size;
   font-weight: $font-weight;
@@ -206,7 +205,44 @@ section {
   margin-right: 15px;
 }
 
+.alert-wrapper {
+  margin-top: 6px;
+  margin-left: 6px;
+  padding: 6px;
+  font-size: small;
+  color: $alert-green;
+  font-weight: $font-bold;
+  white-space: pre-wrap;
+  border: 1px solid $alert-green;
+  border-radius: 3px;
+  display: inline-block;
+}
+
 .alerts {
+  margin-left: 6px;
+  padding: 6px;
+  font-size: small;
+  color: $alert;
+  font-weight: $font-bold;
+  white-space: pre-wrap;
+  border: 1px solid $alert;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.alert-green {
+  margin-left: 6px;
+  padding: 6px;
+  font-size: small;
+  color: $alert-green;
+  font-weight: $font-bold;
+  white-space: pre-wrap;
+  border: 1px solid $alert-green;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.form-alerts {
   margin-top: 6px;
   font-size: small;
   color: $alert;
@@ -214,10 +250,6 @@ section {
   white-space: pre-wrap;
 }
 
-.alert-green {
-  color: $alert-green;
-  white-space: pre-wrap;
-}
 
 // Library View
 .article-wrapper {

@@ -20,7 +20,7 @@
     },
     {
       "id": "22",
-      "inCollection": false,
+      "inCollection": true,
       "artist": "Shakey Graves",
       "albumCover": "https://i.discogs.com/jC3o0JyFBlZdnUjoGrmaRbhL8-aVDa1ZBq-iBdYf6_E/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTExOTU2/OTU2LTE2OTU5NTU5/NDktMjExNy5qcGVn.jpeg",
       "title": "Can't Wake Up",
@@ -29,7 +29,7 @@
     },
     {
       "id": "6",
-      "inCollection": false,
+      "inCollection": true,
       "artist": "The Beatles",
       "albumCover": "https://i.discogs.com/zr9gLwyt6T70HEFnTUuzbZBQi22eEFXRqTXt1T7z39A/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM3NzU1/NC0xMzQwMzU1MTI2/LTE3MTQuanBlZw.jpeg",
       "title": "Let It Be",
@@ -74,7 +74,7 @@
     },
     {
       "id": "5",
-      "inCollection": false,
+      "inCollection": true,
       "artist": "The Beatles",
       "albumCover": "https://i.discogs.com/eTJnH8j54jpgAhqd52SmxA5d_NX3bBCosvInD2VbE0k/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTMwMjc3/MzEtMTM3NzM5MTE4/My0xNzk4LmpwZWc.jpeg",
       "title": "Hey Jude",
@@ -83,7 +83,7 @@
     },
     {
       "id": "7",
-      "inCollection": false,
+      "inCollection": true,
       "artist": "Banda Taurina",
       "albumCover": "https://i.discogs.com/cMAe1QtuQy3DRib7dA_NtCO-peUiFNWapk7_fO7kfSo/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEwNzc3/MzItMTE5MDM5NTg5/MC5qcGVn.jpeg",
       "title": "¡Torero! La Fiesta Brava, Vol. 3",
@@ -101,7 +101,7 @@
     },
     {
       "id": "10",
-      "inCollection": true,
+      "inCollection": false,
       "artist": "Shakey Graves",
       "albumCover": "https://i.discogs.com/VcpxEdXieNxFaUIi7-mH17b9rOiNkIorOnOrYNAtDhs/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTYxNTUz/NTYtMTQxMjQ1NTAz/Ny0yODc4LmpwZWc.jpeg",
       "title": "And The Horse He Rode In On",
@@ -119,7 +119,7 @@
     },
     {
       "id": "12",
-      "inCollection": true,
+      "inCollection": false,
       "artist": "Blondie",
       "albumCover": "https://i.discogs.com/9sGnG9YK1yNAwbXg_lPD8f51FlTrKSrM_oYiXhivB18/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTExNzgy/MDc2LTE1MjIzNjMy/MTItMTI1NS5qcGVn.jpeg",
       "title": "Autoamerican",
@@ -128,7 +128,7 @@
     },
     {
       "id": "13",
-      "inCollection": true,
+      "inCollection": false,
       "artist": "Ashlee Simpson",
       "albumCover": "https://i.discogs.com/hQ6EeS3ehhA6yGn3UknQ3RY4LstaZx-DF9cgNF1agCw/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE0NTQz/NjMwLTE1NzY3MTk1/ODEtMjk0Ni5wbmc.jpeg",
       "title": "Autobiography",
@@ -155,7 +155,7 @@
     },
     {
       "id": "17",
-      "inCollection": true,
+      "inCollection": false,
       "artist": "Halsey",
       "albumCover": "https://i.discogs.com/Zlzi3teg9zbAtveW5wDaMJFomYUUuRYbRf1vMMjkRUc/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTgwODcz/MTktMTQ1NTIwMjUw/Mi01MjI3LmpwZWc.jpeg",
       "title": "Badlands",
@@ -251,6 +251,60 @@
       "title": "asdf",
       "released": 3654,
       "label": "adf"
+    },
+    {
+      "id": "30",
+      "inCollection": false,
+      "artist": "name",
+      "albumCover": "link",
+      "title": "title",
+      "released": 2525,
+      "label": "no"
+    },
+    {
+      "id": "31",
+      "inCollection": false,
+      "artist": "omg",
+      "albumCover": "wtf",
+      "title": "bbq",
+      "released": 1222,
+      "label": "blomp"
+    },
+    {
+      "id": "32",
+      "inCollection": false,
+      "artist": "lalall",
+      "albumCover": "alsdkfj",
+      "title": "fa",
+      "released": 23,
+      "label": "ti"
+    },
+    {
+      "id": "33",
+      "inCollection": true,
+      "artist": "r",
+      "albumCover": "dfasdf",
+      "title": "r",
+      "released": 13,
+      "label": "r"
+    },
+    {
+      "id": "34",
+      "inCollection": true,
+      "artist": "lasdf",
+      "albumCover": "lkjafs",
+      "title": "lkj",
+      "released": 88,
+      "label": "asdf"
+    },
+    {
+      "id": "35",
+      "inCollection": true,
+      "artist": "asdf",
+      "albumCover": "asd",
+      "title": "adsf",
+      "released": 1,
+      "label": "afd"
     }
   ]
 }

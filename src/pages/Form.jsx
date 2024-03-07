@@ -40,8 +40,8 @@ const AlbumsForm = () => {
 
     return (
         <>
-            <div className='spacer' />
             {formStatus && <div className='alert-green'>{formStatus}</div>}
+            <div className='spacer' />
             <article className='article-wrapper'>
                 <div className='article-title'>
                     <h2>Notice something missing?</h2>
@@ -70,7 +70,6 @@ const AlbumsForm = () => {
                     setSubmitting(false) //setSubmitting handles form control 
                     }
                     }}
-                    //! We need to decide if we want all errors up top or below each option
                 >
                 {({ isSubmitting }) => (
                 <Form className='form-wrapper'>
@@ -83,7 +82,7 @@ const AlbumsForm = () => {
                                     <Field type={field.type} id={field.name} name={field.name} placeholder={field.placeholder} />
                             )}
                             <label htmlFor={field.name} id={field.name}>{field.label}</label>
-                            <ErrorMessage name={field.name} component='div' className='alerts' />
+                            <ErrorMessage name={field.name} component='div' className='form-alerts' />
                             </div>
                         ))}
                         <button type='submit' disabled={isSubmitting} className='form-btn'>Submit</button>

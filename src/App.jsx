@@ -25,10 +25,10 @@ const App = () => {
         <Link to='/'><img src={Logo} alt='Wax Staxx logo' id='logo' /></Link>
         <NavBar />
           {/* We should make it light...it will be dark already! isDarkMode={isDarkMode} onToggleDarkMode={onToggleDarkMode} */}
-          {error && <div className='alerts'>{error}</div>}
-          {success && <div className='alerts-green'>{success}</div>}
       </header>
       <main>
+        {error && <div className='alerts'>{error}</div>}
+        {success && <div className='alerts-green'>{success}</div>}
         <Outlet context={{ searchQuery, handleSearch, handleSortSelection, sortSelected, useErrorAlerts }}/>
         <hr id='footer' />
         <Footer />
