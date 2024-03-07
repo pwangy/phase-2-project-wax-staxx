@@ -19,7 +19,6 @@ const AlbumsProvider = ({ children }) => {
                 setAlbums(data)
             } catch (err) {
                 includeErrorAlerts(err)
-                setTimeout(() => includeErrorAlerts(''), 6000)
             }
         })()
     }, [includeErrorAlerts])
@@ -28,8 +27,7 @@ const AlbumsProvider = ({ children }) => {
         try {
             setAlbums((currentAlbums) => {
                 const lastVariableArray = currentAlbums.slice(-1)
-                const id = lastVariableArray.length
-                ? Number(lastVariableArray[0].id) + 1 : uuidv4()
+                const id = lastVariableArray.length ? String(Number(lastVariableArray[0].id) + 1) : uuidv4()
             const updatedAlbums = [...currentAlbums, { id, ...formData}]
             return updatedAlbums
             })
@@ -38,15 +36,14 @@ const AlbumsProvider = ({ children }) => {
             await postJSON(url, currentAlbums, { inCollection, artist, albumCover, title, released, label })
         } catch (err) {
                 includeErrorAlerts(err)
-                setTimeout(() => includeErrorAlerts(''), 5000)
                 setAlbums(currentAlbums => currentAlbums.slice(0, -1))
     }}
 
     const inCollectionUpdate = (id) => (
         setAlbums(albums.map(album => album.id === id ? { ...album, inCollection: !album.inCollection } : album))
         )
-
-    const handlePatchInCollection = async (id, inCollection) => {
+        
+        const handlePatchInCollection = async (id, inCollection) => {
         inCollectionUpdate(id)
         try {
             const result = await patchJSON(url, id, { inCollection : inCollection })

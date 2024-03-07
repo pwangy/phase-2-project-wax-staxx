@@ -18,6 +18,7 @@ const SingleAlbumDetails = () => {
 
   const { artist, title, released, label, inCollection, albumCover } = album
   const displayButton = inCollection ? '+ my staxx' : '- my staxx'
+  // const disableButton = inCollection && !showStaxx
 
   return (
     <article>
@@ -32,7 +33,7 @@ const SingleAlbumDetails = () => {
           <p><span>Album:</span> {title}</p>
           <p><span>Released:</span> {released}</p>
           <p><span>Label:</span> {label}</p>
-          <button className='detail-button' onClick={() => handlePatchInCollection(id, inCollection)}>{displayButton}</button>
+          <button className='detail-button' onClick={() => handlePatchInCollection(id, !inCollection)}>{displayButton}</button>
         </div>
         <img src={albumCover} alt={title} className='detail-album-art' />
       </section>
