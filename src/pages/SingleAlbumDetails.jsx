@@ -17,7 +17,7 @@ const SingleAlbumDetails = () => {
   }
 
   const { artist, title, released, label, inCollection, albumCover } = album
-  const displayButton = inCollection ? '+ my staxx' : '- my staxx'
+  const displayButton = !inCollection ? '+ my staxx' : '- my staxx'
   // const disableButton = inCollection && !showStaxx
 
   return (

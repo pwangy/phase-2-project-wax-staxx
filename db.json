@@ -74,7 +74,7 @@
     },
     {
       "id": "5",
-      "inCollection": false,
+      "inCollection": true,
       "artist": "The Beatles",
       "albumCover": "https://i.discogs.com/eTJnH8j54jpgAhqd52SmxA5d_NX3bBCosvInD2VbE0k/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTMwMjc3/MzEtMTM3NzM5MTE4/My0xNzk4LmpwZWc.jpeg",
       "title": "Hey Jude",
