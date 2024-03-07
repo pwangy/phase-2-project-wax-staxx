@@ -17,29 +17,26 @@ const SingleAlbumDetails = () => {
   }
 
   const { artist, title, released, label, inCollection, albumCover } = album
-  const displayButton = inCollection ? 'Remove from Collection' : 'Add to Collection'
+  const displayButton = inCollection ? '+ my staxx' : '- my staxx'
 
   return (
-    <>
-      <div>
-        <br />
-        <div>
-          <img src={albumCover} alt={title} className='detail-album-art' />
+    <article>
+      <div className='spacer' />
+      <div className='article-title'>
+            <h2>Album Details</h2>
+            <hr />
         </div>
-      </div>
-      <div id='singlealbumdetails'>
-        <br />
-        <div><mark className='singleMark'>Artist:</mark> {artist}</div>
-        <br />
-        <div><mark className='singleMark'>Album:</mark> {title}</div>
-        <br />
-        <div><mark className='singleMark'>Released:</mark> {released}</div>
-        <br />
-        <div><mark className='singleMark'>Label:</mark> {label}</div>
-        <br />
-        <button onClick={() => handlePatchInCollection(id, inCollection)}>{displayButton}</button>
-      </div>
-    </>
+      <section className='detail-wrapper'>
+        <div className='album-detail'>
+          <p><span>Artist:</span> {artist}</p>
+          <p><span>Album:</span> {title}</p>
+          <p><span>Released:</span> {released}</p>
+          <p><span>Label:</span> {label}</p>
+          <button className='detail-button' onClick={() => handlePatchInCollection(id, inCollection)}>{displayButton}</button>
+        </div>
+        <img src={albumCover} alt={title} className='detail-album-art' />
+      </section>
+    </article>
   )
 }
 

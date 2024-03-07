@@ -101,7 +101,7 @@
     },
     {
       "id": "10",
-      "inCollection": false,
+      "inCollection": true,
       "artist": "Shakey Graves",
       "albumCover": "https://i.discogs.com/VcpxEdXieNxFaUIi7-mH17b9rOiNkIorOnOrYNAtDhs/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTYxNTUz/NTYtMTQxMjQ1NTAz/Ny0yODc4LmpwZWc.jpeg",
       "title": "And The Horse He Rode In On",
@@ -233,6 +233,15 @@
       "title": "Cleopatra",
       "released": 2016,
       "label": "Dualtone"
+    },
+    {
+      "id": "28",
+      "inCollection": false,
+      "artist": "testy",
+      "albumCover": "testers",
+      "title": "testing",
+      "released": 3436,
+      "label": "no"
     }
   ]
 }
