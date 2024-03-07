@@ -29,7 +29,7 @@
     },
     {
       "id": "6",
-      "inCollection": false,
+      "inCollection": true,
       "artist": "The Beatles",
       "albumCover": "https://i.discogs.com/zr9gLwyt6T70HEFnTUuzbZBQi22eEFXRqTXt1T7z39A/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM3NzU1/NC0xMzQwMzU1MTI2/LTE3MTQuanBlZw.jpeg",
       "title": "Let It Be",
@@ -74,7 +74,7 @@
     },
     {
       "id": "5",
-      "inCollection": false,
+      "inCollection": true,
       "artist": "The Beatles",
       "albumCover": "https://i.discogs.com/eTJnH8j54jpgAhqd52SmxA5d_NX3bBCosvInD2VbE0k/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTMwMjc3/MzEtMTM3NzM5MTE4/My0xNzk4LmpwZWc.jpeg",
       "title": "Hey Jude",
@@ -83,7 +83,7 @@
     },
     {
       "id": "7",
-      "inCollection": false,
+      "inCollection": true,
       "artist": "Banda Taurina",
       "albumCover": "https://i.discogs.com/cMAe1QtuQy3DRib7dA_NtCO-peUiFNWapk7_fO7kfSo/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEwNzc3/MzItMTE5MDM5NTg5/MC5qcGVn.jpeg",
       "title": "¡Torero! La Fiesta Brava, Vol. 3",
@@ -92,7 +92,7 @@
     },
     {
       "id": "8",
-      "inCollection": false,
+      "inCollection": true,
       "artist": "Alex Lilly",
       "albumCover": "https://i.discogs.com/n1J2-jgJvWlQU-37bbbfXRiMa_ak9wzvKPUuvmF2VP0/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEzMjg5/NTU1LTE1NTE0NjQ3/NjEtOTcxNC5qcGVn.jpeg",
       "title": "2% Milk",
@@ -209,7 +209,7 @@
     },
     {
       "id": "25",
-      "inCollection": false,
+      "inCollection": true,
       "artist": "Big Brother & The Holding Company",
       "albumCover": "https://i.discogs.com/B6XTMAPGwEMhxLdKtGIsaIRM4InsKcNAqXU9n9l_V1k/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM5NTM2/NjgtMTUxNjEyNzc2/My01MzAxLmpwZWc.jpeg",
       "title": "Cheap Thrills",
@@ -218,7 +218,7 @@
     },
     {
       "id": "26",
-      "inCollection": false,
+      "inCollection": true,
       "artist": "The Wild Reeds",
       "albumCover": "https://i.discogs.com/NAktWqZb3J2DB-5FstaUnYSVMHG9fc8XAwZ7_zCMkSE/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEzMzI5/MzMzLTE1NTI1Mzkx/NDMtOTgxMS5qcGVn.jpeg",
       "title": "Cheers",
@@ -227,7 +227,7 @@
     },
     {
       "id": "27",
-      "inCollection": false,
+      "inCollection": true,
       "artist": "The Lumineers",
       "albumCover": "https://i.discogs.com/Z_q_344EiCGH80d9FQbUmgbHG_DadUoArFq8S6x8-wY/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTgzNTU0/MTQtMTQ1OTk4MDA4/Ny0zOTMxLmpwZWc.jpeg",
       "title": "Cleopatra",
