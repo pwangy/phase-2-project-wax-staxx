@@ -1,3 +1,54 @@
+# Wax Staxx
+Welcome to Wax Staxx! - A React app that provides information about various albums, allowing users to track and showcase their personal collection. 
+
+
+
+## Features
+- Browse the main Collection of albums.
+- Search and filter albums by artist or title.
+- Sort albums by artist or title in alphabetical order
+- Add new albums to the Collection and your Staxx at the same time using the form.
+- An option to remove an album from your Staxx but not from the Collection. 
+- View album details by clicking on the album itself. 
+
+## Structure
+- `App` Root component
+- `AlbumProvider` Provides context data to share with child routes
+- `Library` Default view, shows the main Collection
+- `SearchBar` and `SortButtons` component for searching and filtering albums.
+- `Form` Allows users to add an album
+- `SingleAlbumDetails` Displays a single album along with details by matching to the album's assigned database id `/album/:id`
+
+### Additional
+- `Nav` Navigation component, appears in the header of all pages to allow easy navigation
+- `ErrorPage` and `ErrorAlertsProvider` Provide context, manages alerts and popups to inform user of successful actions or prompting a different action. Custom hook.
+- `Footer` Links and credits to app authors
+- `helpers` utility file holding different functional helpers
+- `routes` Routing structure defining pairs of routes and the component to display when called
+
+## Getting Up and Running
+1. Clone this repository
+2. Install dependencies: `npm install`
+4. `npm run server` will start the server on `http://localhost:4000/records`
+5. `npm run start`  stars the frontend on `http://localhost:5173/`
+6.  - http://localhost:5173/ is fetching from http://localhost:4000/records which is required to run the application
+
+## Tech
+- Vite
+- React
+- React-Router-Dom
+- Scss
+- Formik
+- Yup
+- UUID v4
+
+## Authors
+⚡Waxx Staxx was built with 💖 by 👨‍🎤 [Vinny Revard](https://github.com/Vincent-Revard), 👩‍🎤 [Xen Contreras](https://github.com/Xenbydesign), and 👩‍🎤 [Peggy Wang](https://github.com/pwangy/) for educational purposes as part of Flatiron School's Software Engineering bootcamp.⚡
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
+
+----
 # Wax Staxx - MVP
 
 ## Pages
@@ -32,61 +83,3 @@
 - [ ]  Validation on album addition form to check for incoming duplicates
 - [ ]  When editing Album, edits the MyCollection at the same time (lib is always source of truth)
 - [ ]  light mode
-
-------------
-# Wax Staxx
-
-Welcome to Wax Staxx! -  a React web application that provides information about various vinyl albums, allowing users to showcase their personal collection. for collectors it fun to talk about music and what albums you have this website is clean and to the point to be able to keep your collection up to date. 
-
-## Features
-
-- Browse a collection of Albums.
-- Search and filter albums by artist and album title.
-- Sort albums by artist or album title in alphabetical order
-- Add new albums to the collective and your personal staxx at the same time using the submission form.
-- An option to remove an album from your personal collection but not from the collective. 
-- (Optional) view more album details by clicking on the album itself. 
-
-## Project Structure
-
-The project is structured with the following components:
-
-- `App`: The main component.
-- `Library`: The landing page of the website.
-- `SearchBar` and `SortButtons`: Component for searching and filtering albums.
-- `Form`: Form for submitting new albums.
-- `Library` and `AlbumProvider`: Components for displaying a list of albums in the collective or in your `my staxx`, respectively.
-- `SingleAlbumDetails`: Component for identifying /:id to get a specific albums details
-
-### Additional Components (if applicable)
-
-- `Header`: Header component (considered optional).
-- `ErrorPage`: Page for handling errors (considered optional).
-- `Nav`: Navigation component for linking to specific pages.
-
-## Installation
-
-1. Clone this repository.
-2. Open a terminal window to open this repository in your code editor
-3. Install dependencies: `npm install`
-4. Run `npm run server` This will start the server on port http://localhost:4000/records and watch for changes in the db.json file .
-5. Run the application: `npm start` which should open http://localhost:5173/
-6.  - http://localhost:5173/ is fetching from http://localhost:4000/records which is required to run the application
-
-## Usage
-
-???
-
-
-## Authors
-
-- Vinny Revard
-- Peggy Wang
-- Xen Contreras
-
-## Contributing
-
-Pull requests are welcome. For major changes, please open an issue first
-to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
