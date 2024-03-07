@@ -11,7 +11,7 @@
     },
     {
       "id": "16",
-      "inCollection": true,
+      "inCollection": false,
       "artist": "Tessa Violet",
       "albumCover": "https://i.discogs.com/NQnOxer_YK4JmRaCfJnN9FSbG-Cwfdf9wY31ECqwTBc/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE0NzE1/MzUyLTE1ODAxOTcx/NzAtMjA2OC5qcGVn.jpeg",
       "title": "Bad Ideas",
@@ -20,7 +20,7 @@
     },
     {
       "id": "22",
-      "inCollection": true,
+      "inCollection": false,
       "artist": "Shakey Graves",
       "albumCover": "https://i.discogs.com/jC3o0JyFBlZdnUjoGrmaRbhL8-aVDa1ZBq-iBdYf6_E/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTExOTU2/OTU2LTE2OTU5NTU5/NDktMjExNy5qcGVn.jpeg",
       "title": "Can't Wake Up",
@@ -29,7 +29,7 @@
     },
     {
       "id": "6",
-      "inCollection": true,
+      "inCollection": false,
       "artist": "The Beatles",
       "albumCover": "https://i.discogs.com/zr9gLwyt6T70HEFnTUuzbZBQi22eEFXRqTXt1T7z39A/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM3NzU1/NC0xMzQwMzU1MTI2/LTE3MTQuanBlZw.jpeg",
       "title": "Let It Be",
@@ -38,7 +38,7 @@
     },
     {
       "id": "1",
-      "inCollection": true,
+      "inCollection": false,
       "artist": "ABBA",
       "albumCover": "https://i.discogs.com/QLvRIsoIF6reDsMjw0V1q_vzRGLdv2rOKS2z9EL4aEQ/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTg1NTE4/Ny0xNTc2Nzk0MzIz/LTYyOTYuanBlZw.jpeg",
       "title": "The Album",
@@ -65,7 +65,7 @@
     },
     {
       "id": "4",
-      "inCollection": true,
+      "inCollection": false,
       "artist": "The Beatles",
       "albumCover": "https://i.discogs.com/J_kXjrGE2cBR2NkJV4D85OgxBp9JbmtYkULA1I6fdpQ/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTczODM0/NC0xMjkyMjY2Nzk3/LmpwZWc.jpeg",
       "title": "Abbey Road",
@@ -146,7 +146,7 @@
     },
     {
       "id": "15",
-      "inCollection": false,
+      "inCollection": true,
       "artist": "Bad Company",
       "albumCover": "https://i.discogs.com/lMfRi3aMPSYqhZgzwmmEuwBAJYaZrKX4rmeN6HgApaI/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE1Mjc4/ODUtMTI5NzU5Njkw/OC5qcGVn.jpeg",
       "title": "Bad Co",
@@ -155,7 +155,7 @@
     },
     {
       "id": "17",
-      "inCollection": false,
+      "inCollection": true,
       "artist": "Halsey",
       "albumCover": "https://i.discogs.com/Zlzi3teg9zbAtveW5wDaMJFomYUUuRYbRf1vMMjkRUc/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTgwODcz/MTktMTQ1NTIwMjUw/Mi01MjI3LmpwZWc.jpeg",
       "title": "Badlands",
@@ -164,7 +164,7 @@
     },
     {
       "id": "18",
-      "inCollection": false,
+      "inCollection": true,
       "artist": "Barbra Streisand",
       "albumCover": "https://i.discogs.com/tUnt2gi5eryW3nACsAyI0rKlRy7OBnCdXQAlmdMZ1eM/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIwMzI1/MTgtMTI3MTk0Mjk3/Ni5qcGVn.jpeg",
       "title": "Barbra Joan Streisand",
@@ -182,7 +182,7 @@
     },
     {
       "id": "20",
-      "inCollection": false,
+      "inCollection": true,
       "artist": "Joni Mitchell",
       "albumCover": "https://i.discogs.com/U-pVGWIIE_dljGJWs0eDRLWz9YbB7116lWxNTGY9NkM/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEwMDI4/MzgxLTE0OTAzODMz/MjEtNTc4OS5qcGVn.jpeg",
       "title": "Blue",
@@ -227,7 +227,7 @@
     },
     {
       "id": "27",
-      "inCollection": true,
+      "inCollection": false,
       "artist": "The Lumineers",
       "albumCover": "https://i.discogs.com/Z_q_344EiCGH80d9FQbUmgbHG_DadUoArFq8S6x8-wY/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTgzNTU0/MTQtMTQ1OTk4MDA4/Ny0zOTMxLmpwZWc.jpeg",
       "title": "Cleopatra",

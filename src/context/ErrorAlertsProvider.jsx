@@ -11,8 +11,8 @@ const ErrorAlertsProvider = ({ children }) => {
 		setTimeout(() => setError(''), 5000)}
 
 	const includeSuccessAlerts = ({inCollection, title}) => {
-		const addedToMyStaxx = `Added ${title} to MyStaxx`
-		const removedFromMyStaxx = `Removed ${title} from MyStaxx`
+		const addedToMyStaxx = <div className='alert-wrapper'>Added {title} to MyStaxx</div>
+		const removedFromMyStaxx = <div className='alert-wrapper'>Removed {title} from MyStaxx</div>
 		setSuccess(inCollection ? addedToMyStaxx : removedFromMyStaxx)
 		setTimeout(() => setSuccess(''), 5000)}
 
