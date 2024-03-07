@@ -57,7 +57,7 @@ const AlbumsForm = () => {
                 setFormStatus(`You Have Successfully Added ${values.title} by ${values.artist}`) // Message appears on successful POST
                 resetForm()
                 await sleep(4000)
-                navigate('/') // Navigate back to the main library after ...
+                values.inCollection? navigate('/my-staxx'): navigate('/') // Navigate back to the main library after ...
                 setFormStatus('') // reset the displayed Formstatus back
             } catch (validationError) { //upon Submit > forEach field
                 const errors = {} // not completed display a error at the top of the form
