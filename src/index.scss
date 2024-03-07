@@ -16,20 +16,9 @@ $dark-secondary: #333;
 $alert: hotpink;
 $alert-green: #99c270;
 
-
-// todo!
-// error pages, make notifications sticky
-//  style disable buttons to visually cue to user that it is disabled
-
-// form-button - what defines 'isSubmitting'?
-
-// code clean
-
-
 * {
   margin: 0;
   padding: 0;
-  // border: 1px solid lightskyblue;
 }
 
 :root {
@@ -356,7 +345,6 @@ section {
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
-  // background-color: #99c270;
 }
 
 .formik {
