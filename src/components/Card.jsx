@@ -11,7 +11,7 @@ const Card = ({ id, inCollection, artist, albumCover, title, showStaxx}) => {
     return (
         <section className='card'>
             <Link to={`/album/${id}`}>
-            <img src={albumCover} alt={title} className='album-art' />
+                <img src={albumCover} alt={title} className='album-art' />
             </Link>
             <p className='album-title'>{title}</p>
             <p className='artist'>{artist}</p>

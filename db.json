@@ -2,7 +2,7 @@
   "records": [
     {
       "id": "9",
-      "inCollection": true,
+      "inCollection": false,
       "artist": "Adele",
       "albumCover": "https://i.discogs.com/cloSggzA3DtGZUTH6_riCYGe_4wApHzxc5iHgbCvW_U/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIxMDQ3/MTYxLTE2NDUwNjQz/MjYtMTczMy5qcGVn.jpeg",
       "title": "30",
@@ -29,7 +29,7 @@
     },
     {
       "id": "6",
-      "inCollection": false,
+      "inCollection": true,
       "artist": "The Beatles",
       "albumCover": "https://i.discogs.com/zr9gLwyt6T70HEFnTUuzbZBQi22eEFXRqTXt1T7z39A/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM3NzU1/NC0xMzQwMzU1MTI2/LTE3MTQuanBlZw.jpeg",
       "title": "Let It Be",
@@ -119,7 +119,7 @@
     },
     {
       "id": "12",
-      "inCollection": true,
+      "inCollection": false,
       "artist": "Blondie",
       "albumCover": "https://i.discogs.com/9sGnG9YK1yNAwbXg_lPD8f51FlTrKSrM_oYiXhivB18/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTExNzgy/MDc2LTE1MjIzNjMy/MTItMTI1NS5qcGVn.jpeg",
       "title": "Autoamerican",
