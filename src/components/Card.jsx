@@ -8,10 +8,9 @@ const Card = ({ id, inCollection, artist, albumCover, title, showStaxx}) => {
     const displayButton = !showStaxx ? '+ my staxx' : '- my staxx'
     const disableButton = inCollection && !showStaxx
 
-
     return (
         <section className='card'>
-           <Link to={`/album/${id}`}>
+            <Link to={`/album/${id}`}>
             <img src={albumCover} alt={title} className='album-art' />
             </Link>
             <p className='album-title'>{title}</p>

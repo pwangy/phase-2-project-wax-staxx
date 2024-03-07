@@ -87,9 +87,10 @@ const AlbumsForm = () => {
                 <ErrorMessage name={field.name} component='div' style={errorStyle} />
                 </div>
             ))}
-            <button type='submit' disabled={isSubmitting}>
-                Submit
-            </button>
+                <button type='submit' disabled={isSubmitting} className={isSubmitting ? 'disabled' :'form-btn'}>
+                    Submit
+                </button>
+
             </Form>
         )}
         </Formik>

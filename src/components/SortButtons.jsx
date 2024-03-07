@@ -1,5 +1,5 @@
 const ButtonsFilter = ({ handleSortSelection }) => {
-       return (
+      return (
         <div className='filter-wrapper' onClick={handleSortSelection}>
             <h5>SORT</h5>
             <button name='artist' className='filter-button'>By Artist</button>
@@ -8,4 +8,4 @@ const ButtonsFilter = ({ handleSortSelection }) => {
         </div>
 )}
   
-  export default ButtonsFilter
+export default ButtonsFilter
