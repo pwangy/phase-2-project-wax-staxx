@@ -51,7 +51,9 @@ const AlbumsProvider = ({ children }) => {
         } catch (err) {
             includeErrorAlerts(err)
             setTimeout(() => includeErrorAlerts(''), 5000)
-            setAlbums(currentAlbums => currentAlbums.slice(0, -1))
+            setAlbums(currentAlbums => currentAlbums.map(album => 
+                album.id === id ? { ...album, inCollection: !album.inCollection } : album
+            ))
     }
 }
 
