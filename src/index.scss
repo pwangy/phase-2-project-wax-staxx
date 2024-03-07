@@ -19,8 +19,6 @@ $alert-green: #99c270;
 
 // todo!
 // error pages, make notifications sticky
-
-// look at why disabled buttons are hoverable
 //  style disable buttons to visually cue to user that it is disabled
 
 // form-button - what defines 'isSubmitting'?
@@ -103,7 +101,7 @@ button {
   border: 1px solid transparent;
 }
 
-button.disabled {
+.disabled {
   background-color: #666;
   pointer-events: none;
 }

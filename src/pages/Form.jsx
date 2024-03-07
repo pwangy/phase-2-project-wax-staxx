@@ -85,7 +85,7 @@ const AlbumsForm = () => {
                             <ErrorMessage name={field.name} component='div' className='form-alerts' />
                             </div>
                         ))}
-                        <button type='submit' disabled={isSubmitting} className='form-btn'>Submit</button>
+                        <button type='submit' disabled={isSubmitting} className={isSubmitting ? 'disabled' :'form-btn'}>Submit</button>
                     </section>
                 </Form>
             )}
