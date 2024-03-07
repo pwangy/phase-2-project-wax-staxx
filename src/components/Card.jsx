@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import { AlbumsContext } from '../context/AlbumsProvider'
 import { Link } from 'react-router-dom'
 
@@ -8,7 +8,6 @@ const Card = ({ id, inCollection, artist, albumCover, title, showStaxx}) => {
     const displayButton = !showStaxx ? '+ my staxx' : '- my staxx'
     const disableButton = inCollection && !showStaxx
 
-
     return (
         <section className='card'>
             <Link to={`/album/${id}`}>
@@ -16,7 +15,7 @@ const Card = ({ id, inCollection, artist, albumCover, title, showStaxx}) => {
             </Link>
             <p className='album-title'>{title}</p>
             <p className='artist'>{artist}</p>
-            <button disabled={disableButton} onClick={() => handlePatchInCollection(id, !inCollection )}>
+            <button disabled={disableButton} className={disableButton ? 'disabled' : null} aria-disabled={disableButton ? true : false } onClick={() => handlePatchInCollection(id, !inCollection )}>
             {displayButton}
             </button>
         </section>

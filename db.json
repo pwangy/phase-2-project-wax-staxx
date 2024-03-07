@@ -2,7 +2,7 @@
   "records": [
     {
       "id": "9",
-      "inCollection": true,
+      "inCollection": false,
       "artist": "Adele",
       "albumCover": "https://i.discogs.com/cloSggzA3DtGZUTH6_riCYGe_4wApHzxc5iHgbCvW_U/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIxMDQ3/MTYxLTE2NDUwNjQz/MjYtMTczMy5qcGVn.jpeg",
       "title": "30",
@@ -11,7 +11,7 @@
     },
     {
       "id": "16",
-      "inCollection": true,
+      "inCollection": false,
       "artist": "Tessa Violet",
       "albumCover": "https://i.discogs.com/NQnOxer_YK4JmRaCfJnN9FSbG-Cwfdf9wY31ECqwTBc/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE0NzE1/MzUyLTE1ODAxOTcx/NzAtMjA2OC5qcGVn.jpeg",
       "title": "Bad Ideas",
@@ -281,7 +281,7 @@
     },
     {
       "id": "33",
-      "inCollection": true,
+      "inCollection": false,
       "artist": "r",
       "albumCover": "dfasdf",
       "title": "r",
@@ -290,7 +290,7 @@
     },
     {
       "id": "34",
-      "inCollection": true,
+      "inCollection": false,
       "artist": "lasdf",
       "albumCover": "lkjafs",
       "title": "lkj",
@@ -299,7 +299,7 @@
     },
     {
       "id": "35",
-      "inCollection": true,
+      "inCollection": false,
       "artist": "asdf",
       "albumCover": "asd",
       "title": "adsf",
