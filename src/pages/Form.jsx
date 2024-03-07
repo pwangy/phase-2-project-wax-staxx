@@ -30,70 +30,67 @@ const AlbumsForm = () => {
     }
 
     const fieldInfo = [
-        { name: 'artist', type: 'text', label: '', placeholder: 'Enter Artist Name' },
-        { name: 'albumCover', type: 'text', label: '', placeholder: 'Enter Album Cover Link' },
-        { name: 'title', type: 'text', label: '', placeholder: 'Enter Album Title' },
-        { name: 'released', type: 'number', label: '', placeholder: 'Enter Album Release Year' },
-        { name: 'label', type: 'text', label: '', placeholder: 'Enter Album Label' },
-        { name: 'inCollection', type: 'checkbox', label: 'Do you want to add this new Album to your collection?' },
+        { name: 'artist', type: 'text', label: '', placeholder: 'Artist Name' },
+        { name: 'albumCover', type: 'text', label: '', placeholder: 'Album Cover Link' },
+        { name: 'title', type: 'text', label: '', placeholder: 'Album Title' },
+        { name: 'released', type: 'number', label: '', placeholder: 'Album Release Year' },
+        { name: 'label', type: 'text', label: '', placeholder: 'Album Label' },
+        { name: 'inCollection', type: 'checkbox', label: 'Add album to your collection?' },
     ]
 
     return (
-        <article className='article-wrapper'>
-            <div className='article-title'>
-                <h2>Notice something missing?</h2>
-                <hr />
-            </div>
+        <>
             {formStatus && <div className='alert-green'>{formStatus}</div>}
-           <p>Go ahead and add it to our main collection and if you own it and want it in your Staxx, keep the checkbox below checked!<br/><br/>All fields are required.</p>
-        <Formik
-            initialValues={initialValues}
-            validationSchema={validationSchema} //validates using validationSchema
-            onSubmit={async (values, { //pass desired formik functions to assist with form control
-                setSubmitting, resetForm, setStatus }) => {
-            try {
-                await handleAddAlbum(values) // Callback to handle POST
-                setFormStatus(`You Have Successfully Added ${values.title} by ${values.artist}`) // Message appears on successful POST
-                await sleep(4000)
-                navigate('/') // Navigate back to the main library after ...
-                setFormStatus('') // reset the displayed Formstatus back
-                resetForm()
-            } catch (validationError) { //upon Submit > forEach field
-                const errors = {} // not completed display a error at the top of the form
-                validationError.inner.forEach((e) => {
-                errors[e.path] = e.message
-                })
-                setStatus({}) //removes prior status if one was set
-                setSubmitting(false) //setSubmitting handles form control 
-                }
-                }} 
-                //! We need to decide if we want all errors up top or below each option
-            >
-            {({ isSubmitting }) => (
-            <Form>
-            {fieldInfo.map((field) => (
-                <div key={field.name}>
-                <label htmlFor={field.name}>{field.label}</label>
-                {field.type === 'checkbox' ? (
-                        <Field type={field.type} id={field.name} name={field.name} />
-                    ) : (
-                        <Field
-                        type={field.type}
-                        id={field.name}
-                        name={field.name}
-                        placeholder={field.placeholder}
-                        />
-                )}
-                <ErrorMessage name={field.name} component='div' className='alerts' />
+            <div className='spacer' />
+            <article className='article-wrapper'>
+                <div className='article-title'>
+                    <h2>Notice something missing?</h2>
+                    <hr />
                 </div>
-            ))}
-            <button type='submit' disabled={isSubmitting}>
-                Submit
-            </button>
-            </Form>
-        )}
-        </Formik>
-    </article>
+                <p className='form-p'>Go ahead and add it to our main collection. If you want it included in your Staxx, keep the checkbox below checked.<br/><br/>All fields are required.</p>
+            </article>
+            <Formik
+                initialValues={initialValues}
+                validationSchema={validationSchema} //validates using validationSchema
+                onSubmit={async (values, { //pass desired formik functions to assist with form control
+                    setSubmitting, resetForm, setStatus }) => {
+                try {
+                    await handleAddAlbum(values) // Callback to handle POST
+                    setFormStatus(`You Have Successfully Added ${values.title} by ${values.artist}`) // Message appears on successful POST
+                    await sleep(4000)
+                    navigate('/') // Navigate back to the main library after ...
+                    setFormStatus('') // reset the displayed Formstatus back
+                    resetForm()
+                } catch (validationError) { //upon Submit > forEach field
+                    const errors = {} // not completed display a error at the top of the form
+                    validationError.inner.forEach((e) => {
+                    errors[e.path] = e.message
+                    })
+                    setStatus({}) //removes prior status if one was set
+                    setSubmitting(false) //setSubmitting handles form control 
+                    }
+                    }}
+                >
+                {({ isSubmitting }) => (
+                <Form className='form-wrapper'>
+                    <section>
+                        {fieldInfo.map((field) => (
+                            <div key={field.name} className='formik'>
+                            {field.type === 'checkbox' ? (
+                                    <Field type={field.type} id={field.name} name={field.name} />
+                                ) : (
+                                    <Field type={field.type} id={field.name} name={field.name} placeholder={field.placeholder} />
+                            )}
+                            <label htmlFor={field.name} id={field.name}>{field.label}</label>
+                            <ErrorMessage name={field.name} component='div' className='form-alerts' />
+                            </div>
+                        ))}
+                        <button type='submit' disabled={isSubmitting} className={isSubmitting ? 'disabled' :'form-btn'}>Submit</button>
+                    </section>
+                </Form>
+            )}
+            </Formik>
+    </>
 )}
 
 export default AlbumsForm
