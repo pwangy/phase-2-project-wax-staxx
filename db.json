@@ -20,7 +20,7 @@
     },
     {
       "id": "22",
-      "inCollection": true,
+      "inCollection": false,
       "artist": "Shakey Graves",
       "albumCover": "https://i.discogs.com/jC3o0JyFBlZdnUjoGrmaRbhL8-aVDa1ZBq-iBdYf6_E/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTExOTU2/OTU2LTE2OTU5NTU5/NDktMjExNy5qcGVn.jpeg",
       "title": "Can't Wake Up",
@@ -128,7 +128,7 @@
     },
     {
       "id": "13",
-      "inCollection": false,
+      "inCollection": true,
       "artist": "Ashlee Simpson",
       "albumCover": "https://i.discogs.com/hQ6EeS3ehhA6yGn3UknQ3RY4LstaZx-DF9cgNF1agCw/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE0NTQz/NjMwLTE1NzY3MTk1/ODEtMjk0Ni5wbmc.jpeg",
       "title": "Autobiography",
@@ -155,7 +155,7 @@
     },
     {
       "id": "17",
-      "inCollection": false,
+      "inCollection": true,
       "artist": "Halsey",
       "albumCover": "https://i.discogs.com/Zlzi3teg9zbAtveW5wDaMJFomYUUuRYbRf1vMMjkRUc/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTgwODcz/MTktMTQ1NTIwMjUw/Mi01MjI3LmpwZWc.jpeg",
       "title": "Badlands",
@@ -242,6 +242,15 @@
       "title": "testing",
       "released": 3436,
       "label": "no"
+    },
+    {
+      "id": "29",
+      "inCollection": false,
+      "artist": "asdf",
+      "albumCover": "blomp",
+      "title": "asdf",
+      "released": 3654,
+      "label": "adf"
     }
   ]
 }
