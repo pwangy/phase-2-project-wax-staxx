@@ -2,26 +2,27 @@
 $font-stack: Helvetica, Arial, sans-serif;
 $font-size: 1em;
 $font-weight: 400;
+$font-bold: 700;
+$font-bolder: 900;
 $line-height: 1.5;
 
 // Colors | Dark as Default
 $text: snow;
 $accent: #febe99;
 $secondary: #ccc;
+$tertiary: turquoise;
 $dark-primary: #191414;
 $dark-secondary: #333;
-
-
-//! error pages, the form, and the album detail page?
-
+$alert: hotpink;
+$alert-green: #99c270;
 
 * {
   margin: 0;
   padding: 0;
-  // border: 1px solid lightskyblue;
 }
 
 :root {
+  max-width: 1080px;
   font-family: $font-stack;
   font-size: $font-size;
   font-weight: $font-weight;
@@ -43,23 +44,20 @@ header {
   flex-direction: row nowrap;
   align-items: end;
   justify-content: start;
-  // background-color: cyan;
 }
 
 #logo {
   height: 16vh;
   margin: 16px 0 0 0;
   padding: 0;
-  // background-color: violet;
 }
 
 nav > .nav-link {
   margin-left: 25px;
-  font-weight: 700;
+  font-weight: $font-bold;
   text-transform: uppercase;
   text-decoration: none;
   color: $text;
-  // background: yellow;
 }
 
 a.active {
@@ -69,27 +67,32 @@ a.active {
 }
 
 // Links & Buttons
-// a {
-//   font-weight: 500;
-//   color: #646cff;
-//   text-decoration: none;
-// }
+a {
+  color: $tertiary;
+  text-decoration: none;
+  cursor: pointer;
+}
 
-// a:hover {
-//   color: #535bf2;
-// }
+a:hover {
+  color: $accent;
+}
 
 button {
   margin-top: 12px;
   border-radius: 3px;
   padding: 0.5em .5em;
   font-size: x-small;
-  font-weight: 900;
+  font-weight: $font-bolder;
   font-family: inherit;
   background-color: $secondary;
   cursor: pointer;
   text-transform: uppercase;
   border: 1px solid transparent;
+}
+
+.disabled {
+  background-color: #666;
+  pointer-events: none;
 }
 
 button:hover {
@@ -103,14 +106,9 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-.err {
-  margin-right: 15px;
-}
-
 .filter-wrapper {
   margin: 0;
   padding: 0;
-  // background-color: limegreen;
 }
 
 .filter-button {
@@ -126,7 +124,6 @@ input {
   line-height: $line-height;
   border: none;
   border-radius: 3px;
-  // background-color: orange;
 }
 
 #search-sort {
@@ -136,7 +133,6 @@ input {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  // background-color: $dark-secondary;
   border-top: 1px solid $dark-secondary;
   border-bottom: 1px solid $dark-secondary;
   border-radius: 3px;
@@ -150,16 +146,19 @@ body {
   display: flex;
   align-content: center;
   border: none;
-}  
+}
 
 main {
   margin: 0 16px;
-}  
+}
+
+.spacer {
+  height: 48px;
+}
 
 h1, h2, h5 {
   margin: 0;
   padding: 0;
-  // border: none;
 }
 
 h1 {
@@ -173,7 +172,6 @@ h2 {
   text-transform: uppercase;
   color: $text;
   border: none;
-  // background: teal;
 }
 
 h5 {
@@ -189,26 +187,72 @@ hr {
 
 section {
   border: none;
-  // background-color: hotpink;
 }
 
 // Error Pages
-// white-space: pre-wrap;
 .err-wrapper {
   margin: 25px 0 0 25px;
 }
 
-// Album View
+.err {
+  margin-right: 15px;
+}
+
+.alert-wrapper {
+  margin-top: 6px;
+  margin-left: 6px;
+  padding: 6px;
+  font-size: small;
+  color: $alert-green;
+  font-weight: $font-bold;
+  white-space: pre-wrap;
+  border: 1px solid $alert-green;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.alerts {
+  margin-left: 6px;
+  padding: 6px;
+  font-size: small;
+  color: $alert;
+  font-weight: $font-bold;
+  white-space: pre-wrap;
+  border: 1px solid $alert;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.alert-green {
+  margin-left: 6px;
+  padding: 6px;
+  font-size: small;
+  color: $alert-green;
+  font-weight: $font-bold;
+  white-space: pre-wrap;
+  border: 1px solid $alert-green;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.form-alerts {
+  margin-top: 6px;
+  font-size: small;
+  color: $alert;
+  font-weight: $font-bold;
+  white-space: pre-wrap;
+}
+
+
+// Library View
 .article-wrapper {
   display: flex;
   flex-flow: row wrap;
   border: none;
-  // background-color: darkmagenta;
 }
 
 .article-title {
   width: 100%;
-  // background-color: darkolivegreen;
   align-items: left;
   justify-content: left;
   display: block;
@@ -217,7 +261,6 @@ section {
 
 .container-view {
   justify-content: center;
-  // background-color: darkblue;
   border: none;
 }
 
@@ -226,8 +269,6 @@ section {
   margin-bottom: 1.8em;
   display: flex;
   flex-flow: column nowrap;
-  // background-color: darkgray;
-  // border: none;
 }
 
 .card > p {
@@ -237,11 +278,13 @@ section {
 .album-title {
   margin-top: 6px;
   font-size: .67em;
-  font-weight: 900;
+  font-weight: $font-bolder;
+  white-space: pre-line;
 }
 
 .artist {
   font-size: .65em;
+  white-space: pre-line;
 }
 
 .album-art {
@@ -250,15 +293,102 @@ section {
   border: none;
   }
 
-// @media (prefers-color-scheme: dark) {
-//   :root {
-//     color: #213547;
-//     background-color: #ffffff;
-//   }
-//   a:hover {
-//     color: #747bff;
-//   }
-//   button {
-//     background-color: #f9f9f9;
-//   }
-// }
+// Album Detail View
+.detail-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.detail-album-art {
+  width: 300px;
+  height: 300px;
+  border-radius: 3px;
+}
+
+.album-detail {
+  margin-right: 6em;
+  align-self: end;
+}
+
+.album-detail > p {
+  font-size: larger;
+}
+
+.album-detail > p > span {
+  width: 250px;
+  font-size: small;
+  font-weight: $font-weight;
+  text-transform: uppercase;
+  color: $secondary;
+}
+
+.detail-button {
+  margin-top: 3em;
+}
+
+// Form
+.form-p {
+  margin-bottom: 2em;
+  line-height: .75;
+}
+
+.form-wrapper {
+  width: 23vh;
+  padding: 1.5em;
+  display: block;
+  border: 1px solid $dark-secondary;
+  border-radius: 3px;
+}
+
+.form-wrapper > section {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.formik {
+  width: auto;
+  margin-bottom: 1em;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.formik input {
+  border-radius: 3px;
+}
+
+#inCollection {
+  width: 2em;
+  margin-right: 9px;
+  display: inline;
+  cursor: pointer;
+}
+
+.form-btn {
+  align-self: flex-end;
+}
+
+// Footer
+footer {
+  margin-bottom: 3em;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+#footer {
+  margin-top: 3em;
+  height: 1px;
+  background: $dark-secondary;
+  border: none;
+  background-color: $accent;
+}
+
+footer > p {
+  width: 85%;
+  font-size: .80em;
+  text-align: center;
+}
