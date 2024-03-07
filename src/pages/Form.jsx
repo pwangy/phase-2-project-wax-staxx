@@ -67,8 +67,7 @@ const AlbumsForm = () => {
                 setStatus({}) //removes prior status if one was set
                 setSubmitting(false) //setSubmitting handles form control 
             }
-            }} 
-            //! We need to decide if we want all errors up top or below each option        
+            }}    
         >
             {({ isSubmitting }) => (
             <Form>
