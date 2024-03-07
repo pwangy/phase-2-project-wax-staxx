@@ -11,7 +11,7 @@
     },
     {
       "id": "16",
-      "inCollection": true,
+      "inCollection": false,
       "artist": "Tessa Violet",
       "albumCover": "https://i.discogs.com/NQnOxer_YK4JmRaCfJnN9FSbG-Cwfdf9wY31ECqwTBc/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE0NzE1/MzUyLTE1ODAxOTcx/NzAtMjA2OC5qcGVn.jpeg",
       "title": "Bad Ideas",
@@ -20,7 +20,7 @@
     },
     {
       "id": "22",
-      "inCollection": true,
+      "inCollection": false,
       "artist": "Shakey Graves",
       "albumCover": "https://i.discogs.com/jC3o0JyFBlZdnUjoGrmaRbhL8-aVDa1ZBq-iBdYf6_E/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTExOTU2/OTU2LTE2OTU5NTU5/NDktMjExNy5qcGVn.jpeg",
       "title": "Can't Wake Up",
@@ -65,7 +65,7 @@
     },
     {
       "id": "4",
-      "inCollection": true,
+      "inCollection": false,
       "artist": "The Beatles",
       "albumCover": "https://i.discogs.com/J_kXjrGE2cBR2NkJV4D85OgxBp9JbmtYkULA1I6fdpQ/rs:fill/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTczODM0/NC0xMjkyMjY2Nzk3/LmpwZWc.jpeg",
       "title": "Abbey Road",
@@ -233,6 +233,33 @@
       "title": "Cleopatra",
       "released": 2016,
       "label": "Dualtone"
+    },
+    {
+      "id": "28",
+      "inCollection": true,
+      "artist": "Michael Jackson",
+      "albumCover": "https://upload.wikimedia.org/wikipedia/en/f/f6/Off_the_wall.jpg",
+      "title": "Off the Wall",
+      "released": 1979,
+      "label": "Epic"
+    },
+    {
+      "id": "29",
+      "inCollection": true,
+      "artist": "Michael Jackson",
+      "albumCover": "https://upload.wikimedia.org/wikipedia/en/f/f6/Off_the_wall.jpg",
+      "title": "She's Out of My Life",
+      "released": 1979,
+      "label": "Epic"
+    },
+    {
+      "id": "30",
+      "inCollection": true,
+      "artist": "Michael Jackson",
+      "albumCover": "https://upload.wikimedia.org/wikipedia/en/f/f6/Off_the_wall.jpg",
+      "title": "111",
+      "released": 1111,
+      "label": "111"
     }
   ]
 }
