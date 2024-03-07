@@ -70,10 +70,10 @@ Welcome to Wax Staxx! - A React app that provides information about various albu
 - [x] ErrorPage - vr
 - [x] libraryLoader - understand this and use it if appropriate - rm
 - [x] load logo and favicon
-- [ ] Writeup and clean up readme
-- [ ] finish styling
+- [x] Writeup and clean up readme
+- [x] finish styling
 
-## Stretch
+## Stretch / Roadmap
 - [x]  Search by Artist
 - [x]  Improve search functionality, include more than just Artist
 - [x]  individual album view - xen
