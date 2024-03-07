@@ -13,21 +13,22 @@ $dark-secondary: #333;
 
 
 // todo!
-// make logo clickable
+
 // the form
-// white-space: pre-wrap;
-
-// search/sort spacing on form
-
-// album detail page?
 // form: move error msg up
 // error pages, make notifications sticky
+
+// search/sort spacing on form
+// album detail page?
+
+
 // look at why disabled buttons are hoverable
 //  style disable buttons to visually cue to user that it is disabled
 
-// db check
 // code clean
 // readme
+//x db check
+// x footer
 
 * {
   margin: 0;
@@ -223,7 +224,7 @@ section {
   white-space: pre-wrap;
 }
 
-// Album View
+// Library View
 .article-wrapper {
   display: flex;
   flex-flow: row wrap;
@@ -282,6 +283,30 @@ section {
   width: 300px;
   height: 300px;
   border-radius: 3px;
+}
+
+
+// Footer
+footer {
+  margin-bottom: 3em;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+#footer {
+  margin-top: 3em;
+  height: 1px;
+  background: $dark-secondary;
+  border: none;
+  background-color: $accent;
+}
+
+footer > p {
+  width: 85%;
+  font-size: .80em;
+  text-align: center;
 }
 
 // @media (prefers-color-scheme: dark) {
