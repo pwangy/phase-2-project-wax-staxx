@@ -1,4 +1,4 @@
 [build]
-  base = "code/"
+  base = "/"
   publish = "dist"
-  command = "npm run build && npm run server"
+  command = "npm run build"
