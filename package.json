@@ -4,6 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "main": "server.js",
+  "engines": {
+    "node": "21.5.0"
+  },
   "scripts": {
     "start": "vite && server.js",
     "server": "json-server --watch db.json --port 4000",
