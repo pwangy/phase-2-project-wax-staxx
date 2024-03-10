@@ -1,4 +1,7 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/8b8a7181-f0ae-4d9e-aea9-c985c768e706/deploy-status)](https://app.netlify.com/sites/waxstaxx/deploys) [View Wax Staxx live](https://waxstaxx.netlify.app/)
+
+[View Wax Staxx live](https://waxstaxx.netlify.app/)
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8b8a7181-f0ae-4d9e-aea9-c985c768e706/deploy-status)](https://app.netlify.com/sites/waxstaxx/deploys) 
 
 # Wax Staxx
 Welcome to Wax Staxx! - A React app that provides information about various albums, allowing users to track and showcase their personal collection. 
