@@ -4,7 +4,8 @@ import useFetchJSON from '../utils/helpers'
 import { useErrorAlerts } from './ErrorAlertsProvider'
 
 export const AlbumsContext = React.createContext()
-export const url = 'http://localhost:4000/records'
+// export const url = 'http://localhost:4000/records'
+export const url = 'https://waxstaxx-db.onrender.com/records'
 
 const AlbumsProvider = ({ children }) => {
     const [albums, setAlbums] = useState([])
